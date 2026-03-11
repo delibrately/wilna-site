@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "/wilna-site/"
 title = "Wilna"
 theme = "blist"
 languageCode = 'en-us'
