@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on Wilna</title>
+    <link>//localhost:1313/zh/news/</link>
+    <description>Recent content in News on Wilna</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/zh/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AdapBlinker: Robust adaptive median filter approach to detect subtle eye blinks</title>
+      <link>//localhost:1313/zh/news/adapblinker/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/zh/news/adapblinker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deeploc: a CNN-LSTM framework for NLOS-aware localization in underwater sensor networks</title>
+      <link>//localhost:1313/zh/news/deeploc/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/zh/news/deeploc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LiteIP-VTON: A Knowledge-Distilled Diffusion Model for Realistic and Efficient Virtual Try-On</title>
+      <link>//localhost:1313/zh/news/liteip-vton/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/zh/news/liteip-vton/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerNetMax: A DRL-GNN framework for IRS-Assisted IOT network optimization</title>
+      <link>//localhost:1313/zh/news/powernetmax/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/zh/news/powernetmax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SCOPE-BIAS: SOCIAL CONTEXTUAL OPTIMIZATION FOR EVALUATING BIAS IN AI SYSTEMS</title>
+      <link>//localhost:1313/zh/news/scope-bias/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/zh/news/scope-bias/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Through-Wall Mobile Charging: Theory, Methodology, and Implementation</title>
+      <link>//localhost:1313/zh/news/through-wall/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/zh/news/through-wall/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WiMIT: A multitask learning model for WiFi-based identity and posture recognition</title>
+      <link>//localhost:1313/zh/news/wimit/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/zh/news/wimit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wireless Charging for Uncertain Location Nodes</title>
+      <link>//localhost:1313/zh/news/wireless-charging/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/zh/news/wireless-charging/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

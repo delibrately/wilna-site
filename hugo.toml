@@ -1,0 +1,194 @@
+baseurl = "/"
+title = "Wilna"
+theme = "blist"
+languageCode = 'en-us'
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    weight = 1
+    languageName = "English"
+    [languages.en.params]
+      news = "News"
+
+    [[languages.en.params.about]]
+      content = "We are a research lab of Wilna, led by Prof. Lei Wang."
+
+    [[languages.en.params.about]]
+      content = "Our lab focuses on the ."
+
+    [[languages.en.params.about]]
+      content = "Undergraduate students who are highly self-motivated, and interested in this research direction, are welcome to join our Wilna lab (contact: lei.wang@dlut.edu.cn)"
+
+    # [[languages.en.menu.main]]
+    #     name = "About"
+    #     url = "about"
+    #     weight = 1
+    [[languages.en.menu.main]]
+        name = "Research"
+        url = "research"
+        weight = 2
+
+    [[languages.en.menu.main]]
+        name = "People"
+        url = "people"
+        weight = 3
+
+    [[languages.en.menu.main]]
+        name = "Publications"
+        url = "papers"
+        weight = 4
+
+
+  [languages.zh]
+    contentDir = "content/zh"
+    weight = 2
+    languageName = "Chinese"
+    [languages.zh.params]
+      
+      news = "新闻"
+      homepage.social.title = "联系我们团队"
+      homepage.social.description = "如果你对我们Wilna团队感兴趣，欢迎联系我们！"
+
+    [[languages.zh.params.about]]
+      content = "我们是一个由王雷教授领导的Wilna研究实验室。"
+    [[languages.zh.params.about]]
+      content = "我们的实验室专注于xxxxxxxxxxxx。"
+    [[languages.zh.params.about]]
+      content = "欢迎自学能力强、对该研究方向感兴趣的本科生加入我们的Wilna实验室。"
+    [[languages.zh.params.about]]
+      content = "联系方式："
+    [[languages.zh.params.about]]
+      content = "lei.wang@dlut.edu.cn"
+    [[languages.zh.params.about]]
+      content = "lei.wang@dlut.edu.cn"  
+    [[languages.zh.params.about]]
+      content = "lei.wang@dlut.edu.cn"
+
+
+    # [[languages.zh.menu.main]]
+    #     name = "实验室简介"
+    #     url = "about"
+    #     weight = 1
+
+    [[languages.zh.menu.main]]
+        name = "研究课题"
+        url = "research"
+        weight = 2
+
+    [[languages.zh.menu.main]]
+        name = "团队介绍"
+        url = "people"
+        weight = 3
+
+    [[languages.zh.menu.main]]
+        name = "近期论文"
+        url = "papers"
+        weight = 4
+
+
+[[params.introImages]]
+  src = "/intro/3.jpg"
+[[params.introImages]]
+  src = "/intro/2.jpg"
+[[params.introImages]]
+  src = "/intro/1.jpg"
+
+
+
+[[params.logo]]
+  light = "/Dut.png"
+  url = "https://www.dlut.edu.cn/"
+
+
+[params]
+  altLogo = "/Dut.png"
+  teamLogo = "/logo1.png"
+
+  defaultContentLanguage = "zh"
+  defaultContentLanguageInSubdir = true
+
+  enableEmoji = true
+  enableRobotsTXT = true
+
+  hasCJKLanguage = true
+
+  # Enable the darkmode toggle in header
+  # darkModeToggle = true
+  
+  # Enable search in header
+  # enableSearch = true
+
+  # Option to customize the search parameters of a page
+  # Below are the supported options; Note that including entire content
+  # may slowdown the loading of search results
+  # Title of page is included by default
+  # searchKeys = [
+  #   "tags",
+  #   "date",
+  #   "categories",
+  #   "summary",
+  #   "content",
+  #   "link",
+  #   "author"
+  # ]
+
+  # Custom copyright - optional
+  # copyright = "xxx"
+  # favicon = "/xxx.png"
+
+  # Color for the intro details and social links block, not applicable for dark mode
+  # Supported values: Any color from TailwindCSS default colors
+  # Reference: https://tailwindcss.com/docs/customizing-colors
+  ascentColor = "bg-blue-200"
+
+  # The page bundle that is shown on the front page
+  frontBundle = "news"
+
+  # Used to hide the post metadata such as posted date, reading time and word count
+  # Can be used at site level or page level
+  hideMeta = false
+
+  # To hide "Other languages" option if the post is available in multiple languages
+  # Can be used at site level or page level
+  hideOtherLanguages = false
+
+  # Add support for Table of contents
+  # Can be added to a page level also in markdown frontmatter
+  toc = true
+  tocOpen = true
+
+  # Hides the thumbnail in post view
+  # Thumbnails in home and blog pages will still be shown
+  # This setting can also be in page's markdown file
+  hidePageThumbnail = false
+
+  joinus = true
+
+[params.homepage.social]
+  # Global params common for both languages
+  title = "Contact Us"
+  description = "If you are interested in Wilna lab, feel free to contact."
+
+  [[params.homepage.social.icons]]
+    website = "email"
+    url = "lei.wang@dlut.edu.cn"
+  [[params.homepage.social.icons]]
+    website = "logo"
+    src = "/Dut.png"
+    url = "https://www.dlut.edu.cn"
+
+[build]
+  writeStats = true
+  future = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true

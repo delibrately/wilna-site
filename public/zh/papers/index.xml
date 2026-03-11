@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Wilna</title>
+    <link>//localhost:1313/zh/papers/</link>
+    <description>Recent content in Publications on Wilna</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/zh/papers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AdapBlinker: Robust adaptive median filter approach to detect subtle eye blinks</title>
+      <link>//localhost:1313/zh/papers/adapblinker/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh/papers/adapblinker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deeploc: a CNN-LSTM framework for NLOS-aware localization in underwater sensor networks</title>
+      <link>//localhost:1313/zh/papers/deeploc/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh/papers/deeploc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WiMTI: A multitask learning model for WiFi-based identity and posture recognition</title>
+      <link>//localhost:1313/zh/papers/wimti/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh/papers/wimti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerNetMax: A DRL-GNN framework for IRS-Assisted IOT network optimization</title>
+      <link>//localhost:1313/zh/papers/powernetmax/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh/papers/powernetmax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AquaKey: Exploiting the Randomness of the Underwater Visible Light Communication Channel for Key Extraction</title>
+      <link>//localhost:1313/zh/papers/aquakey/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh/papers/aquakey/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AutoDLAR: A Semi-supervised Cross-modal Contact-free Human Activity Recognition System</title>
+      <link>//localhost:1313/zh/papers/autodlar/</link>
+      <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh/papers/autodlar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reliable Data Delivery in Underwater Optical Wireless Sensor Networks</title>
+      <link>//localhost:1313/zh/papers/reliable-data-delivery/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh/papers/reliable-data-delivery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minimizing Age of Information for Underwater Optical Wireless Sensor Networks</title>
+      <link>//localhost:1313/zh/papers/minimizing-age-of-information/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/zh/papers/minimizing-age-of-information/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

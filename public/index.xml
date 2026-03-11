@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wilna</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Wilna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AdapBlinker: Robust adaptive median filter approach to detect subtle eye blinks</title>
+      <link>//localhost:1313/papers/adapblinker/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/adapblinker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deeploc: a CNN-LSTM framework for NLOS-aware localization in underwater sensor networks</title>
+      <link>//localhost:1313/papers/deeploc/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/deeploc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WiMTI: A multitask learning model for WiFi-based identity and posture recognition</title>
+      <link>//localhost:1313/papers/wimti/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/wimti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerNetMax: A DRL-GNN framework for IRS-Assisted IOT network optimization</title>
+      <link>//localhost:1313/papers/powernetmax/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/powernetmax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AquaKey: Exploiting the Randomness of the Underwater Visible Light Communication Channel for Key Extraction</title>
+      <link>//localhost:1313/papers/aquakey/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/aquakey/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AdapBlinker: Robust adaptive median filter approach to detect subtle eye blinks</title>
+      <link>//localhost:1313/news/adapblinker/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/news/adapblinker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deeploc: a CNN-LSTM framework for NLOS-aware localization in underwater sensor networks</title>
+      <link>//localhost:1313/news/deeploc/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/news/deeploc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LiteIP-VTON: A Knowledge-Distilled Diffusion Model for Realistic and Efficient Virtual Try-On</title>
+      <link>//localhost:1313/news/liteip-vton/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/news/liteip-vton/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerNetMax: A DRL-GNN framework for IRS-Assisted IOT network optimization</title>
+      <link>//localhost:1313/news/powernetmax/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/news/powernetmax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SCOPE-BIAS: SOCIAL CONTEXTUAL OPTIMIZATION FOR EVALUATING BIAS IN AI SYSTEMS</title>
+      <link>//localhost:1313/news/scope-bias/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/news/scope-bias/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Through-Wall Mobile Charging: Theory, Methodology, and Implementation</title>
+      <link>//localhost:1313/news/through-wall/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/news/through-wall/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WiMIT: A multitask learning model for WiFi-based identity and posture recognition</title>
+      <link>//localhost:1313/news/wimit/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/news/wimit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wireless Charging for Uncertain Location Nodes</title>
+      <link>//localhost:1313/news/wireless-charging/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/news/wireless-charging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AutoDLAR: A Semi-supervised Cross-modal Contact-free Human Activity Recognition System</title>
+      <link>//localhost:1313/papers/1/</link>
+      <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AutoDLAR: A Semi-supervised Cross-modal Contact-free Human Activity Recognition System</title>
+      <link>//localhost:1313/papers/autodlar/</link>
+      <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/autodlar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reliable Data Delivery in Underwater Optical Wireless Sensor Networks</title>
+      <link>//localhost:1313/papers/reliable-data-delivery/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/reliable-data-delivery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minimizing Age of Information for Underwater Optical Wireless Sensor Networks</title>
+      <link>//localhost:1313/papers/minimizing-age-of-information/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/papers/minimizing-age-of-information/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lei Wang</title>
+      <link>//localhost:1313/people/leiwang/</link>
+      <pubDate>Sun, 30 Apr 2000 14:27:08 +0800</pubDate>
+      <guid>//localhost:1313/people/leiwang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Acoustic Sensing and Acoustic Localization</title>
+      <link>//localhost:1313/research/acoustic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/research/acoustic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dandan Wang</title>
+      <link>//localhost:1313/people/wangdandan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/wangdandan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deyun An</title>
+      <link>//localhost:1313/people/andeyun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/andeyun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gongming Shi</title>
+      <link>//localhost:1313/people/shigongming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/shigongming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hairui Chen</title>
+      <link>//localhost:1313/people/chenhairui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/chenhairui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hanmo Li</title>
+      <link>//localhost:1313/people/lihanmo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/lihanmo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hao Yuan</title>
+      <link>//localhost:1313/people/yuanhao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/yuanhao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jiale Song</title>
+      <link>//localhost:1313/people/songjiale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/songjiale/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jiancheng Chi</title>
+      <link>//localhost:1313/people/jianchengchi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/jianchengchi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jianhua Hong</title>
+      <link>//localhost:1313/people/hongjianhua/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/hongjianhua/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jiaxu Zhang</title>
+      <link>//localhost:1313/people/zhangjiaxu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zhangjiaxu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jingbin Liu</title>
+      <link>//localhost:1313/people/liujingbin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/liujingbin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jingchi Zhang</title>
+      <link>//localhost:1313/people/zhangjingchi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zhangjingchi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kehao A</title>
+      <link>//localhost:1313/people/akehao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/akehao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lei Guo</title>
+      <link>//localhost:1313/people/guolei/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/guolei/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Niman Wu</title>
+      <link>//localhost:1313/people/wuniman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/wuniman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qiang Li</title>
+      <link>//localhost:1313/people/liqiang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/liqiang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qihang He</title>
+      <link>//localhost:1313/people/heqihang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/heqihang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qingyuan Liu</title>
+      <link>//localhost:1313/people/liuqingyuan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/liuqingyuan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qiuzi Tao</title>
+      <link>//localhost:1313/people/taoqiuzi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/taoqiuzi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sen Liang</title>
+      <link>//localhost:1313/people/liangsen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/liangsen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shandi Zhang</title>
+      <link>//localhost:1313/people/zhangshandi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zhangshandi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shengjie Li</title>
+      <link>//localhost:1313/people/lishengjie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/lishengjie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shiqi Shao</title>
+      <link>//localhost:1313/people/shaoshiqi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/shaoshiqi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sixu Chen</title>
+      <link>//localhost:1313/people/chensixu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/chensixu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Siyu Liu</title>
+      <link>//localhost:1313/people/liusiyu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/liusiyu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tianyuan Zou</title>
+      <link>//localhost:1313/people/zoutianyuan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zoutianyuan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wenkai Xu</title>
+      <link>//localhost:1313/people/xuwenkai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/xuwenkai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wireless Sensing</title>
+      <link>//localhost:1313/research/wireless-sensing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/research/wireless-sensing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xiaolin Zhang</title>
+      <link>//localhost:1313/people/zhangxiaolin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zhangxiaolin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xiaoyu Zhou</title>
+      <link>//localhost:1313/people/zhouxiaoyu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zhouxiaoyu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xichen Gao</title>
+      <link>//localhost:1313/people/gaoxichen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/gaoxichen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xinxin Lu</title>
+      <link>//localhost:1313/people/luxinxin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/luxinxin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yanan Su</title>
+      <link>//localhost:1313/people/suyanan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/suyanan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yidi Gu</title>
+      <link>//localhost:1313/people/guyidi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/guyidi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yongxin Gao</title>
+      <link>//localhost:1313/people/gaoyongxin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/gaoyongxin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yucheng Wang</title>
+      <link>//localhost:1313/people/wangyucheng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/wangyucheng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yufeng Gao</title>
+      <link>//localhost:1313/people/gaoyufeng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/gaoyufeng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yunbo Chen</title>
+      <link>//localhost:1313/people/chenyunbo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/chenyunbo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yunqi Liu</title>
+      <link>//localhost:1313/people/liuyunqi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/liuyunqi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhaohui Wang</title>
+      <link>//localhost:1313/people/wangzhaohui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/wangzhaohui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhenbin Wu</title>
+      <link>//localhost:1313/people/wuzhenbin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/wuzhenbin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhenquan Qin</title>
+      <link>//localhost:1313/people/zhenquanqin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zhenquanqin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhihuan Wang</title>
+      <link>//localhost:1313/people/wangzhihuan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/wangzhihuan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhipeng Zhang</title>
+      <link>//localhost:1313/people/zhangzhipeng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zhangzhipeng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhiyi Zhou</title>
+      <link>//localhost:1313/people/zhouzhiyi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/zhouzhiyi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ziheng Lu</title>
+      <link>//localhost:1313/people/luziheng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/people/luziheng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>加入我们</title>
+      <link>//localhost:1313/joinus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/joinus/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
