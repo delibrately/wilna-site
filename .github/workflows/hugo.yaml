@@ -33,10 +33,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24' # 修复点1：更新 Node 版本为 24 消除警告
 
       - name: Install Dependencies
-        run: npm install -g postcss postcss-cli autoprefixer
+        run: |
+          npm install -g postcss postcss-cli autoprefixer
+          # 修复点2：进入主题文件夹安装 Tailwind CSS 等依赖
+          cd themes/blist && npm install
 
       - name: Build with Hugo
         run: hugo --minify
