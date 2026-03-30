@@ -2,6 +2,9 @@ baseurl = "https://delibrately.github.io/wilna-site/"
 title = "Wilna"
 theme = "blist"
 languageCode = 'en-us'
+# 增加下面这一行，强制 Hugo 使用相对路径引用资源
+canonifyURLs = true
+relativeURLs = true
 
 [languages]
   [languages.en]
@@ -88,11 +91,11 @@ languageCode = 'en-us'
 
 
 [[params.introImages]]
-  src = "/intro/3.jpg"
+  src = "intro/3.jpg"
 [[params.introImages]]
-  src = "/intro/2.jpg"
+  src = "intro/2.jpg"
 [[params.introImages]]
-  src = "/intro/1.jpg"
+  src = "intro/1.jpg"
 
 
 
