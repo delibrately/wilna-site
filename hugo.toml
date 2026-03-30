@@ -1,4 +1,4 @@
-baseurl = "/wilna-site/"
+baseurl = "https://delibrately.github.io/wilna-site/"
 title = "Wilna"
 theme = "blist"
 languageCode = 'en-us'
