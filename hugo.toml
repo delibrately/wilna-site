@@ -91,22 +91,22 @@ relativeURLs = true
 
 
 [[params.introImages]]
-  src = "https://delibrately.github.io/wilna-site/intro/3.jpg"
+  src = "intro/3.jpg"
 [[params.introImages]]
-  src = "https://delibrately.github.io/wilna-site/intro/2.jpg"
+  src = "intro/2.jpg"
 [[params.introImages]]
-  src = "https://delibrately.github.io/wilna-site/intro/1.jpg"
+  src = "intro/1.jpg"
 
 
 
 [[params.logo]]
-  light = "https://delibrately.github.io/wilna-site/Dut.png"
+  light = "Dut.png"
   url = "https://www.dlut.edu.cn/"
 
 
 [params]
-  altLogo = "https://delibrately.github.io/wilna-site/Dut.png"
-  teamLogo = "https://delibrately.github.io/wilna-site/logo1.png"
+  altLogo = "Dut.png"
+  teamLogo = "logo1.png"
 
   defaultContentLanguage = "zh"
   defaultContentLanguageInSubdir = true
@@ -178,7 +178,7 @@ relativeURLs = true
     url = "lei.wang@dlut.edu.cn"
   [[params.homepage.social.icons]]
     website = "logo"
-    src = "https://delibrately.github.io/wilna-site/Dut.png"
+    src = "Dut.png"
     url = "https://www.dlut.edu.cn"
 
 [build]
