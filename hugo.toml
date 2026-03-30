@@ -3,8 +3,8 @@ title = "Wilna"
 theme = "blist"
 languageCode = 'en-us'
 # 增加下面这一行，强制 Hugo 使用相对路径引用资源
-canonifyURLs = true
-relativeURLs = true
+canonifyURLs = false
+relativeURLs = false
 
 [languages]
   [languages.en]
