@@ -3,8 +3,8 @@ title = "Wilna"
 theme = "blist"
 languageCode = 'en-us'
 # 增加下面这一行，强制 Hugo 使用相对路径引用资源
-canonifyURLs = false
-relativeURLs = false
+canonifyURLs = true
+relativeURLs = true
 
 [languages]
   [languages.en]
@@ -91,21 +91,21 @@ relativeURLs = false
 
 
 [[params.introImages]]
-  src = "/wilna-site/intro/3.jpg"
+  src = "intro/3.jpg"
 [[params.introImages]]
-  src = "/wilna-site/intro/2.jpg"
+  src = "intro/2.jpg"
 [[params.introImages]]
-  src = "/wilna-site/intro/1.jpg"
+  src = "intro/1.jpg"
 
 
 
 [[params.logo]]
-  light = "/wilna-site/Dut.png"
+  light = "Dut.png"
   url = "https://www.dlut.edu.cn/"
 
 
 [params]
-  altLogo = "/wilna-site/Dut.png"
+  altLogo = "Dut.png"
   teamLogo = "logo1.png"
 
   defaultContentLanguage = "zh"
@@ -178,7 +178,7 @@ relativeURLs = false
     url = "lei.wang@dlut.edu.cn"
   [[params.homepage.social.icons]]
     website = "logo"
-    src = "/wilna-site/Dut.png"
+    src = "Dut.png"
     url = "https://www.dlut.edu.cn"
 
 [build]
