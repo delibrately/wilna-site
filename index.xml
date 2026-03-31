@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wilna</title>
+    <link>https://delibrately.github.io/wilna-site/</link>
+    <description>Recent content on Wilna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://delibrately.github.io/wilna-site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AdapBlinker: Robust adaptive median filter approach to detect subtle eye blinks</title>
+      <link>https://delibrately.github.io/wilna-site/papers/adapblinker/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/papers/adapblinker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deeploc: a CNN-LSTM framework for NLOS-aware localization in underwater sensor networks</title>
+      <link>https://delibrately.github.io/wilna-site/papers/deeploc/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/papers/deeploc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WiMTI: A multitask learning model for WiFi-based identity and posture recognition</title>
+      <link>https://delibrately.github.io/wilna-site/papers/wimti/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/papers/wimti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerNetMax: A DRL-GNN framework for IRS-Assisted IOT network optimization</title>
+      <link>https://delibrately.github.io/wilna-site/papers/powernetmax/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/papers/powernetmax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AquaKey: Exploiting the Randomness of the Underwater Visible Light Communication Channel for Key Extraction</title>
+      <link>https://delibrately.github.io/wilna-site/papers/aquakey/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/papers/aquakey/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AdapBlinker: Robust adaptive median filter approach to detect subtle eye blinks</title>
+      <link>https://delibrately.github.io/wilna-site/news/adapblinker/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/news/adapblinker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deeploc: a CNN-LSTM framework for NLOS-aware localization in underwater sensor networks</title>
+      <link>https://delibrately.github.io/wilna-site/news/deeploc/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/news/deeploc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LiteIP-VTON: A Knowledge-Distilled Diffusion Model for Realistic and Efficient Virtual Try-On</title>
+      <link>https://delibrately.github.io/wilna-site/news/liteip-vton/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/news/liteip-vton/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerNetMax: A DRL-GNN framework for IRS-Assisted IOT network optimization</title>
+      <link>https://delibrately.github.io/wilna-site/news/powernetmax/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/news/powernetmax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SCOPE-BIAS: SOCIAL CONTEXTUAL OPTIMIZATION FOR EVALUATING BIAS IN AI SYSTEMS</title>
+      <link>https://delibrately.github.io/wilna-site/news/scope-bias/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/news/scope-bias/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Through-Wall Mobile Charging: Theory, Methodology, and Implementation</title>
+      <link>https://delibrately.github.io/wilna-site/news/through-wall/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/news/through-wall/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WiMIT: A multitask learning model for WiFi-based identity and posture recognition</title>
+      <link>https://delibrately.github.io/wilna-site/news/wimit/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/news/wimit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wireless Charging for Uncertain Location Nodes</title>
+      <link>https://delibrately.github.io/wilna-site/news/wireless-charging/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/news/wireless-charging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AutoDLAR: A Semi-supervised Cross-modal Contact-free Human Activity Recognition System</title>
+      <link>https://delibrately.github.io/wilna-site/papers/autodlar/</link>
+      <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/papers/autodlar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reliable Data Delivery in Underwater Optical Wireless Sensor Networks</title>
+      <link>https://delibrately.github.io/wilna-site/papers/reliable-data-delivery/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/papers/reliable-data-delivery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minimizing Age of Information for Underwater Optical Wireless Sensor Networks</title>
+      <link>https://delibrately.github.io/wilna-site/papers/minimizing-age-of-information/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/papers/minimizing-age-of-information/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lei Wang</title>
+      <link>https://delibrately.github.io/wilna-site/people/leiwang/</link>
+      <pubDate>Sun, 30 Apr 2000 14:27:08 +0800</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/leiwang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Acoustic Sensing and Acoustic Localization</title>
+      <link>https://delibrately.github.io/wilna-site/research/acoustic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/research/acoustic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dandan Wang</title>
+      <link>https://delibrately.github.io/wilna-site/people/wangdandan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/wangdandan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deyun An</title>
+      <link>https://delibrately.github.io/wilna-site/people/andeyun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/andeyun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gongming Shi</title>
+      <link>https://delibrately.github.io/wilna-site/people/shigongming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/shigongming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hairui Chen</title>
+      <link>https://delibrately.github.io/wilna-site/people/chenhairui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/chenhairui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hanmo Li</title>
+      <link>https://delibrately.github.io/wilna-site/people/lihanmo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/lihanmo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hao Yuan</title>
+      <link>https://delibrately.github.io/wilna-site/people/yuanhao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/yuanhao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jiale Song</title>
+      <link>https://delibrately.github.io/wilna-site/people/songjiale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/songjiale/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jiancheng Chi</title>
+      <link>https://delibrately.github.io/wilna-site/people/jianchengchi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/jianchengchi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jianhua Hong</title>
+      <link>https://delibrately.github.io/wilna-site/people/hongjianhua/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/hongjianhua/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jiaxu Zhang</title>
+      <link>https://delibrately.github.io/wilna-site/people/zhangjiaxu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zhangjiaxu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jingbin Liu</title>
+      <link>https://delibrately.github.io/wilna-site/people/liujingbin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/liujingbin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jingchi Zhang</title>
+      <link>https://delibrately.github.io/wilna-site/people/zhangjingchi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zhangjingchi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kehao A</title>
+      <link>https://delibrately.github.io/wilna-site/people/akehao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/akehao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lei Guo</title>
+      <link>https://delibrately.github.io/wilna-site/people/guolei/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/guolei/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Niman Wu</title>
+      <link>https://delibrately.github.io/wilna-site/people/wuniman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/wuniman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qiang Li</title>
+      <link>https://delibrately.github.io/wilna-site/people/liqiang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/liqiang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qihang He</title>
+      <link>https://delibrately.github.io/wilna-site/people/heqihang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/heqihang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qingyuan Liu</title>
+      <link>https://delibrately.github.io/wilna-site/people/liuqingyuan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/liuqingyuan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qiuzi Tao</title>
+      <link>https://delibrately.github.io/wilna-site/people/taoqiuzi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/taoqiuzi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sen Liang</title>
+      <link>https://delibrately.github.io/wilna-site/people/liangsen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/liangsen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shandi Zhang</title>
+      <link>https://delibrately.github.io/wilna-site/people/zhangshandi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zhangshandi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shengjie Li</title>
+      <link>https://delibrately.github.io/wilna-site/people/lishengjie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/lishengjie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shiqi Shao</title>
+      <link>https://delibrately.github.io/wilna-site/people/shaoshiqi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/shaoshiqi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sixu Chen</title>
+      <link>https://delibrately.github.io/wilna-site/people/chensixu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/chensixu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Siyu Liu</title>
+      <link>https://delibrately.github.io/wilna-site/people/liusiyu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/liusiyu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tianyuan Zou</title>
+      <link>https://delibrately.github.io/wilna-site/people/zoutianyuan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zoutianyuan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wenkai Xu</title>
+      <link>https://delibrately.github.io/wilna-site/people/xuwenkai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/xuwenkai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wireless Sensing</title>
+      <link>https://delibrately.github.io/wilna-site/research/wireless-sensing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/research/wireless-sensing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xiaolin Zhang</title>
+      <link>https://delibrately.github.io/wilna-site/people/zhangxiaolin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zhangxiaolin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xiaoyu Zhou</title>
+      <link>https://delibrately.github.io/wilna-site/people/zhouxiaoyu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zhouxiaoyu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xichen Gao</title>
+      <link>https://delibrately.github.io/wilna-site/people/gaoxichen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/gaoxichen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xinxin Lu</title>
+      <link>https://delibrately.github.io/wilna-site/people/luxinxin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/luxinxin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yanan Su</title>
+      <link>https://delibrately.github.io/wilna-site/people/suyanan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/suyanan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yidi Gu</title>
+      <link>https://delibrately.github.io/wilna-site/people/guyidi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/guyidi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yongxin Gao</title>
+      <link>https://delibrately.github.io/wilna-site/people/gaoyongxin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/gaoyongxin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yucheng Wang</title>
+      <link>https://delibrately.github.io/wilna-site/people/wangyucheng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/wangyucheng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yufeng Gao</title>
+      <link>https://delibrately.github.io/wilna-site/people/gaoyufeng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/gaoyufeng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yunbo Chen</title>
+      <link>https://delibrately.github.io/wilna-site/people/chenyunbo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/chenyunbo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yunqi Liu</title>
+      <link>https://delibrately.github.io/wilna-site/people/liuyunqi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/liuyunqi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhaohui Wang</title>
+      <link>https://delibrately.github.io/wilna-site/people/wangzhaohui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/wangzhaohui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhenbin Wu</title>
+      <link>https://delibrately.github.io/wilna-site/people/wuzhenbin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/wuzhenbin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhenquan Qin</title>
+      <link>https://delibrately.github.io/wilna-site/people/zhenquanqin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zhenquanqin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhihuan Wang</title>
+      <link>https://delibrately.github.io/wilna-site/people/wangzhihuan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/wangzhihuan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhipeng Zhang</title>
+      <link>https://delibrately.github.io/wilna-site/people/zhangzhipeng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zhangzhipeng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zhiyi Zhou</title>
+      <link>https://delibrately.github.io/wilna-site/people/zhouzhiyi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/zhouzhiyi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ziheng Lu</title>
+      <link>https://delibrately.github.io/wilna-site/people/luziheng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/people/luziheng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>加入我们</title>
+      <link>https://delibrately.github.io/wilna-site/joinus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://delibrately.github.io/wilna-site/joinus/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
