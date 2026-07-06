@@ -21,6 +21,8 @@
   <meta itemprop="name" content="Research">
   <meta itemprop="description" content="Research Areas">
   <meta name="lang" content="en" />
+
+  <script src="/wilna-site/js/site-paths.js" defer></script>
 </head>
 <body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen">
   <div id="header" class="header bg-transparent fixed z-10 w-full min-h-32 flex items-center">
@@ -54,24 +56,6 @@
         </div>
       </div>
     </header>
-    <script>
-      const nav = document.getElementById("header");
-      const mobileMenuButton = document.querySelector('.mobile-menu-button');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      function refreshTopBar() {
-        const clampedScroll = Math.min(window.scrollY / 80, 1);
-        nav.style.boxShadow = `0 0 24px rgba(0, 0, 0, ${clampedScroll * clampedScroll * clampedScroll * 0.1})`;
-        nav.style.minHeight = `${clampedScroll * 4 + (1 - clampedScroll) * 8}rem`;
-      }
-      window.onscroll = refreshTopBar;
-      if (mobileMenu && mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', function () {
-          nav.classList.toggle("menu-expanded");
-          mobileMenu.classList.toggle('hidden');
-          mobileMenu.classList.toggle('flex');
-        });
-      }
-    </script>
   </div>
 
   <main class="flex-1">
@@ -88,7 +72,7 @@
             </div>
             <div class="research-intro flex flex-col">
               <h3 class="text-2xl font-semibold mb-2">Acoustic Sensing and Acoustic Localization</h3>
-              <p>Acoustic perception and acoustic positioning are key technologies that utilize sound signals to understand the environment and determine the spatial location of sound sources. The former focuses on extracting information such as speech, events, and environmental conditions from audio (e.g., speech recognition, noise monitoring, abnormal sound detection), while the latter focuses on estimating the direction and location of sound sources based on multi-microphone arrays and the propagation characteristics of sound waves (e.g., TDOA, beamforming). Due to their low cost, wide coverage, and the absence of line-of-sight requirements, these two technologies have significant application value in scenarios such as smart homes, robot navigation, AR/VR spatial audio, and security monitoring.</p>
+              <p>Acoustic perception and acoustic positioning are key technologies that utilize sound signals to understand the environment and determine the spatial location of sound sources.</p>
             </div>
           </a>
         </div>
@@ -100,7 +84,7 @@
             </div>
             <div class="research-intro flex flex-col">
               <h3 class="text-2xl font-semibold mb-2">Wireless Sensing</h3>
-              <p>Wireless sensing is a type of non-intrusive sensing technology that utilizes common wireless signals in the environment (such as Wi-Fi, Bluetooth, millimeter waves, LoRa, etc.) to see the states of people and objects. It achieves capabilities such as action recognition, gait analysis, vital sign monitoring, and spatial state perception by analyzing the subtle disturbances (such as CSI fluctuations, Doppler effect) caused by human activities and environmental changes during the propagation of the signals. Compared to wearable devices or cameras, wireless sensing has the advantages of no need for contact, privacy friendliness, all-day operation, and certain robustness in penetration and obstruction. Therefore, it has broad application prospects in smart homes, health monitoring, security, human-computer interaction, and smart cities. With the development of 5G/6G, the Internet of Things, and AI, wireless sensing is accelerating its evolution towards higher precision, stronger generalization, and edge real-time deployment.</p>
+              <p>Wireless sensing uses wireless signals to perceive human and environmental states.</p>
             </div>
           </a>
         </div>
@@ -116,15 +100,9 @@
           <p class="opacity-60">If you are interested in Wilna lab, feel free to contact.</p>
         </div>
         <ul class="flex justify-start md:justify-end mt-10 md:mt-0 gap-x-3 flex-wrap gap-y-2 w-full">
-          <li><a href="/wilna-site/joinus/"><button class="button-4 dark:bg-gray-800 dark:text-white" style="margin-right: 8px;">Join us</button></a></li>
-          <li><a href="mailto:lei.wang@dlut.edu.cn" target="_blank" rel="noopener" aria-label="email" class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300">Email</a></li>
-          <li><a href="https://www.dlut.edu.cn" target="_blank" rel="noopener" aria-label="DUT" class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"><img height="24" width="24" src="/wilna-site/Dut.png" alt="DUT" /></a></li>
+          <li><a href="/wilna-site/joinus/">Join us</a></li>
         </ul>
       </div>
-    </div>
-    <div class="container p-6 mx-auto flex justify-between items-center">
-      <span class="text-sm font-light">2026 © Wilna</span>
-      <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">↑</span>
     </div>
   </footer>
 </body>
