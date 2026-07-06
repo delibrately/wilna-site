@@ -1,7 +1,12 @@
 <header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
-  <a href="{{ .Site.Home.Permalink }}" class="capitalize font-extrabold text-2xl">
-    {{ if .Site.Params.logo }}
-    <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" class="h-8 max-w-full" />
+  <a href="{{ .Site.Home.RelPermalink }}" class="capitalize font-extrabold text-2xl">
+    {{ $logo := .Site.Params.logo.light | default .Site.Params.altLogo }}
+    {{ if $logo }}
+    {{ $logoURL := $logo | relURL }}
+    {{ with resources.Get $logo }}
+      {{ $logoURL = .RelPermalink }}
+    {{ end }}
+    <img src="{{ $logoURL }}" alt="{{ .Site.Title }}" class="h-8 max-w-full" />
     {{ else }}
     {{ .Site.Title }}
     {{ end }}
@@ -44,7 +49,7 @@
         class="language-dropdown absolute top-full mt-2 left-0 flex-col gap-2 bg-gray-100 dark:bg-gray-900 dark:text-white z-10 hidden">
         {{ range .Site.Languages }}
         {{ if not (eq .Lang $.Site.Language.Lang) }}
-        <a class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700" href="/{{ .Lang }}/" lang="{{ .Lang }}">{{ default .Lang .LanguageName }}</a>
+        <a class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700" href="{{ printf "%s/" .Lang | relURL }}" lang="{{ .Lang }}">{{ default .Lang .LanguageName }}</a>
         {{ end }}
         {{ end }}
       </div>
@@ -62,7 +67,7 @@
         <path d="M11.5 3a17 17 0 0 0 0 18" />
         <path d="M12.5 3a17 17 0 0 1 0 18" />
       </svg>
-      <a href="/{{ .Lang }}/" lang="{{ .Lang }}">{{ default .Lang .LanguageName }}</a>
+      <a href="{{ printf "%s/" .Lang | relURL }}" lang="{{ .Lang }}">{{ default .Lang .LanguageName }}</a>
       {{ end }}
       {{ end }}
     </li>

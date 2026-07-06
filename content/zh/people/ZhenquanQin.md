@@ -10,7 +10,7 @@ name = 'Zhenquan Qin'
 name_cn = '覃振权'
 name_en = 'Zhenquan Qin'
 degree = 'Associate Professor'
-image = "/people/ZhenquanQin.png"
+image = "people/ZhenquanQin.png"
 
 email = 'qzq@dlut.edu.cn'
 

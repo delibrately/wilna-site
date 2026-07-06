@@ -1,10 +1,16 @@
-baseurl = "https://delibrately.github.io/wilna-site/"
+baseURL = "https://delibrately.github.io/wilna-site/"
 title = "Wilna"
 theme = "blist"
 languageCode = 'en-us'
-# 增加下面这一行，强制 Hugo 使用相对路径引用资源
-canonifyURLs = true
-relativeURLs = true
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = true
+enableEmoji = true
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+# Keep URLs rooted at the GitHub Pages project path from baseURL.
+canonifyURLs = false
+relativeURLs = false
 
 [languages]
   [languages.en]
@@ -99,7 +105,7 @@ relativeURLs = true
 
 
 
-[[params.logo]]
+[params.logo]
   light = "Dut.png"
   url = "https://www.dlut.edu.cn/"
 
@@ -107,14 +113,6 @@ relativeURLs = true
 [params]
   altLogo = "Dut.png"
   teamLogo = "logo1.png"
-
-  defaultContentLanguage = "zh"
-  defaultContentLanguageInSubdir = true
-
-  enableEmoji = true
-  enableRobotsTXT = true
-
-  hasCJKLanguage = true
 
   # Enable the darkmode toggle in header
   # darkModeToggle = true

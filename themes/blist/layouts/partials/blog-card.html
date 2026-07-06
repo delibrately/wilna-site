@@ -1,8 +1,17 @@
 <div class="p-2">
-<a href="{{ .Permalink }}">
-  {{ if .Params.thumbnail }}
+<a href="{{ .RelPermalink }}">
+  {{ $thumbnail := .Params.thumbnail | default .Params.image | default .Params.img }}
+  {{ if $thumbnail }}
+  {{ $thumbnailURL := $thumbnail }}
+  {{ if not (strings.HasPrefix $thumbnail "http") }}
+    {{ $thumbnailPath := strings.TrimPrefix "/" $thumbnail }}
+    {{ $thumbnailURL = $thumbnailPath | relURL }}
+    {{ with resources.Get $thumbnailPath }}
+      {{ $thumbnailURL = .RelPermalink }}
+    {{ end }}
+  {{ end }}
   <div class="relative">
-    <img src="{{ .Params.thumbnail }}" alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-52 object-cover" />
+    <img src="{{ $thumbnailURL }}" alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-52 object-cover" />
     {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
     <div class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
       {{ .Date | time.Format ":date_medium" }}

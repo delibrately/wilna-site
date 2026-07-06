@@ -11,7 +11,7 @@ name = 'Lei Wang'
 name_cn = '王雷'
 name_en = 'Lei Wang'
 degree = 'Professor'
-image = "/people/LeiWang.jpg"
+image = "people/Leiwang.jpg"
 
 email = 'lei.wang@dlut.edu.cn'
 

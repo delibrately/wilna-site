@@ -42,7 +42,7 @@ jobs:
           cd themes/blist && npm install
 
       - name: Build with Hugo
-        run: hugo --minify
+        run: hugo --minify --cleanDestinationDir
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

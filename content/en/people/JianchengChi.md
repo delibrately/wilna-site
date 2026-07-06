@@ -10,7 +10,7 @@ name = 'Jiancheng Chi'
 name_cn = '池建成'
 name_en = 'Jiancheng Chi'
 degree = 'Assistant Professor'
-image = "/people/JianchengChi.png"
+image = "people/JianchengChi.png"
 
 email = 'chijiancheng@dlut.edu.cn'
 

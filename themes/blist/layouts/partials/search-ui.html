@@ -32,4 +32,4 @@
 {{ $search := resources.Get "js/search.js" }}
 
 {{ $concatjs := slice $fuse $search | resources.Concat "js/scripts.js" | resources.Minify }}
-<script src="{{ $concatjs.Permalink }}"></script>
+<script src="{{ $concatjs.RelPermalink }}"></script>

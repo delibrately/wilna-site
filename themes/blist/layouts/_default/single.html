@@ -1,10 +1,19 @@
 {{ define "main" }}
   {{ $lastmodstr := (.Lastmod | time.Format ":date_long") }}
   {{ $datestr := (.Date | time.Format ":date_long") }}
+  {{ $thumbnail := .Params.thumbnail | default .Params.image | default .Params.img }}
 
-  {{ if (and .Params.thumbnail (not (or .Site.Params.hidePageThumbnail .Params.hidePageThumbnail)) ) }}
+  {{ if (and $thumbnail (not (or .Site.Params.hidePageThumbnail .Params.hidePageThumbnail)) ) }}
+  {{ $thumbnailURL := $thumbnail }}
+  {{ if not (strings.HasPrefix $thumbnail "http") }}
+    {{ $thumbnailPath := strings.TrimPrefix "/" $thumbnail }}
+    {{ $thumbnailURL = $thumbnailPath | relURL }}
+    {{ with resources.Get $thumbnailPath }}
+      {{ $thumbnailURL = .RelPermalink }}
+    {{ end }}
+  {{ end }}
   <div class="relative max-w-5xl mx-auto px-4">
-    <img src="{{ .Params.thumbnail }}" class="rounded-lg shadow-sm w-full object-contain" />
+    <img src="{{ $thumbnailURL }}" class="rounded-lg shadow-sm w-full object-contain" />
     {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
     <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
       {{ $datestr }}

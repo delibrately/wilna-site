@@ -1,1 +1,5 @@
-<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Text }}</a>
+{{ $href := .Destination }}
+{{ if not (or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "mailto:") (strings.HasPrefix .Destination "#")) }}
+  {{ $href = .Destination | relURL }}
+{{ end }}
+<a href="{{ $href | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Text }}</a>
