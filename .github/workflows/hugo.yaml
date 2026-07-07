@@ -39,7 +39,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install -g postcss postcss-cli autoprefixer
+          npm install -g postcss postcss-cli autoprefixer postcss-import
+          npm ci --prefix themes/blist --include=dev
           # 修复点2：进入主题文件夹安装 Tailwind CSS 等依赖
           cd themes/blist && npm install
 
