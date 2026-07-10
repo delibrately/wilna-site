@@ -4,7 +4,7 @@ mentor = "Mentor"
 alumni_title = "Student"
 draft = false
 type = 'people'
-layout = 'peopleList'
+layout = 'overview'
 +++
 
 # Our Group

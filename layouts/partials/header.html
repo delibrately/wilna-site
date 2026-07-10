@@ -1,0 +1,33 @@
+{{ $universityLogo := partial "asset-url.html" "Dut.png" }}
+{{ $teamLogo := partial "asset-url.html" "logo1.png" }}
+<header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">
+      <img class="site-brand__university" src="{{ $universityLogo }}" alt="Dalian University of Technology">
+      <img class="site-brand__team" src="{{ $teamLogo }}" alt="Wilna Lab">
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+
+    <nav id="site-navigation" class="site-nav" aria-label="Primary navigation">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+      {{ end }}
+      {{ range .Site.Languages }}
+        {{ if ne .Lang $.Site.Language.Lang }}
+          <a class="language-link" href="{{ printf "%s/" .Lang | relURL }}" lang="{{ .Lang }}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3.5 9h17M3.5 15h17M12 3c2.2 2.5 3.3 5.5 3.3 9S14.2 18.5 12 21c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3Z"/>
+            </svg>
+            {{ .LanguageName }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </nav>
+  </div>
+</header>

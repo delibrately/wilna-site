@@ -1,0 +1,6 @@
+{{- $path := strings.TrimPrefix "/" . -}}
+{{- with resources.Get $path -}}
+  {{- .RelPermalink -}}
+{{- else -}}
+  {{- $path | relURL -}}
+{{- end -}}

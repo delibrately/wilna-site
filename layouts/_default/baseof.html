@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="{{ .Lang }}" itemscope itemtype="https://schema.org/WebPage">
+  {{ partial "head.html" . }}
+  <body class="lab-site">
+    {{ partial "header.html" . }}
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

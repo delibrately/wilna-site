@@ -4,7 +4,7 @@ mentor = "导师"
 alumni_title = "学生"
 draft = false
 type = 'people'
-layout = 'peopleList'
+layout = 'overview'
 +++
 
 # 团队成员

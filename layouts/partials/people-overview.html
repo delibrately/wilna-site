@@ -1,0 +1,43 @@
+<header class="page-heading">
+  <div class="site-container">
+    <p class="eyebrow">Wilna Lab</p>
+    <h1>{{ if eq .Lang "zh" }}团队成员{{ else }}People{{ end }}</h1>
+    <p>{{ if eq .Lang "zh" }}汇集无线感知、网络系统与智能计算方向的教师、学生和校友。{{ else }}Faculty, students, and alumni working across sensing, networking, and intelligent systems.{{ end }}</p>
+  </div>
+</header>
+{{ $advisors := where .Pages "Params.alumni" false }}
+{{ $members := where .Pages "Params.alumni" true }}
+<section class="section">
+  <div class="site-container">
+    <div class="section-heading"><div class="section-heading__copy"><h2>{{ .Site.Params.advisors }}</h2></div></div>
+    <div class="advisor-grid">
+      {{ range $advisors.ByTitle }}
+        {{ $image := partial "asset-url.html" (.Params.image | default "people/LeiWang.png") }}
+        <article class="advisor-card">
+          <a href="{{ .RelPermalink }}"><img class="advisor-card__image" src="{{ $image }}" alt="{{ .Title }}"></a>
+          <div class="advisor-card__body">
+            <h3><a href="{{ .RelPermalink }}">{{ if eq $.Lang "zh" }}{{ .Params.name_cn | default .Title }}{{ else }}{{ .Params.name | default .Title }}{{ end }}</a></h3>
+            <p>{{ if eq $.Lang "zh" }}{{ .Params.name | default .Title }} · {{ .Params.degree }}{{ else }}{{ .Params.name_cn }} · {{ .Params.degree }}{{ end }}</p>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<section class="section section--soft">
+  <div class="site-container">
+    <div class="section-heading"><div class="section-heading__copy"><h2>{{ .Site.Params.members }}</h2></div></div>
+    <div class="member-grid">
+      {{ range $members.ByTitle }}
+        {{ $displayName := cond (eq $.Lang "zh") (.Params.name_cn | default .Title) (.Params.name | default .Title) }}
+        <article class="member-card">
+          <span class="member-card__mark" aria-hidden="true">{{ substr $displayName 0 1 }}</span>
+          <div>
+            <h3><a href="{{ .RelPermalink }}">{{ $displayName }}</a></h3>
+            <p>{{ if eq $.Lang "zh" }}{{ .Params.name }} · {{ .Params.work }}{{ else }}{{ .Params.name_cn }} · {{ .Params.work }}{{ end }}</p>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

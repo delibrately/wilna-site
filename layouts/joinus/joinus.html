@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <header class="detail-header">
+    <div class="site-container"><p class="eyebrow">Wilna Lab</p><h1>{{ .Title }}</h1></div>
+  </header>
+  <article class="site-container prose-content">
+    {{ .Content }}
+    <a class="button button--primary" href="mailto:{{ .Site.Params.email }}">{{ if eq .Lang "zh" }}联系实验室{{ else }}Contact the lab{{ end }}</a>
+  </article>
+{{ end }}

@@ -1,7 +1,7 @@
 baseURL = "https://delibrately.github.io/wilna-site/"
 title = "Wilna"
 theme = "blist"
-languageCode = 'en-us'
+languageCode = "zh-cn"
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = true
 enableEmoji = true
@@ -15,16 +15,35 @@ relativeURLs = false
 [languages]
   [languages.en]
     contentDir = "content/en"
-    weight = 1
+    weight = 2
     languageName = "English"
     [languages.en.params]
       news = "News"
+      heroEyebrow = "Dalian University of Technology"
+      heroTitle = "Wilna Lab"
+      heroDescription = "We study wireless sensing, acoustic intelligence, Internet of Things, and dependable networked systems."
+      heroPrimary = "Explore research"
+      heroSecondary = "Meet the team"
+      latestNews = "Latest publications"
+      latestNewsDescription = "Recent work from our team across sensing, networking, and intelligent systems."
+      researchTitle = "Research directions"
+      researchDescription = "We build practical systems where wireless signals, sensing, and intelligence meet."
+      viewAll = "View all"
+      learnMore = "Learn more"
+      advisors = "Faculty"
+      members = "Students and alumni"
+      publications = "Publications"
+      abstract = "Abstract"
+      bibtex = "BibTeX"
+      contactTitle = "Work with us"
+      contactDescription = "We welcome motivated students and research collaborators."
+      contactAction = "Contact the lab"
 
     [[languages.en.params.about]]
       content = "We are a research lab of Wilna, led by Prof. Lei Wang."
 
     [[languages.en.params.about]]
-      content = "Our lab focuses on the ."
+      content = "Our research spans wireless sensing, acoustic intelligence, Internet of Things, and networked systems."
 
     [[languages.en.params.about]]
       content = "Undergraduate students who are highly self-motivated, and interested in this research direction, are welcome to join our Wilna lab (contact: lei.wang@dlut.edu.cn)"
@@ -51,28 +70,38 @@ relativeURLs = false
 
   [languages.zh]
     contentDir = "content/zh"
-    weight = 2
-    languageName = "Chinese"
+    weight = 1
+    languageName = "中文"
     [languages.zh.params]
-      
       news = "新闻"
+      heroEyebrow = "大连理工大学"
+      heroTitle = "Wilna 实验室"
+      heroDescription = "面向无线感知、声学智能、物联网与网络化系统，探索可落地、可信赖的智能技术。"
+      heroPrimary = "了解研究方向"
+      heroSecondary = "认识团队成员"
+      latestNews = "最新成果"
+      latestNewsDescription = "聚焦无线感知、网络系统与智能计算的近期研究工作。"
+      researchTitle = "研究方向"
+      researchDescription = "让无线信号、环境感知与智能计算在真实场景中协同工作。"
+      viewAll = "查看全部"
+      learnMore = "了解更多"
+      advisors = "指导教师"
+      members = "学生与校友"
+      publications = "论文成果"
+      abstract = "摘要"
+      bibtex = "BibTeX"
+      contactTitle = "加入与合作"
+      contactDescription = "欢迎对相关方向感兴趣的同学和研究伙伴与我们联系。"
+      contactAction = "联系实验室"
       homepage.social.title = "联系我们团队"
       homepage.social.description = "如果你对我们Wilna团队感兴趣，欢迎联系我们！"
 
     [[languages.zh.params.about]]
       content = "我们是一个由王雷教授领导的Wilna研究实验室。"
     [[languages.zh.params.about]]
-      content = "我们的实验室专注于xxxxxxxxxxxx。"
+      content = "我们聚焦无线感知、声学智能、物联网与网络化系统。"
     [[languages.zh.params.about]]
       content = "欢迎自学能力强、对该研究方向感兴趣的本科生加入我们的Wilna实验室。"
-    [[languages.zh.params.about]]
-      content = "联系方式："
-    [[languages.zh.params.about]]
-      content = "lei.wang@dlut.edu.cn"
-    [[languages.zh.params.about]]
-      content = "lei.wang@dlut.edu.cn"  
-    [[languages.zh.params.about]]
-      content = "lei.wang@dlut.edu.cn"
 
 
     # [[languages.zh.menu.main]]
@@ -113,6 +142,8 @@ relativeURLs = false
 [params]
   altLogo = "Dut.png"
   teamLogo = "logo1.png"
+  description = "Wilna Lab at Dalian University of Technology"
+  email = "lei.wang@dlut.edu.cn"
 
   # Enable the darkmode toggle in header
   # darkModeToggle = true

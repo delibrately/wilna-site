@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <header class="detail-header">
+    <div class="site-container">
+      <p class="eyebrow">Wilna Lab</p>
+      <h1>{{ .Title }}</h1>
+      {{ partial "translation-pill.html" . }}
+    </div>
+  </header>
+  <article class="site-container prose-content">{{ .Content }}</article>
+{{ end }}

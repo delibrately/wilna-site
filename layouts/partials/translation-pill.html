@@ -1,0 +1,7 @@
+{{ if .IsTranslated }}
+  {{ range .Translations }}
+    <a class="translation-pill" href="{{ .RelPermalink }}" lang="{{ .Lang }}">
+      {{ if eq .Lang "zh" }}中文版{{ else }}English version{{ end }}
+    </a>
+  {{ end }}
+{{ end }}

@@ -2,7 +2,7 @@
 title = 'Research'
 draft = false
 type = 'research'
-layout = 'researchList'
+layout = 'overview'
 +++
 
 # Research Areas

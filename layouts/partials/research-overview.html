@@ -1,0 +1,22 @@
+<header class="page-heading">
+  <div class="site-container">
+    <p class="eyebrow">Wilna Lab</p>
+    <h1>{{ .Site.Params.researchTitle }}</h1>
+    <p>{{ .Site.Params.researchDescription }}</p>
+  </div>
+</header>
+<section class="section section--soft">
+  <div class="site-container research-grid">
+    {{ range .Pages.ByTitle }}
+      {{ $image := partial "asset-url.html" (.Params.img | default "intro/1.jpg") }}
+      <article class="research-card">
+        <img class="research-card__image" src="{{ $image }}" alt="{{ .Title }}">
+        <div class="research-card__content">
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Params.intro }}</p>
+          <a class="card-link" href="{{ .RelPermalink }}">{{ $.Site.Params.learnMore }} →</a>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
