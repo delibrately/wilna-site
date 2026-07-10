@@ -93,3 +93,11 @@ GitHub Actions 使用 `.github/workflows/hugo.yaml` 构建并上传 `public/`，
 3. 对首页、团队、导师详情、研究、研究详情、论文、论文详情、新闻和加入页面执行桌面与手机宽度检查。
 4. 手机端菜单可展开，包含研究、团队、论文和语言切换四个入口。
 5. 验证目标为：无站内 404、无缺图、无空链接、无错误根路径、无横向溢出。
+
+### 最终部署结果
+
+1. 发现仓库同时启用了 Hugo Actions 与 GitHub Pages 分支发布，两套流程会互相覆盖；Hugo Actions 虽然成功，随后分支构建仍会用源码根目录覆盖站点并产生平台级 404。
+2. 将源码长期保存在 `codex/github-pages-source`，将 Pages 实际监听的 `codex/github-pages-fix` 更新为生产静态文件；`main` 同步保留同一份静态树。
+3. Pages 静态树 SHA 为 `a9fccc5a70ac339f26aa53dce2c8eea20f000718`，与本地最终构建完全一致。
+4. GitHub 内置 `pages-build-deployment #9` 成功完成，线上地址 `https://delibrately.github.io/wilna-site/zh/` 恢复为 HTTP 200。
+5. 线上复查首页、团队、研究、论文、论文详情、新闻详情和加入页面均为 HTTP 200；桌面与手机端无缺图和横向溢出，手机菜单可正常展开。
