@@ -1,6 +1,12 @@
 {{ define "main" }}
-  {{ $hero := partial "asset-url.html" "intro/3.jpg" }}
-  <section class="hero" style="background-image: url('{{ $hero }}')">
+  {{ $heroImages := .Site.Params.introImages }}
+  <section class="hero" data-hero-carousel aria-roledescription="carousel" aria-label="{{ if eq .Lang "zh" }}实验室团队合影{{ else }}Lab team photos{{ end }}">
+    <div class="hero__slides">
+      {{ range $index, $image := $heroImages }}
+        {{ $hero := partial "asset-url.html" $image.src }}
+        <div class="hero__slide{{ if eq $index 0 }} is-active{{ end }}" data-hero-slide style="background-image: url('{{ $hero }}')" aria-hidden="{{ if eq $index 0 }}false{{ else }}true{{ end }}"></div>
+      {{ end }}
+    </div>
     <div class="site-container hero__content">
       <p class="eyebrow">{{ .Site.Params.heroEyebrow }}</p>
       <h1>{{ .Site.Params.heroTitle }}</h1>
@@ -10,6 +16,13 @@
         <a class="button button--light" href="{{ "people/" | relLangURL }}">{{ .Site.Params.heroSecondary }}</a>
       </div>
     </div>
+    {{ if gt (len $heroImages) 1 }}
+      <div class="site-container hero__pagination" role="group" aria-label="{{ if eq .Lang "zh" }}选择团队合影{{ else }}Choose a team photo{{ end }}">
+        {{ range $index, $image := $heroImages }}
+          <button class="hero__dot{{ if eq $index 0 }} is-active{{ end }}" type="button" data-hero-dot data-slide-index="{{ $index }}" aria-label="{{ if eq $.Lang "zh" }}显示第 {{ add $index 1 }} 张团队合影{{ else }}Show team photo {{ add $index 1 }}{{ end }}"{{ if eq $index 0 }} aria-current="true"{{ end }}></button>
+        {{ end }}
+      </div>
+    {{ end }}
   </section>
 
   {{ $researchPages := where .Site.RegularPages "Type" "research" }}

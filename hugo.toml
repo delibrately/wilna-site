@@ -128,9 +128,9 @@ relativeURLs = false
 [[params.introImages]]
   src = "intro/3.jpg"
 [[params.introImages]]
-  src = "intro/2.jpg"
-[[params.introImages]]
   src = "intro/1.jpg"
+[[params.introImages]]
+  src = "intro/2.jpg"
 
 
 
