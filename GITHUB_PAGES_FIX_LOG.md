@@ -101,3 +101,12 @@ GitHub Actions 使用 `.github/workflows/hugo.yaml` 构建并上传 `public/`，
 3. Pages 静态树 SHA 为 `a9fccc5a70ac339f26aa53dce2c8eea20f000718`，与本地最终构建完全一致。
 4. GitHub 内置 `pages-build-deployment #9` 成功完成，线上地址 `https://delibrately.github.io/wilna-site/zh/` 恢复为 HTTP 200。
 5. 线上复查首页、团队、研究、论文、论文详情、新闻详情和加入页面均为 HTTP 200；桌面与手机端无缺图和横向溢出，手机菜单可正常展开。
+
+---
+
+## 2026-07-11 首页轮播与研究图片更新
+
+1. 首页 Hero 从单张 `intro/3.jpg` 改为 `intro/3.jpg`、`intro/1.jpg`、`intro/2.jpg` 三图轮播，每 6 秒自动切换；重复的 `intro/4.jpg` 已删除。
+2. 增加可点击轮播圆点、悬停与键盘聚焦暂停，并兼容系统“减少动态效果”设置。
+3. 新增 `assets/research/5.png`，替换中英文声学感知研究卡片和详情页图片。
+4. 新增 `assets/research/6.png`，替换中英文无线感知研究卡片和详情页图片。

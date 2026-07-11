@@ -133,10 +133,32 @@ body.lab-site a {
   min-height: 640px;
   display: flex;
   align-items: center;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   color: var(--white);
   isolation: isolate;
+}
+
+.hero__slides,
+.hero__slide {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__slides {
+  z-index: -2;
+}
+
+.hero__slide {
+  opacity: 0;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.025);
+  transition: opacity 900ms ease, transform 6s ease;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .hero::before {
@@ -148,8 +170,43 @@ body.lab-site a {
 }
 
 .hero__content {
+  position: relative;
+  z-index: 1;
   max-width: 700px;
   padding-block: 104px;
+}
+
+.hero__pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  transform: translateX(-50%);
+}
+
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: width 160ms ease, border-radius 160ms ease, background 160ms ease;
+}
+
+.hero__dot.is-active {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--white);
+}
+
+.hero__dot:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
 }
 
 .eyebrow {
@@ -743,6 +800,9 @@ body.lab-site a {
 
   .hero {
     min-height: 590px;
+  }
+
+  .hero__slide {
     background-position: 58% center;
   }
 
@@ -760,6 +820,11 @@ body.lab-site a {
 
   .hero__description {
     font-size: 17px;
+  }
+
+  .hero__pagination {
+    bottom: 20px;
+    justify-content: center;
   }
 
   .button-row,
@@ -843,5 +908,12 @@ body.lab-site a {
 
   .paper-item .badge {
     justify-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide,
+  .hero__dot {
+    transition: none;
   }
 }
