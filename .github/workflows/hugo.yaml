@@ -8,8 +8,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: wilna-pages-publication
@@ -37,11 +35,6 @@ jobs:
       - name: Audit generated internal links and assets
         run: python3 scripts/audit-links.py public
 
-      - name: Upload built website for Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-
       - name: Checkout static Pages branch
         uses: actions/checkout@v4
         with:
@@ -62,14 +55,3 @@ jobs:
             git -C _pages_checkout commit -m "Publish Hugo build from ${GITHUB_SHA}"
             git -C _pages_checkout push origin HEAD:codex/github-pages-fix
           fi
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
