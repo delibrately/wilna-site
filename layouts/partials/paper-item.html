@@ -1,0 +1,9 @@
+{{ $ui := index .Site.Data.ui .Lang }}
+{{ $topic := index .Site.Data.paper_topics (lower .File.ContentBaseName) | default "other" }}
+<article class="paper-item" data-paper data-year="{{ .Date.Year }}" data-topic="{{ $topic }}">
+  <div class="paper-item__meta"><span>{{ .Date.Year }}</span><span>{{ index $ui $topic }}</span>{{ with .Params.ccf }}<span class="badge">CCF {{ . }}</span>{{ end }}</div>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  {{ with .Params.paper.author }}<p class="paper-item__authors">{{ range $i, $author := . }}{{ if $i }}, {{ end }}{{ $author.name }}{{ end }}</p>{{ end }}
+  <p class="paper-item__venue">{{ .Params.publisher }}</p>
+  <div class="paper-item__links"><a href="{{ .RelPermalink }}">{{ $ui.paper }}<span class="sr-only">: {{ .Title }}</span></a>{{ with .Params.doi }}<a href="{{ cond (hasPrefix . "http") . (printf "https://doi.org/%s" .) }}" target="_blank" rel="noopener">{{ $ui.doi }} <span aria-hidden="true">↗</span><span class="sr-only">: {{ $.Title }}</span></a>{{ end }}</div>
+</article>

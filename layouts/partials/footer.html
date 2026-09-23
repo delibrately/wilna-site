@@ -1,80 +1,9 @@
-<footer class="site-footer">
-  <div class="site-container site-footer__inner">
-    <span>© {{ now.Year }} Wilna Lab · Dalian University of Technology</span>
-    <div class="site-footer__links">
-      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
-      <a href="https://www.dlut.edu.cn/" target="_blank" rel="noopener">DLUT</a>
-    </div>
-  </div>
-</footer>
-<script>
-  (() => {
-    const button = document.querySelector('.menu-toggle');
-    const navigation = document.querySelector('.site-nav');
-    if (!button || !navigation) return;
-    button.addEventListener('click', () => {
-      const open = navigation.classList.toggle('is-open');
-      button.setAttribute('aria-expanded', String(open));
-    });
-    navigation.addEventListener('click', (event) => {
-      if (event.target.closest('a')) {
-        navigation.classList.remove('is-open');
-        button.setAttribute('aria-expanded', 'false');
-      }
-    });
-  })();
-
-  (() => {
-    const carousel = document.querySelector('[data-hero-carousel]');
-    if (!carousel) return;
-
-    const slides = Array.from(carousel.querySelectorAll('[data-hero-slide]'));
-    const dots = Array.from(carousel.querySelectorAll('[data-hero-dot]'));
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let activeIndex = 0;
-    let timer;
-
-    const showSlide = (index) => {
-      activeIndex = (index + slides.length) % slides.length;
-      slides.forEach((slide, slideIndex) => {
-        const active = slideIndex === activeIndex;
-        slide.classList.toggle('is-active', active);
-        slide.setAttribute('aria-hidden', String(!active));
-      });
-      dots.forEach((dot, dotIndex) => {
-        const active = dotIndex === activeIndex;
-        dot.classList.toggle('is-active', active);
-        if (active) dot.setAttribute('aria-current', 'true');
-        else dot.removeAttribute('aria-current');
-      });
-    };
-
-    const stop = () => window.clearInterval(timer);
-    const start = () => {
-      stop();
-      if (slides.length < 2 || reduceMotion.matches) return;
-      timer = window.setInterval(() => showSlide(activeIndex + 1), 6000);
-    };
-
-    dots.forEach((dot) => {
-      dot.addEventListener('click', () => {
-        showSlide(Number(dot.dataset.slideIndex));
-        start();
-      });
-    });
-
-    carousel.addEventListener('mouseenter', stop);
-    carousel.addEventListener('mouseleave', start);
-    carousel.addEventListener('focusin', stop);
-    carousel.addEventListener('focusout', (event) => {
-      if (!carousel.contains(event.relatedTarget)) start();
-    });
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) stop();
-      else start();
-    });
-
-    showSlide(0);
-    start();
-  })();
-</script>
+{{ $ui := index .Site.Data.ui .Lang }}
+<footer class="site-footer"><div class="site-container">
+  <div class="site-footer__main"><div class="site-footer__about"><a class="footer-brand" href="{{ .Site.Home.RelPermalink }}">Wilna Lab<span>{{ $ui.university }}</span></a><p>{{ $ui.footerMission }}</p></div>
+    <nav class="site-footer__links" aria-label="{{ if eq .Lang "zh" }}页脚导航{{ else }}Footer navigation{{ end }}"><a href="{{ "research/" | relLangURL }}">{{ $ui.research }}</a><a href="{{ "people/" | relLangURL }}">{{ $ui.people }}</a><a href="{{ "papers/" | relLangURL }}">{{ $ui.papers }}</a><a href="{{ "joinus/" | relLangURL }}">{{ $ui.join }}</a></nav>
+    <div class="site-footer__contact"><span>{{ $ui.contact }}</span><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><a href="https://www.dlut.edu.cn/">{{ $ui.university }} <span aria-hidden="true">↗</span></a></div>
+  </div><div class="site-footer__bottom">© {{ now.Year }} Wilna Lab · {{ $ui.university }}</div>
+</div></footer>
+{{ $script := resources.Get "js/lab.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>

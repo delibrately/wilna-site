@@ -110,3 +110,11 @@ GitHub Actions 使用 `.github/workflows/hugo.yaml` 构建并上传 `public/`，
 2. 增加可点击轮播圆点、悬停与键盘聚焦暂停，并兼容系统“减少动态效果”设置。
 3. 新增 `assets/research/5.png`，替换中英文声学感知研究卡片和详情页图片。
 4. 新增 `assets/research/6.png`，替换中英文无线感知研究卡片和详情页图片。
+
+---
+
+## 2026-09-23 视觉与交互升级（本地待审阅）
+
+本轮在现有 Hugo 源码中升级首页、导航、研究详情、团队、论文、新闻与加入页面，保留 GitHub Pages 子路径与中英文路由。用户确认所有 43 位非教师成员均为在读学生，已据此新增明确的成员身份字段。
+
+完整修改文件、设计变化、测试结果、部署说明和待补充资料见 [VISUAL_UPGRADE_LOG.md](VISUAL_UPGRADE_LOG.md)。本轮未推送或发布到 GitHub。

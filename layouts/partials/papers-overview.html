@@ -1,22 +1,13 @@
-<header class="page-heading">
-  <div class="site-container">
-    <p class="eyebrow">Wilna Lab</p>
-    <h1>{{ .Site.Params.publications }}</h1>
-    <p>{{ if eq .Lang "zh" }}实验室近期发表的期刊、会议论文与系统研究成果。{{ else }}Journal articles, conference papers, and systems research from the lab.{{ end }}</p>
-  </div>
-</header>
-<section class="section section--soft">
-  <div class="site-container paper-list">
-    {{ range .Pages.ByDate.Reverse }}
-      <article class="paper-item">
-        <div class="paper-item__year">{{ if gt .Date.Year 1 }}{{ .Date.Year }}{{ else }}—{{ end }}</div>
-        <div>
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          {{ with .Params.paper.author }}<p>{{ range $index, $author := . }}{{ if $index }}, {{ end }}{{ $author.name }}{{ end }}</p>{{ end }}
-          {{ with .Params.publisher }}<p>{{ . }}</p>{{ end }}
-        </div>
-        {{ with .Params.ccf }}<span class="badge">CCF {{ . }}</span>{{ end }}
-      </article>
-    {{ end }}
-  </div>
-</section>
+{{ $ui := index .Site.Data.ui .Lang }}
+{{ $papers := .Pages.ByDate.Reverse }}
+<header class="page-heading"><div class="site-container"><p class="eyebrow">Publications</p><h1>{{ $ui.papers }}</h1><p>{{ if eq .Lang "zh" }}我们的期刊、会议论文与系统研究成果。{{ else }}Journal articles, conference papers, and systems research from our team.{{ end }}</p></div></header>
+<section class="section"><div class="site-container" data-paper-list>
+  <form class="paper-filters" data-paper-filters hidden aria-label="{{ $ui.papers }}">
+    <div><label for="paper-year">{{ $ui.year }}</label><select id="paper-year" name="year"><option value="">{{ $ui.allYears }}</option>{{ range $papers.GroupByDate "2006" }}<option value="{{ .Key }}">{{ .Key }}</option>{{ end }}</select></div>
+    <div><label for="paper-topic">{{ $ui.topic }}</label><select id="paper-topic" name="topic"><option value="">{{ $ui.allTopics }}</option>{{ range slice "wireless" "acoustic" "networking" "sensing" }}<option value="{{ . }}">{{ index $ui . }}</option>{{ end }}</select></div>
+    <button class="button button--outline" type="reset">{{ $ui.reset }}</button>
+  </form>
+  <p class="filter-count" role="status" aria-live="polite" data-paper-count data-label="{{ $ui.resultCount }}">{{ len $papers }} {{ $ui.resultCount }}</p>
+  <div class="paper-list">{{ range $papers.GroupByDate "2006" }}<section class="year-group" data-year-group aria-labelledby="year-{{ .Key }}"><h2 id="year-{{ .Key }}">{{ .Key }}</h2><div>{{ range .Pages }}{{ partial "paper-item.html" . }}{{ end }}</div></section>{{ end }}</div>
+  <p class="empty-state" data-paper-empty hidden>{{ $ui.noResults }}</p>
+</div></section>

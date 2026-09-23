@@ -1,33 +1,22 @@
-{{ $universityLogo := partial "asset-url.html" "Dut.png" }}
-{{ $teamLogo := partial "asset-url.html" "logo1.png" }}
-<header class="site-header">
-  <div class="site-container site-header__inner">
-    <a class="site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">
-      <img class="site-brand__university" src="{{ $universityLogo }}" alt="Dalian University of Technology">
-      <img class="site-brand__team" src="{{ $teamLogo }}" alt="Wilna Lab">
-    </a>
-
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 7h16M4 12h16M4 17h16"/>
-      </svg>
-    </button>
-
-    <nav id="site-navigation" class="site-nav" aria-label="Primary navigation">
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-      {{ end }}
-      {{ range .Site.Languages }}
-        {{ if ne .Lang $.Site.Language.Lang }}
-          <a class="language-link" href="{{ printf "%s/" .Lang | relURL }}" lang="{{ .Lang }}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="12" cy="12" r="9"/>
-              <path d="M3.5 9h17M3.5 15h17M12 3c2.2 2.5 3.3 5.5 3.3 9S14.2 18.5 12 21c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3Z"/>
-            </svg>
-            {{ .LanguageName }}
-          </a>
-        {{ end }}
-      {{ end }}
-    </nav>
+{{ $ui := index .Site.Data.ui .Lang }}
+<a class="skip-link" href="#main-content">{{ $ui.skip }}</a>
+<header class="site-header"><div class="site-container site-header__inner">
+  <div class="site-brand">
+    <a href="https://www.dlut.edu.cn/" aria-label="{{ $ui.university }}">{{ partial "image.html" (dict "src" "Dut.png" "alt" $ui.university "class" "site-brand__university" "width" 112 "sizes" "44px") }}</a>
+    <span class="site-brand__divider" aria-hidden="true"></span>
+    <a href="{{ .Site.Home.RelPermalink }}" aria-label="Wilna Lab · {{ $ui.home }}">{{ partial "image.html" (dict "src" "logo1.png" "alt" "Wilna Lab" "class" "site-brand__team" "width" 320 "sizes" "122px") }}</a>
   </div>
-</header>
+  <button class="menu-toggle icon-button" type="button" aria-label="{{ $ui.menu }}" title="{{ $ui.menu }}" aria-expanded="false" aria-controls="site-navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path class="menu-lines" d="M4 7h16M4 12h16M4 17h16"/><path class="menu-cross" d="m6 6 12 12M6 18 12-12"/></svg></button>
+  <nav id="site-navigation" class="site-nav" aria-label="{{ $ui.navigation }}">
+    {{ range .Site.Menus.main }}
+      {{ $target := .Page }}
+      {{ $active := or (eq $.RelPermalink $target.RelPermalink) (and (not $target.IsHome) (hasPrefix $.RelPermalink $target.RelPermalink)) }}
+      <a href="{{ $target.RelPermalink }}"{{ if $active }} class="is-active" aria-current="{{ if eq $.RelPermalink $target.RelPermalink }}page{{ else }}location{{ end }}"{{ end }}>{{ .Name }}</a>
+    {{ end }}
+    {{ range .Site.Sites }}{{ if ne .Language.Lang $.Lang }}
+      {{ $target := .Home }}
+      {{ with $.Translations }}{{ range . }}{{ $target = . }}{{ end }}{{ else }}{{ with .GetPage $.Section }}{{ $target = . }}{{ end }}{{ end }}
+      <a class="language-link" href="{{ $target.RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">{{ if eq .Language.Lang "en" }}EN{{ else }}中文{{ end }}</a>
+    {{ end }}{{ end }}
+  </nav>
+</div></header>

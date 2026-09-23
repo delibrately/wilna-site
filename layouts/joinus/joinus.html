@@ -1,9 +1,6 @@
 {{ define "main" }}
-  <header class="detail-header">
-    <div class="site-container"><p class="eyebrow">Wilna Lab</p><h1>{{ .Title }}</h1></div>
-  </header>
-  <article class="site-container prose-content">
-    {{ .Content }}
-    <a class="button button--primary" href="mailto:{{ .Site.Params.email }}">{{ if eq .Lang "zh" }}联系实验室{{ else }}Contact the lab{{ end }}</a>
-  </article>
+{{ $ui := index .Site.Data.ui .Lang }}
+<header class="page-heading"><div class="site-container"><p class="eyebrow">Join Wilna</p><h1>{{ $ui.join }}</h1><p>{{ $ui.joinIntro }}</p></div></header>
+<section class="section"><div class="site-container editorial-grid"><div class="section-heading--side"><h2>{{ $ui.joinDirections }}</h2><p>{{ $ui.applicationIntro }}</p><a class="text-link" href="{{ "research/" | relLangURL }}">{{ $ui.research }} <span aria-hidden="true">↗</span></a></div><div class="join-directions">{{ range (where .Site.RegularPages "Type" "research").ByTitle }}{{ $data := index $.Site.Data.research (lower .File.ContentBaseName) }}<article><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p>{{ (index $data $.Lang).summary }}</p></article>{{ end }}</div></div></section>
+<section class="section section--soft"><div class="site-container editorial-grid"><div class="section-heading--side"><p class="eyebrow">Get in touch</p><h2>{{ $ui.application }}</h2><a class="contact-email" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></div><div><ol class="question-list">{{ range $ui.applicationSteps }}<li>{{ . }}</li>{{ end }}</ol><p class="notice">{{ $ui.joinNote }}</p>{{ .Content }}</div></div></section>
 {{ end }}

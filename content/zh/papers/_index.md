@@ -1,5 +1,5 @@
 +++
-title = 'Publications'
+title = '论文成果'
 date = 2024-04-28T20:26:03+08:00
 draft = false
 type = 'paper'

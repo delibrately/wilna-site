@@ -1,22 +1,4 @@
-<header class="page-heading">
-  <div class="site-container">
-    <p class="eyebrow">Wilna Lab</p>
-    <h1>{{ .Site.Params.researchTitle }}</h1>
-    <p>{{ .Site.Params.researchDescription }}</p>
-  </div>
-</header>
-<section class="section section--soft">
-  <div class="site-container research-grid">
-    {{ range .Pages.ByTitle }}
-      {{ $image := partial "asset-url.html" (.Params.img | default "intro/1.jpg") }}
-      <article class="research-card">
-        <img class="research-card__image" src="{{ $image }}" alt="{{ .Title }}">
-        <div class="research-card__content">
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p>{{ .Params.intro }}</p>
-          <a class="card-link" href="{{ .RelPermalink }}">{{ $.Site.Params.learnMore }} →</a>
-        </div>
-      </article>
-    {{ end }}
-  </div>
-</section>
+{{ $ui := index .Site.Data.ui .Lang }}
+<header class="page-heading"><div class="site-container"><p class="eyebrow">Research directions</p><h1>{{ $ui.research }}</h1><p>{{ .Site.Params.researchDescription }}</p></div></header>
+<section class="section" aria-labelledby="research-areas"><div class="site-container"><h2 class="sr-only" id="research-areas">{{ $ui.research }}</h2><div class="research-grid">{{ range .Pages.ByTitle }}{{ partial "research-card.html" . }}{{ end }}</div></div></section>
+<section class="section section--soft"><div class="site-container"><div class="section-heading"><div><p class="eyebrow">Featured research</p><h2>{{ $ui.featured }}</h2></div></div><div class="project-grid">{{ range .Site.Data.featured_research }}{{ partial "project-card.html" (dict "page" $ "project" .) }}{{ end }}</div></div></section>

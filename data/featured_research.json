@@ -1,0 +1,4 @@
+[
+  {"id":"wimti","name":"WiMTI","paper":"papers/WiMTI","topic":"wireless","zh":{"question":"人体姿态变化会如何影响基于 Wi-Fi 的身份识别？","method":"多任务学习与动态交叉缝合单元，在身份和姿态识别任务间实现特征自适应融合。"},"en":{"question":"How do changes in posture affect Wi-Fi-based identity recognition?","method":"Multitask learning and dynamic cross-stitch units adaptively fuse features across identity and posture recognition."}},
+  {"id":"powernetmax","name":"PowerNetMax","paper":"papers/PowerNetMax","topic":"networking","zh":{"question":"如何优化复杂环境下大规模 IoT 网络的覆盖与能量效率？","method":"结合深度强化学习（DRL）与图神经网络（GNN），动态调整智能反射面（IRS）的相位。"},"en":{"question":"How can large IoT networks improve coverage and energy efficiency in complex environments?","method":"Deep reinforcement learning (DRL) and graph neural networks (GNN) dynamically adjust intelligent reflecting surface (IRS) phases."}}
+]

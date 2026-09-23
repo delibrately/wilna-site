@@ -2,6 +2,7 @@
 title = 'Shengjie Li'
 draft = false
 alumni = true
+member_status = 'student'
 
 type = 'people'
 layout = 'people'

@@ -1,5 +1,5 @@
 +++
-title = 'People'
+title = '团队成员'
 mentor = "导师"
 alumni_title = "学生"
 draft = false

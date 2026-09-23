@@ -2,6 +2,7 @@
 title = 'Zhenquan Qin'
 draft = false
 alumni = false
+member_status = 'faculty'
 
 type = 'people'
 layout = 'mentor'

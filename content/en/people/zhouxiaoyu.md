@@ -2,6 +2,7 @@
 title = 'Xiaoyu Zhou'
 draft = false
 alumni = true
+member_status = 'student'
 
 type = 'people'
 layout = 'people'

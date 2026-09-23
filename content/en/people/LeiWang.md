@@ -3,6 +3,7 @@ title = 'Lei Wang'
 date = 2000-04-30T14:27:08+08:00
 draft = false
 alumni = false
+member_status = 'faculty'
 
 type = 'people'
 layout = 'mentor'

@@ -1,18 +1,16 @@
 {{ define "main" }}
-  {{ $image := partial "asset-url.html" (.Params.img | default "intro/1.jpg") }}
-  <header class="detail-header">
-    <div class="site-container">
-      <p class="eyebrow">{{ .Site.Params.researchTitle }}</p>
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.intro }}<p class="detail-header__meta">{{ . }}</p>{{ end }}
-      {{ partial "translation-pill.html" . }}
-    </div>
-  </header>
-  <div class="site-container">
-    <img class="detail-image" src="{{ $image }}" alt="{{ .Title }}">
-    <article class="detail-layout">
-      {{ range .Params.detailedIntro }}<p>{{ . }}</p>{{ end }}
-      {{ .Content }}
-    </article>
-  </div>
+{{ $ui := index .Site.Data.ui .Lang }}
+{{ $data := index .Site.Data.research (lower .File.ContentBaseName) }}
+{{ $copy := index $data .Lang }}
+<header class="detail-header"><div class="site-container"><a class="back-link" href="{{ "research/" | relLangURL }}">← {{ $ui.backResearch }}</a><p class="eyebrow">{{ $ui.research }} / {{ $data.number }}</p><h1>{{ .Title }}</h1><p class="detail-header__lead">{{ $copy.summary }}</p></div></header>
+<figure class="site-container research-figure">{{ partial "image.html" (dict "src" .Params.img "alt" .Title "class" "detail-image" "width" 1600 "sizes" "(max-width: 1240px) 100vw, 1220px" "loading" "eager") }}<figcaption>{{ $ui.figureCaption }}</figcaption></figure>
+<section class="section"><div class="site-container editorial-grid"><div class="section-heading--side"><p class="eyebrow">Questions</p><h2>{{ $ui.problem }}</h2></div><ol class="question-list">{{ range $copy.questions }}<li>{{ . }}</li>{{ end }}</ol></div></section>
+<section class="section section--soft"><div class="site-container"><div class="section-heading"><div><p class="eyebrow">Approach</p><h2>{{ $ui.approach }}</h2></div></div><div class="method-grid">{{ range $i, $method := $copy.methods }}<article><span class="section-number" aria-hidden="true">0{{ add $i 1 }}</span><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div></div></section>
+<section class="section"><div class="site-container">
+  <div class="section-heading"><h2>{{ $ui.relatedProjects }}</h2></div>
+  {{ if $data.projects }}<div class="project-grid">{{ range $.Site.Data.featured_research }}{{ if in $data.projects .id }}{{ partial "project-card.html" (dict "page" $ "project" .) }}{{ end }}{{ end }}</div>{{ else }}<p class="empty-copy">{{ $ui.relatedPending }}</p>{{ end }}
+  <div class="section-heading section-heading--spaced"><h2>{{ $ui.relatedPapers }}</h2></div>
+  {{ if $data.papers }}<div class="paper-list">{{ range $data.papers }}{{ with $.Site.GetPage . }}{{ partial "paper-item.html" . }}{{ end }}{{ end }}</div>{{ else }}<p class="empty-copy">{{ $ui.relatedPending }}</p>{{ end }}
+  <details class="research-background"><summary>{{ $ui.background }}</summary><div class="prose"><p>{{ .Params.intro }}</p>{{ range .Params.detailedIntro }}<p>{{ . }}</p>{{ end }}{{ .Content }}</div></details>
+</div></section>
 {{ end }}

@@ -2,27 +2,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-
-  {{ $favicon := partial "asset-url.html" "Dut.png" }}
-  <link rel="icon" href="{{ $favicon }}" type="image/png">
-
-  {{ $themeStyles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/") }}
-  {{ $labStyles := resources.Get "css/lab.css" }}
-  {{ if hugo.IsServer }}
-    <link rel="stylesheet" href="{{ $themeStyles.RelPermalink }}">
-    <link rel="stylesheet" href="{{ $labStyles.RelPermalink }}">
-  {{ else }}
-    {{ $themeStyles = $themeStyles | minify | fingerprint }}
-    {{ $labStyles = $labStyles | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $themeStyles.RelPermalink }}" integrity="{{ $themeStyles.Data.Integrity }}">
-    <link rel="stylesheet" href="{{ $labStyles.RelPermalink }}" integrity="{{ $labStyles.Data.Integrity }}">
+  <script>document.documentElement.classList.add('js');</script>
+  {{ $ui := index .Site.Data.ui .Lang }}
+  <title>{{ if .IsHome }}Wilna Lab · {{ $ui.university }}{{ else }}{{ .Title }} · Wilna Lab{{ end }}</title>
+  {{ $description := .Description }}
+  {{ if not $description }}
+    {{ if eq .Type "research" }}{{ with .File }}{{ with index $.Site.Data.research (lower .ContentBaseName) }}{{ $description = (index . $.Lang).summary }}{{ end }}{{ end }}{{ end }}
+    {{ if and (not $description) (eq .Type "paper") }}{{ with .Params.abstract }}{{ $description = index . 0 }}{{ end }}{{ end }}
+    {{ if and (not $description) (eq .Type "people") }}{{ with .Params.introduction }}{{ $description = (index . 0).content }}{{ else }}{{ $description = printf "%s · %s · Wilna Lab · %s" $.Title ($.Params.work | default $ui.people) $ui.university }}{{ end }}{{ end }}
+    {{ if not $description }}{{ $description = printf "%s · %s" .Title $ui.footerMission }}{{ end }}
   {{ end }}
-
-  {{ range .AlternativeOutputFormats }}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}">
-  {{ end }}
-  {{ partial "opengraph.html" . }}
-  {{ partial "twitter_cards.html" . }}
+  <meta name="description" content="{{ $description | plainify | truncate 180 }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">{{ end }}
+  {{ $favicon := (resources.Get "Dut.png").Resize "64x png" }}
+  <link rel="icon" href="{{ $favicon.RelPermalink }}" type="image/png">
+  {{ $styles := resources.Get "css/lab.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  {{ range .AlternativeOutputFormats }}<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}">{{ end }}
+  <meta property="og:title" content="{{ .Title }} · Wilna Lab">
+  <meta property="og:description" content="{{ $description | plainify | truncate 180 }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta name="twitter:card" content="summary">
 </head>

@@ -7,7 +7,7 @@
       {{ range .Pages.ByDate.Reverse }}
         <article class="news-card">
           {{ if gt .Date.Year 1 }}<div class="news-card__meta">{{ .Date.Year }}</div>{{ end }}
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           {{ with .Description }}<p>{{ . }}</p>{{ end }}
           <a class="card-link" href="{{ .RelPermalink }}">{{ $.Site.Params.learnMore }} →</a>
         </article>

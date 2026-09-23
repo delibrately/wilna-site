@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ $ui := index .Site.Data.ui .Lang }}
+<header class="page-heading"><div class="site-container"><p class="eyebrow">News &amp; updates</p><h1>{{ $ui.news }}</h1><p>{{ .Description }}</p></div></header>
+<section class="section" aria-labelledby="latest-updates"><div class="site-container"><h2 class="sr-only" id="latest-updates">{{ $ui.news }}</h2>{{ partial "news-feed.html" (dict "page" .) }}</div></section>
+<section class="section section--soft" id="archive"><div class="site-container">
+  <div class="section-heading"><div><h2>{{ $ui.archive }}</h2><p>{{ $ui.archiveNote }}</p></div></div>
+  <div class="archive-list">{{ range .Pages.ByTitle }}{{ if not .Params.confirmed_event }}<article><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p>{{ .Description }}</p></article>{{ end }}{{ end }}</div>
+</div></section>
+{{ end }}

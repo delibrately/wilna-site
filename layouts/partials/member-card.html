@@ -1,0 +1,5 @@
+{{ $name := cond (eq .Lang "zh") (.Params.name_cn | default .Title) (.Params.name | default .Title) }}
+<article class="member-card">
+  {{ with .Params.image }}{{ partial "image.html" (dict "src" . "alt" "" "class" "member-card__photo" "width" 160) }}{{ else }}<span class="member-card__mark" aria-hidden="true">{{ substr $name 0 1 }}</span>{{ end }}
+  <div><h3><a href="{{ .RelPermalink }}">{{ $name }}</a></h3><p>{{ if eq .Lang "zh" }}{{ .Params.name }}{{ else }}{{ .Params.name_cn }}{{ end }}</p><span class="member-card__degree">{{ .Params.work }}</span></div>
+</article>

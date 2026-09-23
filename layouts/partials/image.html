@@ -1,0 +1,22 @@
+{{- $path := strings.TrimPrefix "/" .src -}}
+{{- $resource := resources.Get $path -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- if $resource -}}
+  {{- /* Keep existing original-image URLs available alongside optimized variants. */ -}}
+  {{- $originalURL := $resource.RelPermalink -}}
+  {{- $max := int (.width | default 1440) -}}
+  {{- $widths := slice 480 800 1200 1600 1920 -}}
+  {{- $sources := slice -}}
+  {{- range $widths -}}
+    {{- if and (le . $max) (le . $resource.Width) -}}
+      {{- $variant := $resource.Resize (printf "%dx webp q82" .) -}}
+      {{- $sources = $sources | append (printf "%s %dw" $variant.RelPermalink $variant.Width) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $image := $resource.Resize (printf "%dx webp q82" (math.Min $max $resource.Width | int)) -}}
+  {{- $sources = $sources | append (printf "%s %dw" $image.RelPermalink $image.Width) | uniq -}}
+  <img class="{{ .class }}" src="{{ $image.RelPermalink }}" srcset="{{ delimit $sources ", " | safeHTMLAttr }}" sizes="{{ .sizes | default "(max-width: 760px) 100vw, 50vw" }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .alt }}" loading="{{ $loading }}" decoding="async"{{ if eq $loading "eager" }} fetchpriority="high"{{ end }}>
+{{- else -}}
+  {{- $config := images.Config (printf "static/%s" $path) -}}
+  <img class="{{ .class }}" src="{{ $path | relURL }}" width="{{ $config.Width }}" height="{{ $config.Height }}" alt="{{ .alt }}" loading="{{ $loading }}" decoding="async">
+{{- end -}}
