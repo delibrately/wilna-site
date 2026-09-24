@@ -3,6 +3,7 @@ title = 'Lei Wang'
 draft = false
 alumni = false
 member_status = 'faculty'
+faculty_order = 1
 
 type = 'people'
 layout = 'mentor'

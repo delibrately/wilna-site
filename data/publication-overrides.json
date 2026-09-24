@@ -1,0 +1,46 @@
+{
+  "line_wraps": {
+    "edge-|enabled": "edge-enabled", "algo-|rithm": "algorithm", "ship-|ping": "shipping",
+    "dis-|crepancies": "discrepancies", "Zheng-|gang": "Zhenggang", "Zhong-|wei": "Zhongwei",
+    "motif-|guided": "motif-guided", "Confer-|ence": "Conference", "Educa-|tional": "Educational",
+    "SIG-|COMM": "SIGCOMM", "evo-|lutionary": "evolutionary", "Through-|wall": "Through-wall",
+    "Com-|put": "Comput", "thunder-|localization": "thunder-localization", "Her-|bert": "Herbert",
+    "vehi-|cles": "vehicles", "Charg-|ing": "Charging", "acous-|tic": "acoustic",
+    "blockchain-|based": "blockchain-based", "Houb-|ing": "Houbing", "penalty-|based": "penalty-based",
+    "Com-|promising": "Compromising", "Ac-|celerating": "Accelerating", "24-|26": "24-26",
+    "schedul-|ing": "scheduling", "encoder-|decoder": "encoder-decoder", "Sdn-|enabled": "Sdn-enabled",
+    "adap-|tive": "adaptive", "Non-|cooperative": "Non-cooperative", "Zhong-|hao": "Zhonghao",
+    "INFO-|COM": "INFOCOM", "light-|weight": "lightweight", "network-|ing": "networking",
+    "Yu-|Kwong": "Yu-Kwong", "oppor-|tunistic": "opportunistic", "asso-|ciation": "association",
+    "recog-|nition": "recognition", "net-|works": "networks", "restric-|tion": "restriction",
+    "net-|work": "network", "sociality-|aware": "sociality-aware", "Dis-|tributed": "Distributed",
+    "Mobi-|Com": "MobiCom", "Mit-|igating": "Mitigating", "authenti-|cation": "authentication",
+    "propor-|tional": "proportional", "monitor-|ing": "monitoring"
+  },
+  "entries": {
+    "184": {"review_flags": ["source-typography-unconfirmed"]},
+    "233": {"review_flags": ["same-title-distinct-issue"]},
+    "234": {"review_flags": ["same-title-distinct-issue"]}
+  },
+  "relationships": [
+    {"ids": [228, 253, 259], "reason": "Similar proportional-fairness backoff titles and overlapping authors; possible conference/journal versions."},
+    {"ids": [164, 191], "reason": "Similar multiple-AP association titles and overlapping authors; possible conference/journal versions."},
+    {"ids": [215, 245], "reason": "Similar geographic-routing sleep-scheduling titles and overlapping authors; possible conference/journal versions."},
+    {"ids": [220, 260], "reason": "Similar contention-resolution backoff titles and overlapping authors; possible conference/journal versions."},
+    {"ids": [78, 87], "reason": "Same title; conference and CoRR versions. Relationship not externally verified."},
+    {"ids": [173, 181], "reason": "Same title; conference and CoRR versions. Relationship not externally verified."},
+    {"ids": [147, 192], "reason": "Similar traffic-flow titles and overlapping authors; journal and CoRR versions may be related."},
+    {"ids": [55, 102], "reason": "Same title; journal and conference entries may be related versions."},
+    {"ids": [99, 136], "reason": "Same title; journal and conference entries may be related versions."},
+    {"ids": [221, 226], "reason": "Same title with different author lists; journal and conference entries retained."},
+    {"ids": [262, 263], "reason": "Same title apart from capitalization; journal and conference entries retained."},
+    {"ids": [184, 225], "reason": "Same title apart from spacing; journal and conference entries with different author lists."},
+    {"ids": [72, 151], "reason": "Similar charging-scheduling titles and overlapping authors; possible conference/journal versions."},
+    {"ids": [75, 155], "reason": "Similar period-area coverage titles and overlapping authors; possible conference/journal versions."},
+    {"ids": [120, 154], "reason": "Similar directional-charging titles and overlapping authors; possible conference/journal versions."},
+    {"ids": [53, 139], "reason": "Similar Fresnel-diffraction titles and overlapping authors; possible conference/journal versions."},
+    {"ids": [50, 156], "reason": "Similar Fresnel-zone charging topics and overlapping authors; possible conference/journal versions."},
+    {"ids": [195, 209], "reason": "Matching acoustic-localization title phrase and overlapping authors; possible poster/full-paper versions."},
+    {"ids": [231, 237], "reason": "Similar heating-system titles and overlapping authors; possible poster/full-paper versions."}
+  ]
+}

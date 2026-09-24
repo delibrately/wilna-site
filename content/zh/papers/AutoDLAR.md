@@ -13,14 +13,14 @@ bibtex = """@article{lu2024autodlar,
   number={4},
   pages={1234},
   year={2024},
-  doi={10.3390/s24041234}
+  doi={10.1145/3607254}
 }
 """
 
 abstract = [
     "Contact-free human activity recognition (HAR) is critical for healthcare and smart homes, but existing methods rely on single-modal or fully supervised learning. This paper proposes AutoDLAR, a semi-supervised cross-modal HAR system using WiFi CSI and video data. The system combines labeled and unlabeled data with a semi-supervised framework and integrates features via a cross-modal fusion module. Experiments show AutoDLAR achieves higher accuracy than single-modal and fully supervised methods, demonstrating effectiveness in real-world scenarios."
 ]
-doi = "10.3390/s24041234"
+doi = "10.1145/3607254"
 publisher = "ACM Transactions on Sensor Networks"
 ccf = "B"
 publish = "journal"

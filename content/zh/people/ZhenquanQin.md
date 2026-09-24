@@ -3,6 +3,7 @@ title = 'Zhenquan Qin'
 draft = false
 alumni = false
 member_status = 'faculty'
+faculty_order = 2
 
 type = 'people'
 layout = 'mentor'

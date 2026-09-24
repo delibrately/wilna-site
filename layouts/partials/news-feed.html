@@ -4,5 +4,5 @@
 {{ if $news }}
   <div class="news-list">{{ range first (.limit | default 50) $news.ByDate.Reverse }}<article class="news-item"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time><div><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><p>{{ .Description }}</p></div></article>{{ end }}</div>
 {{ else }}
-  <div class="empty-state"><h3>{{ $ui.newsEmpty }}</h3><p>{{ $ui.newsEmptyDetail }}</p><a class="text-link" href="{{ "news/" | relLangURL }}#archive">{{ $ui.archive }} <span aria-hidden="true">↗</span></a></div>
+  <div class="empty-state"><h3>{{ $ui.newsEmpty }}</h3><p>{{ $ui.newsEmptyDetail }}</p></div>
 {{ end }}

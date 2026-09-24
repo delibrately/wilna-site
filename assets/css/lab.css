@@ -188,6 +188,27 @@ button:disabled { cursor: default; }
 .paper-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 18px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
 .paper-filters label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
 .paper-filters select { width: 210px; min-height: 46px; padding: 8px 32px 8px 14px; border: 1px solid #8b9ba7; border-radius: 4px; color: var(--ink); background: #fff; font-size: 14px; }
+.publication-filters { display: grid; grid-template-columns: minmax(220px,1fr) 150px 210px auto; }
+.publication-filters > div { min-width: 0; }
+.publication-filters select, .publication-filters input { width: 100%; }
+.publication-filters input { min-width: 0; min-height: 46px; padding: 8px 14px; border: 1px solid #8b9ba7; border-radius: 4px; color: var(--ink); background: #fff; font-size: 14px; }
+.publication-summary { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0 28px; margin-bottom: 28px; }
+.publication-item, .publication-results { scroll-margin-top: 110px; }
+.publication-item { overflow-wrap: anywhere; }
+.publication-pagination { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding-block: 24px; border-top: 1px solid var(--line); }
+.publication-pagination > div { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.publication-pagination select { min-height: 44px; padding: 6px; border: 1px solid #8b9ba7; border-radius: 4px; background: #fff; color: var(--ink); }
+.publication-pagination button:disabled { opacity: .5; }
+@media (max-width: 1080px) {
+  .publication-filters { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .publication-filters .publication-search { grid-column: 1 / -1; }
+  .publication-filters .button { justify-self: start; }
+}
+@media (max-width: 480px) {
+  .publication-pagination { gap: 12px; }
+  .publication-pagination .button { padding-inline: 12px; }
+  .publication-pagination label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+}
 .filter-count { margin-block: 24px 36px; font-size: 13px; color: var(--muted); }
 .year-group { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 36px; margin-bottom: 48px; }
 .year-group > h2 { padding-top: 23px; color: var(--teal-ink); font-size: 28px; }

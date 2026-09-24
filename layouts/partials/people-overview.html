@@ -2,7 +2,7 @@
 <header class="page-heading"><div class="site-container"><p class="eyebrow">The people behind Wilna</p><h1>{{ $ui.people }}</h1><p>{{ if eq .Lang "zh" }}在信号、网络与智能系统的交汇处，一起探索与创造。{{ else }}Exploring the intersection of signals, networks, and intelligent systems, together.{{ end }}</p><nav class="section-tabs" aria-label="{{ $ui.people }}"><a href="#faculty">{{ $ui.faculty }}</a><a href="#students">{{ $ui.students }}</a><a href="#alumni">{{ $ui.alumni }}</a></nav></div></header>
 <section class="section" id="faculty"><div class="site-container">
   <div class="section-heading"><div><p class="eyebrow">Faculty</p><h2>{{ $ui.faculty }}</h2></div></div>
-  <div class="advisor-grid">{{ range (where .Pages "Params.member_status" "faculty").ByTitle }}
+  <div class="advisor-grid">{{ range sort (where .Pages "Params.member_status" "faculty") "Params.faculty_order" "asc" }}
     {{ $name := cond (eq $.Lang "zh") (.Params.name_cn | default .Title) (.Params.name | default .Title) }}
     <article class="advisor-card">
       <a class="advisor-card__portrait" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ partial "image.html" (dict "src" .Params.image "alt" "" "class" "advisor-card__image" "width" 320) }}</a>

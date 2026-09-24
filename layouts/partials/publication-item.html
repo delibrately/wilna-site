@@ -1,0 +1,8 @@
+{{ $p := .publication }}{{ $ui := .ui }}
+<article class="paper-item publication-item" id="publication-{{ $p.id }}" data-publication data-id="{{ $p.id }}" data-year="{{ $p.year }}" data-type="{{ $p.type }}" tabindex="-1">
+  <div class="paper-item__meta"><span>[{{ $p.id }}]</span><span>{{ index $ui.types $p.type }}</span></div>
+  <h3 data-publication-title>{{ if and $p.link_verified $p.url (hasPrefix $p.url "https://") }}<a href="{{ $p.url }}" target="_blank" rel="noopener">{{ $p.title }}</a>{{ else }}{{ $p.title }}{{ end }}</h3>
+  <p class="paper-item__authors" data-publication-authors>{{ if eq $p.contributor_role "editor" }}{{ $ui.editors }}: {{ end }}{{ delimit $p.authors ", " }}</p>
+  <p class="paper-item__venue" data-publication-venue>{{ if ne $p.type "edited-volume" }}<em>{{ $p.venue }}</em>{{ if $p.publication_details }}, {{ end }}{{ end }}{{ $p.publication_details }}</p>
+  {{ if and $p.link_verified $p.doi }}<div class="paper-item__links"><a href="https://doi.org/{{ $p.doi }}" target="_blank" rel="noopener">DOI: {{ $p.doi }}</a></div>{{ end }}
+</article>

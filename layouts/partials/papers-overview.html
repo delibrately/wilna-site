@@ -1,13 +1,27 @@
 {{ $ui := index .Site.Data.ui .Lang }}
-{{ $papers := .Pages.ByDate.Reverse }}
-<header class="page-heading"><div class="site-container"><p class="eyebrow">Publications</p><h1>{{ $ui.papers }}</h1><p>{{ if eq .Lang "zh" }}我们的期刊、会议论文与系统研究成果。{{ else }}Journal articles, conference papers, and systems research from our team.{{ end }}</p></div></header>
-<section class="section"><div class="site-container" data-paper-list>
-  <form class="paper-filters" data-paper-filters hidden aria-label="{{ $ui.papers }}">
-    <div><label for="paper-year">{{ $ui.year }}</label><select id="paper-year" name="year"><option value="">{{ $ui.allYears }}</option>{{ range $papers.GroupByDate "2006" }}<option value="{{ .Key }}">{{ .Key }}</option>{{ end }}</select></div>
-    <div><label for="paper-topic">{{ $ui.topic }}</label><select id="paper-topic" name="topic"><option value="">{{ $ui.allTopics }}</option>{{ range slice "wireless" "acoustic" "networking" "sensing" }}<option value="{{ . }}">{{ index $ui . }}</option>{{ end }}</select></div>
-    <button class="button button--outline" type="reset">{{ $ui.reset }}</button>
+{{ $pubUI := index .Site.Data.publication_ui .Lang }}
+{{ $papers := sort .Site.Data.publications.publications "year" "desc" }}
+{{ $years := slice }}
+{{ range $papers }}{{ $years = $years | append .year }}{{ end }}
+{{ $years = $years | uniq }}
+<header class="page-heading"><div class="site-container"><p class="eyebrow">Publications</p><h1>{{ $ui.papers }}</h1></div></header>
+<section class="section"><div class="site-container" data-publications data-language="{{ .Lang }}">
+  <form class="paper-filters publication-filters" data-publication-filters hidden role="search" aria-label="{{ $ui.papers }}">
+    <div class="publication-search"><label for="paper-query">{{ $pubUI.search }}</label><input type="search" id="paper-query" name="q" placeholder="{{ $pubUI.placeholder }}" autocomplete="off" aria-controls="publication-results"></div>
+    <div><label for="paper-year">{{ $pubUI.year }}</label><select id="paper-year" name="year" aria-controls="publication-results"><option value="">{{ $pubUI.allYears }}</option>{{ range $years }}<option value="{{ . }}">{{ . }} ({{ len (where $papers "year" .) }})</option>{{ end }}</select></div>
+    <div><label for="paper-type">{{ $pubUI.type }}</label><select id="paper-type" name="type" aria-controls="publication-results"><option value="">{{ $pubUI.allTypes }}</option>{{ range slice "journal-article" "conference-paper" "poster" "poster-demo" "preprint" "editorial" "edited-volume" "book-chapter" }}<option value="{{ . }}">{{ index $pubUI.types . }} ({{ len (where $papers "type" .) }})</option>{{ end }}</select></div>
+    <button class="button button--outline" type="reset">{{ $pubUI.reset }}</button>
   </form>
-  <p class="filter-count" role="status" aria-live="polite" data-paper-count data-label="{{ $ui.resultCount }}">{{ len $papers }} {{ $ui.resultCount }}</p>
-  <div class="paper-list">{{ range $papers.GroupByDate "2006" }}<section class="year-group" data-year-group aria-labelledby="year-{{ .Key }}"><h2 id="year-{{ .Key }}">{{ .Key }}</h2><div>{{ range .Pages }}{{ partial "paper-item.html" . }}{{ end }}</div></section>{{ end }}</div>
-  <p class="empty-state" data-paper-empty hidden>{{ $ui.noResults }}</p>
+  <div class="publication-summary"><p class="filter-count" role="status" aria-live="polite" data-publication-count>{{ len $papers }} {{ $pubUI.count }}</p></div>
+  <div class="paper-list publication-results" id="publication-results" tabindex="-1">
+    {{ range $years }}<section class="year-group" data-publication-year aria-labelledby="year-{{ . }}"><h2 id="year-{{ . }}">{{ . }}</h2><div>{{ range sort (where $papers "year" .) "id" "asc" }}{{ partial "publication-item.html" (dict "publication" . "ui" $pubUI) }}{{ end }}</div></section>{{ end }}
+  </div>
+  <p class="empty-state" data-publication-empty hidden>{{ $pubUI.empty }}</p>
+  <nav class="publication-pagination" data-publication-pagination hidden aria-label="{{ $pubUI.pagination }}">
+    <button class="button button--outline" data-publication-prev type="button">{{ $pubUI.previous }}</button>
+    <div><label for="publication-page">{{ $pubUI.page }}</label><select id="publication-page" data-publication-page aria-controls="publication-results"></select><span data-publication-pages></span></div>
+    <button class="button button--outline" data-publication-next type="button">{{ $pubUI.next }}</button>
+  </nav>
 </div></section>
+{{ $script := resources.Get "js/publications.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>

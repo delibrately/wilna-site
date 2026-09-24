@@ -4,6 +4,7 @@ import path from 'node:path';
 import http from 'node:http';
 import { createRequire } from 'node:module';
 import { pathToFileURL } from 'node:url';
+import { checkPublications } from './check-publications.mjs';
 
 const root = path.resolve(process.argv[2] || 'public');
 const output = path.resolve(process.argv[3] || '/private/tmp/wilna-redesign/qa');
@@ -125,24 +126,22 @@ try {
   assert.equal(await page.locator('[data-hero-dot]').nth(1).getAttribute('aria-current'), 'true');
   report.interactions.push('continuous six-second full cycle and English autoplay');
 
-  await page.goto(base + 'zh/papers/');
-  await page.selectOption('[name="year"]', '2023');
-  assert.equal(await page.locator('[data-paper]:visible').count(), 2);
-  await page.selectOption('[name="topic"]', 'wireless');
-  assert.equal(await page.locator('[data-paper]:visible').count(), 0);
-  assert.equal(await page.locator('[data-paper-empty]').isVisible(), true);
-  await page.locator('button[type="reset"]').click();
-  await page.waitForFunction(() => document.querySelectorAll('[data-paper]:not([hidden])').length === 8);
-  assert.equal(await page.locator('[data-paper]:visible').count(), 8);
-  await page.selectOption('[name="topic"]', 'wireless');
-  assert.equal(await page.locator('[data-paper]:visible').count(), 2);
-  report.interactions.push('year/topic combined filters, empty state, reset');
+  await checkPublications(page, base, output);
+  report.interactions.push('Data-driven exact titles/authors and verified links, pagination without duplicates, all years/types, title/author/venue search, combined filters, reset, empty state, URL persistence, language switch, keyboard and bilingual 320/390/768/1440px layouts');
 
   await page.goto(base + 'zh/people/');
   assert.equal(await page.locator('.advisor-card').count(), 3);
+  assert.deepEqual(await page.locator('.advisor-card h3').allTextContents(), ['王雷', '覃振权', '池建成']);
   assert.equal(await page.locator('#students .member-card').count(), 43);
   assert.equal(await page.locator('#alumni .member-card').count(), 0);
   report.interactions.push('3 faculty, 43 confirmed students, no fabricated alumni');
+  await page.goto(base + 'en/people/');
+  assert.deepEqual(await page.locator('.advisor-card h3').allTextContents(), ['Lei Wang', 'Zhenquan Qin', 'Jiancheng Chi']);
+  for (const lang of ['zh', 'en']) {
+    await page.goto(base + lang + '/news/');
+    assert.equal(await page.locator('#archive').count(), 0);
+  }
+  report.interactions.push('bilingual faculty order and removal of historical news archive');
 
   for (const width of [320, 1080, 1200]) {
     await page.setViewportSize({ width, height: 1000 });
@@ -156,7 +155,8 @@ try {
   const noJS = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const noJSPage = await noJS.newPage();
   await noJSPage.goto(base + 'zh/papers/');
-  assert.equal(await noJSPage.locator('[data-paper]').count(), 8);
+  const publicationData = JSON.parse(await fs.readFile(new URL('../data/publications.json', import.meta.url), 'utf8'));
+  assert.equal(await noJSPage.locator('[data-publication]:visible').count(), publicationData.publications.length);
   assert.equal(await noJSPage.locator('.site-nav').isVisible(), true);
   await noJS.close();
   report.interactions.push('navigation and all publications available without JavaScript');
