@@ -2,7 +2,7 @@
 title = 'Ziheng Lu'
 draft = false
 alumni = true
-member_status = 'student'
+member_status = "alumni"
 
 type = 'people'
 layout = 'people'

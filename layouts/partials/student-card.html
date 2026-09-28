@@ -1,0 +1,10 @@
+{{ $student := .student }}
+{{ $lang := .lang }}
+{{ $name := cond (eq $lang "zh") $student.name_zh $student.name_en }}
+{{ $identity := cond (eq $lang "zh") (cond (eq $student.level "phd") "博士" (cond (eq $student.level "master") "硕士" "本科生")) (cond (eq $student.level "phd") "PhD" (cond (eq $student.level "master") "Master's" "Undergraduate")) }}
+{{ $direction := cond (eq $lang "zh") $student.research_zh $student.research_en }}
+{{ $href := printf "people/%s/" $student.profile | relLangURL }}
+<article class="member-card member-card--student">
+  <a class="member-card__portrait" href="{{ $href }}" aria-hidden="true" tabindex="-1">{{ if $student.image }}{{ partial "image.html" (dict "src" $student.image "alt" "" "class" "member-card__photo" "width" 180 "sizes" "80px") }}{{ else }}<span class="member-card__mark">{{ substr $name 0 1 }}</span>{{ end }}</a>
+  <div class="member-card__body"><h3><a href="{{ $href }}">{{ $name }}</a></h3><p class="member-card__identity">{{ $identity }}</p>{{ with $direction }}<p class="member-card__research">{{ . }}</p>{{ end }}</div>
+</article>

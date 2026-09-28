@@ -3,7 +3,7 @@
 {{ $data := index .Site.Data.research (lower .File.ContentBaseName) }}
 {{ $copy := index $data .Lang }}
 <header class="detail-header"><div class="site-container"><a class="back-link" href="{{ "research/" | relLangURL }}">← {{ $ui.backResearch }}</a><p class="eyebrow">{{ $ui.research }} / {{ $data.number }}</p><h1>{{ .Title }}</h1><p class="detail-header__lead">{{ $copy.summary }}</p></div></header>
-<figure class="site-container research-figure">{{ partial "image.html" (dict "src" .Params.img "alt" .Title "class" "detail-image" "width" 1600 "sizes" "(max-width: 1240px) 100vw, 1220px" "loading" "eager") }}<figcaption>{{ $ui.figureCaption }}</figcaption></figure>
+<figure class="site-container research-figure">{{ partial "image.html" (dict "src" .Params.img "alt" .Title "class" "detail-image" "width" 1600 "sizes" "(max-width: 1240px) 100vw, 1220px" "loading" "eager") }}</figure>
 <section class="section"><div class="site-container editorial-grid"><div class="section-heading--side"><p class="eyebrow">Questions</p><h2>{{ $ui.problem }}</h2></div><ol class="question-list">{{ range $copy.questions }}<li>{{ . }}</li>{{ end }}</ol></div></section>
 <section class="section section--soft"><div class="site-container"><div class="section-heading"><div><p class="eyebrow">Approach</p><h2>{{ $ui.approach }}</h2></div></div><div class="method-grid">{{ range $i, $method := $copy.methods }}<article><span class="section-number" aria-hidden="true">0{{ add $i 1 }}</span><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div></div></section>
 <section class="section"><div class="site-container">

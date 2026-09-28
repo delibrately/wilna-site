@@ -1,0 +1,391 @@
+{
+  "students": [
+    {
+      "profile": "chenlingyu",
+      "name_zh": "陈灵玉",
+      "name_en": "陈灵玉",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/chenlingyu.png"
+    },
+    {
+      "profile": "andeyun",
+      "name_zh": "安得运",
+      "name_en": "Deyun An",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/andeyun.png"
+    },
+    {
+      "profile": "chenhairui",
+      "name_zh": "陈海瑞",
+      "name_en": "Hairui Chen",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/chenhairui.png"
+    },
+    {
+      "profile": "guyidi",
+      "name_zh": "古一迪",
+      "name_en": "Yidi Gu",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/guyidi.png"
+    },
+    {
+      "profile": "shahid-muhammad-rehman",
+      "name_zh": "Shahid Muhammad Rehman",
+      "name_en": "Shahid Muhammad Rehman",
+      "level": "phd",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/shahid-muhammad-rehman.png"
+    },
+    {
+      "profile": "shaoshiqi",
+      "name_zh": "邵诗淇",
+      "name_en": "Shiqi Shao",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/shaoshiqi.png"
+    },
+    {
+      "profile": "suyanan",
+      "name_zh": "苏雅楠",
+      "name_en": "Yanan Su",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/suyanan.png"
+    },
+    {
+      "profile": "tahreem-iqbal",
+      "name_zh": "Tahreem Iqbal",
+      "name_en": "Tahreem Iqbal",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/tahreem-iqbal.png"
+    },
+    {
+      "profile": "lihanmo",
+      "name_zh": "李翰墨",
+      "name_en": "Hanmo Li",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/lihanmo.png"
+    },
+    {
+      "profile": "danish-sarwr",
+      "name_zh": "DANISH SARWR",
+      "name_en": "DANISH SARWR",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/danish-sarwr.png"
+    },
+    {
+      "profile": "xuwenkai",
+      "name_zh": "徐文凯",
+      "name_en": "Wenkai Xu",
+      "level": "master",
+      "research_zh": "物理AI系统",
+      "research_en": "Physical AI systems",
+      "image": "people/students/xuwenkai.png"
+    },
+    {
+      "profile": "saif-ur-rehman-muhammad",
+      "name_zh": "SAIF UR REHMAN MUHAMMAD",
+      "name_en": "SAIF UR REHMAN MUHAMMAD",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/saif-ur-rehman-muhammad.png"
+    },
+    {
+      "profile": "shigongming",
+      "name_zh": "史恭铭",
+      "name_en": "Gongming Shi",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/shigongming.png"
+    },
+    {
+      "profile": "muhammad-farhan",
+      "name_zh": "Muhammad Farhan",
+      "name_en": "Muhammad Farhan",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/muhammad-farhan.png"
+    },
+    {
+      "profile": "liuqingyuan",
+      "name_zh": "刘清源",
+      "name_en": "Qingyuan Liu",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/liuqingyuan.png"
+    },
+    {
+      "profile": "songjiale",
+      "name_zh": "宋嘉乐",
+      "name_en": "Jiale Song",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/songjiale.png"
+    },
+    {
+      "profile": "khan-shah-fahad",
+      "name_zh": "KHAN SHAH FAHAD",
+      "name_en": "KHAN SHAH FAHAD",
+      "level": "phd",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/khan-shah-fahad.png"
+    },
+    {
+      "profile": "kibriya-md-golam",
+      "name_zh": "Kibriya Md Golam",
+      "name_en": "Kibriya Md Golam",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/kibriya-md-golam.png"
+    },
+    {
+      "profile": "gaoyongxin",
+      "name_zh": "高用鑫",
+      "name_en": "Yongxin Gao",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/gaoyongxin.png"
+    },
+    {
+      "profile": "abdul-rafey-muhammad",
+      "name_zh": "Abdul Rafey Muhammad",
+      "name_en": "Abdul Rafey Muhammad",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/abdul-rafey-muhammad.png"
+    },
+    {
+      "profile": "hassan-muhammad",
+      "name_zh": "Hassan Muhammad",
+      "name_en": "Hassan Muhammad",
+      "level": "master",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/hassan-muhammad.png"
+    },
+    {
+      "profile": "guolei",
+      "name_zh": "郭磊",
+      "name_en": "Lei Guo",
+      "level": "phd",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/guolei.png"
+    },
+    {
+      "profile": "lishengjie",
+      "name_zh": "李升洁",
+      "name_en": "Shengjie Li",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/lishengjie.png"
+    },
+    {
+      "profile": "akter-faria",
+      "name_zh": "AKTER FARIA",
+      "name_en": "AKTER FARIA",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/akter-faria.png"
+    },
+    {
+      "profile": "chensixu",
+      "name_zh": "陈思旭",
+      "name_en": "Sixu Chen",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/chensixu.png"
+    },
+    {
+      "profile": "heqihang",
+      "name_zh": "何启航",
+      "name_en": "Qihang He",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/heqihang.png"
+    },
+    {
+      "profile": "djabri-dalel",
+      "name_zh": "DJABRI DALEL",
+      "name_en": "DJABRI DALEL",
+      "level": "phd",
+      "research_zh": "物理AI系统",
+      "research_en": "Physical AI systems",
+      "image": "people/students/djabri-dalel.png"
+    },
+    {
+      "profile": "liujingbin",
+      "name_zh": "刘景彬",
+      "name_en": "Jingbin Liu",
+      "level": "phd",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/liujingbin.png"
+    },
+    {
+      "profile": "fengxiaojia",
+      "name_zh": "冯小佳",
+      "name_en": "冯小佳",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/fengxiaojia.png"
+    },
+    {
+      "profile": "zhangshandi",
+      "name_zh": "张善迪",
+      "name_en": "Shandi Zhang",
+      "level": "master",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/zhangshandi.png"
+    },
+    {
+      "profile": "liuyunqi",
+      "name_zh": "刘云奇",
+      "name_en": "Yunqi Liu",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/liuyunqi.png"
+    },
+    {
+      "profile": "wuzhenbin",
+      "name_zh": "吴镇彬",
+      "name_en": "Zhenbin Wu",
+      "level": "master",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/wuzhenbin.png"
+    },
+    {
+      "profile": "nadiashamshad",
+      "name_zh": "NadiaShamshad",
+      "name_en": "NadiaShamshad",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/nadiashamshad.png"
+    },
+    {
+      "profile": "wangdandan",
+      "name_zh": "王丹丹",
+      "name_en": "Dandan Wang",
+      "level": "phd",
+      "research_zh": "物理AI系统",
+      "research_en": "Physical AI systems",
+      "image": "people/students/wangdandan.png"
+    },
+    {
+      "profile": "taoqiuzi",
+      "name_zh": "陶秋子",
+      "name_en": "Qiuzi Tao",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/taoqiuzi.png"
+    },
+    {
+      "profile": "zhangxiaolin",
+      "name_zh": "张孝霖",
+      "name_en": "Xiaolin Zhang",
+      "level": "phd",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/zhangxiaolin.png"
+    },
+    {
+      "profile": "wangwenhao",
+      "name_zh": "汪文灏",
+      "name_en": "汪文灏",
+      "level": "master",
+      "research_zh": "协同边缘智能",
+      "research_en": "Collaborative edge intelligence",
+      "image": "people/students/wangwenhao.png"
+    },
+    {
+      "profile": "shenzhanping",
+      "name_zh": "沈占平",
+      "name_en": "沈占平",
+      "level": "master",
+      "research_zh": "多模态感知",
+      "research_en": "Multimodal sensing",
+      "image": "people/students/shenzhanping.png"
+    },
+    {
+      "profile": "akehao",
+      "name_zh": "阿克豪",
+      "name_en": "Kehao A",
+      "level": "master",
+      "research_zh": "",
+      "research_en": "",
+      "image": ""
+    },
+    {
+      "profile": "wangzhaohui",
+      "name_zh": "王照辉",
+      "name_en": "Zhaohui Wang",
+      "level": "phd",
+      "research_zh": "",
+      "research_en": "",
+      "image": ""
+    },
+    {
+      "profile": "liqiang",
+      "name_zh": "李强",
+      "name_en": "Qiang Li",
+      "level": "master",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/liqiang.png"
+    },
+    {
+      "profile": "paul-munda-beah",
+      "name_zh": "Paul Munda Beah",
+      "name_en": "Paul Munda Beah",
+      "level": "master",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/paul-munda-beah.png"
+    },
+    {
+      "profile": "omar-mohamud-mohamed",
+      "name_zh": "OMAR MOHAMUD MOHAMED",
+      "name_en": "OMAR MOHAMUD MOHAMED",
+      "level": "phd",
+      "research_zh": "通信与网络",
+      "research_en": "Communications and networks",
+      "image": "people/students/omar-mohamud-mohamed.png"
+    }
+  ]
+}

@@ -2,8 +2,8 @@
 title = 'Jiancheng Chi'
 draft = false
 alumni = false
-member_status = 'faculty'
-faculty_order = 3
+member_status = "faculty"
+faculty_order = 4
 
 type = 'people'
 layout = 'mentor'

@@ -7,6 +7,7 @@
     <span class="section-number" aria-hidden="true">{{ $data.number }}</span>
     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     <p>{{ $copy.summary }}</p>
+    {{ with $copy.topics }}<ul class="research-topics">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
     <a class="text-link" href="{{ .RelPermalink }}">{{ $ui.more }} <span aria-hidden="true">↗</span><span class="sr-only">: {{ .Title }}</span></a>
   </div>
 </article>

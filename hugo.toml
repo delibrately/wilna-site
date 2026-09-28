@@ -1,5 +1,5 @@
 baseURL = "https://delibrately.github.io/wilna-site/"
-title = "Wilna"
+title = "WiLNA"
 theme = "blist"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh"
@@ -20,14 +20,14 @@ relativeURLs = false
     [languages.en.params]
       news = "News"
       heroEyebrow = "Dalian University of Technology"
-      heroTitle = "Wilna Lab"
-      heroDescription = "We study wireless sensing, acoustic intelligence, Internet of Things, and dependable networked systems."
+      heroTitle = "WiLNA"
+      heroDescription = "For real-world settings such as marine operations and industrial sites, we study multimodal sensing, communications and networks, collaborative edge intelligence, and the autonomous operation of physical AI systems."
       heroPrimary = "Explore research"
       heroSecondary = "Meet the team"
       latestNews = "Latest publications"
       latestNewsDescription = "Recent work from our team across sensing, networking, and intelligent systems."
       researchTitle = "Research directions"
-      researchDescription = "We build practical systems where wireless signals, sensing, and intelligence meet."
+      researchDescription = "Multimodal sensing, communications and networks, collaborative edge intelligence, and physical AI systems."
       viewAll = "View all"
       learnMore = "Learn more"
       advisors = "Faculty"
@@ -40,13 +40,13 @@ relativeURLs = false
       contactAction = "Contact the lab"
 
     [[languages.en.params.about]]
-      content = "We are a research lab of Wilna, led by Prof. Lei Wang."
+      content = "We are a research lab of WiLNA, led by Prof. Lei Wang."
 
     [[languages.en.params.about]]
       content = "Our research spans wireless sensing, acoustic intelligence, Internet of Things, and networked systems."
 
     [[languages.en.params.about]]
-      content = "Undergraduate students who are highly self-motivated, and interested in this research direction, are welcome to join our Wilna lab (contact: lei.wang@dlut.edu.cn)"
+      content = "Undergraduate students who are highly self-motivated, and interested in this research direction, are welcome to join our WiLNA lab (contact: lei.wang@dlut.edu.cn)"
 
     [[languages.en.menu.main]]
         name = "Home"
@@ -85,14 +85,14 @@ relativeURLs = false
     [languages.zh.params]
       news = "新闻"
       heroEyebrow = "大连理工大学"
-      heroTitle = "Wilna 实验室"
-      heroDescription = "面向无线感知、声学智能、物联网与网络化系统，探索可落地、可信赖的智能技术。"
+      heroTitle = "WiLNA"
+      heroDescription = "面向海洋作业与工业现场等真实场景，研究多模态感知、通信与网络、协同边缘智能，及物理AI系统的自主运行。"
       heroPrimary = "了解研究方向"
       heroSecondary = "认识团队成员"
       latestNews = "最新成果"
       latestNewsDescription = "聚焦无线感知、网络系统与智能计算的近期研究工作。"
       researchTitle = "研究方向"
-      researchDescription = "让无线信号、环境感知与智能计算在真实场景中协同工作。"
+      researchDescription = "多模态感知、通信与网络、协同边缘智能、物理AI系统。"
       viewAll = "查看全部"
       learnMore = "了解更多"
       advisors = "指导教师"
@@ -104,14 +104,14 @@ relativeURLs = false
       contactDescription = "欢迎对相关方向感兴趣的同学和研究伙伴与我们联系。"
       contactAction = "联系实验室"
       homepage.social.title = "联系我们团队"
-      homepage.social.description = "如果你对我们Wilna团队感兴趣，欢迎联系我们！"
+      homepage.social.description = "如果你对我们WiLNA团队感兴趣，欢迎联系我们！"
 
     [[languages.zh.params.about]]
-      content = "我们是一个由王雷教授领导的Wilna研究实验室。"
+      content = "我们是一个由王雷教授领导的WiLNA研究实验室。"
     [[languages.zh.params.about]]
       content = "我们聚焦无线感知、声学智能、物联网与网络化系统。"
     [[languages.zh.params.about]]
-      content = "欢迎自学能力强、对该研究方向感兴趣的本科生加入我们的Wilna实验室。"
+      content = "欢迎自学能力强、对该研究方向感兴趣的本科生加入WiLNA。"
 
 
     [[languages.zh.menu.main]]
@@ -160,9 +160,10 @@ relativeURLs = false
 
 
 [params]
+  labFullName = "Wireless Lab of Network and Application"
   altLogo = "Dut.png"
   teamLogo = "logo1.png"
-  description = "Wilna Lab at Dalian University of Technology"
+  description = "WiLNA at Dalian University of Technology"
   email = "lei.wang@dlut.edu.cn"
 
   # Enable the darkmode toggle in header
@@ -220,7 +221,7 @@ relativeURLs = false
 [params.homepage.social]
   # Global params common for both languages
   title = "Contact Us"
-  description = "If you are interested in Wilna lab, feel free to contact."
+  description = "If you are interested in WiLNA lab, feel free to contact."
 
   [[params.homepage.social.icons]]
     website = "email"
