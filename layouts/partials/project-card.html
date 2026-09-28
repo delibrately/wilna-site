@@ -2,19 +2,22 @@
 {{ $project := .project }}
 {{ $ui := index $page.Site.Data.ui $page.Lang }}
 {{ $copy := index $project $page.Lang }}
-{{ $paper := $page.Site.GetPage $project.paper }}
+{{ $publication := false }}
+{{ range $page.Site.Data.publications.publications }}
+  {{ if eq .id $project.publication_id }}{{ $publication = . }}{{ end }}
+{{ end }}
 <article class="project-card" id="project-{{ $project.id }}">
   <div class="project-card__media">
     {{ with $project.image }}
-      {{ partial "image.html" (dict "src" . "alt" $project.name "width" 1200) }}
+      {{ partial "image.html" (dict "src" . "alt" $copy.name "width" 1200) }}
     {{ else }}
-      <div class="media-placeholder"><span class="media-placeholder__name" aria-hidden="true">{{ $project.name }}</span><span>{{ $ui.mediaPending }}</span><small>{{ $ui.mediaNote }}</small></div>
+      <div class="media-placeholder"><span class="media-placeholder__name" aria-hidden="true">{{ $copy.name }}</span><span>{{ $ui.mediaPending }}</span><small>{{ $ui.mediaNote }}</small></div>
     {{ end }}
   </div>
   <div class="project-card__body">
-    <p class="eyebrow">{{ index $ui $project.topic }}</p>
-    <h3>{{ $project.name }}</h3>
+    <p class="eyebrow">{{ $copy.topic }}</p>
+    <h3>{{ $copy.name }}</h3>
     <dl><dt>{{ $ui.problem }}</dt><dd>{{ $copy.question }}</dd><dt>{{ $ui.method }}</dt><dd>{{ $copy.method }}</dd></dl>
-    {{ with $paper }}<a class="text-link" href="{{ .RelPermalink }}">{{ $ui.paper }} <span aria-hidden="true">↗</span><span class="sr-only">: {{ $project.name }}</span></a>{{ end }}
+    {{ with $publication }}{{ if and .link_verified .url }}<a class="text-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ $copy.publication }} <span aria-hidden="true">↗</span><span class="sr-only">: {{ $ui.paper }} — {{ $copy.name }}</span></a>{{ end }}{{ end }}
   </div>
 </article>

@@ -1,11 +1,71 @@
 {
+  "multimodal-sensing": {
+    "number": "01",
+    "projects": ["uwbeacon"],
+    "publication_ids": [60],
+    "zh": {
+      "summary": "融合声音、无线信号与图像，感知人、设备和环境，适应水下等复杂场景。",
+      "goal": "如何融合声音、无线信号与图像等不同类型的信息，实现对人、设备与环境的感知，适应水下等复杂场景。",
+      "topics": ["声学定位", "无线感知（包括 Wi-Fi 感知）", "水下感知"]
+    },
+    "en": {
+      "summary": "Fusing sound, wireless signals, and images to sense people, devices, and environments, including complex underwater settings.",
+      "goal": "How can different types of information, including sound, wireless signals, and images, be fused to sense people, devices, and environments, including in complex underwater settings?",
+      "topics": ["Acoustic localization", "Wireless sensing (including Wi-Fi sensing)", "Underwater sensing"]
+    }
+  },
+  "communications-networks": {
+    "number": "02",
+    "projects": ["aqualink"],
+    "publication_ids": [11],
+    "zh": {
+      "summary": "面向水下、工业等复杂环境，研究稳定可靠的信息传输与设备互联。",
+      "goal": "如何在水下、工业等复杂环境中实现稳定可靠的信息传输与设备互联。",
+      "topics": ["水下光通信", "水下组网", "工业物联网"]
+    },
+    "en": {
+      "summary": "Reliable information transfer and device connectivity in complex underwater and industrial environments.",
+      "goal": "How can reliable information transfer and device connectivity be achieved in complex environments such as underwater and industrial settings?",
+      "topics": ["Underwater optical communication", "Underwater networking", "Industrial Internet of Things"]
+    }
+  },
+  "collaborative-edge-intelligence": {
+    "number": "03",
+    "projects": ["industrial-task-offloading"],
+    "publication_ids": [12],
+    "zh": {
+      "summary": "让智能模型在靠近数据源的设备上高效运行，降低处理延迟与计算资源消耗。",
+      "goal": "如何让智能模型在靠近数据源的设备上高效运行，降低处理延迟与计算资源消耗。",
+      "topics": ["任务卸载", "端侧模型", "轻量视觉"]
+    },
+    "en": {
+      "summary": "Efficiently running intelligent models near data sources to reduce processing latency and computing resource use.",
+      "goal": "How can intelligent models run efficiently on devices close to data sources, reducing processing latency and computing resource consumption?",
+      "topics": ["Task offloading", "On-device models", "Lightweight vision"]
+    }
+  },
+  "physical-ai": {
+    "number": "04",
+    "projects": ["multi-submersible-escort"],
+    "publication_ids": [71],
+    "zh": {
+      "summary": "结合环境感知、自主决策与运动控制，让机器人和无人设备完成实际任务。",
+      "goal": "如何将环境感知与自主决策、运动控制结合，使机器人和无人设备能够完成实际任务。",
+      "topics": ["水下机器人", "机械臂", "无人机", "无人车"]
+    },
+    "en": {
+      "summary": "Combining environmental sensing, autonomous decision-making, and motion control so robots and unmanned systems can carry out real tasks.",
+      "goal": "How can environmental sensing be combined with autonomous decision-making and motion control so that robots and unmanned systems can carry out real tasks?",
+      "topics": ["Underwater robots", "Robotic arms", "Unmanned aerial vehicles", "Unmanned ground vehicles"]
+    }
+  },
   "acoustic": {
     "number":"01", "papers":[], "projects":[],
     "zh":{"summary":"从声音中理解环境、定位声源。结合麦克风阵列、信号处理与学习方法，研究噪声和混响条件下的声事件识别与空间定位，面向智能家居、机器人及人机交互等应用场景。","questions":["如何在噪声、回声与混响中识别语音和环境声事件？","如何利用多麦克风的时间差、相位差和能量信息确定声源位置？","如何兼顾多声源场景下的鲁棒性与边缘设备的实时性？"],"methods":[{"title":"声学信号处理","text":"结合降噪、回声消除和去混响，构建 Mel 频谱、MFCC 等时频特征。"},{"title":"阵列定位与跟踪","text":"通过到达时间差（TDOA）、波束形成与声源分离，分析声源方向和空间位置。"},{"title":"学习与部署","text":"探索数据驱动的声学表示、跨场景泛化与多模态融合，关注边缘实时运行。"}]},
     "en":{"summary":"Understanding environments and locating sound sources through audio. We explore microphone arrays, signal processing, and learning methods for event recognition and localization in noise and reverberation, with applications in smart spaces, robotics, and human-computer interaction.","questions":["How can speech and sound events be recognized in noise, echoes, and reverberation?","How can timing, phase, and energy differences across microphones locate a sound source?","How can multi-source robustness be balanced with real-time processing on edge devices?"],"methods":[{"title":"Acoustic signal processing","text":"Noise reduction, echo cancellation, and dereverberation support time-frequency representations such as Mel spectra and MFCCs."},{"title":"Array localization and tracking","text":"Time difference of arrival (TDOA), beamforming, and source separation provide spatial information."},{"title":"Learning and deployment","text":"Data-driven acoustic representations, cross-scene generalization, and multimodal fusion inform real-time edge processing."}]}
   },
   "wireless sensing": {
-    "number":"02", "papers":["papers/WiMTI","papers/AutoDLAR"], "projects":["wimti"],
+    "number":"02", "papers":["papers/WiMTI","papers/AutoDLAR"], "projects":[],
     "zh":{"summary":"让无线信号成为观察人与环境的另一种方式。通过分析 Wi-Fi 等信号中的信道变化与多普勒信息，研究无需接触的动作、身份和空间状态感知，关注跨场景泛化、系统鲁棒性及实时部署。","questions":["如何从无线信道的微小变化中识别人类活动与空间状态？","如何减小设备、房间布局和人员差异带来的分布变化？","如何在实时性与能耗限制下部署可靠的感知系统？"],"methods":[{"title":"信道采集与预处理","text":"利用 Wi-Fi CSI 或雷达信息，进行去噪、相位校正、时频变换与多天线特征融合。"},{"title":"学习与多模态融合","text":"结合学习模型及互补模态，研究身份、姿态与活动识别，提升复杂场景下的感知能力。"},{"title":"泛化与边缘推理","text":"关注迁移学习、自监督学习和域自适应，并通过轻量化模型探索端侧实时推理。"}]},
     "en":{"summary":"Using wireless signals to observe people and their surroundings without contact. Channel variations and Doppler information support activity, identity, and spatial sensing. Our research considers cross-scene generalization, robustness, and real-time deployment.","questions":["How can small channel variations reveal human activity and spatial state?","How can sensing adapt to differences in hardware, rooms, and people?","How can reliable sensing operate within real-time and energy constraints?"],"methods":[{"title":"Channel acquisition and processing","text":"Wi-Fi CSI and radar measurements support denoising, phase correction, time-frequency transforms, and multi-antenna feature fusion."},{"title":"Learning across modalities","text":"Learning models and complementary modalities support identity, posture, and activity recognition in complex environments."},{"title":"Generalization and edge inference","text":"Transfer learning, self-supervised learning, and domain adaptation complement lightweight models for real-time inference."}]}
   }

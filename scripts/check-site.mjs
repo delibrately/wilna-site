@@ -43,7 +43,8 @@ page.on('pageerror', (error) => report.issues.push({ type: 'javascript', message
 page.on('response', (response) => {
   if (response.url().startsWith(origin) && response.status() >= 400) report.issues.push({ type: 'http', status: response.status(), url: response.url() });
 });
-const keyPages = ['', 'research/', 'research/acoustic/', 'research/wireless-sensing/', 'people/', 'people/leiwang/', 'papers/', 'papers/wimti/', 'news/', 'news/adapblinker/', 'joinus/'];
+const researchAreas = ['multimodal-sensing', 'communications-networks', 'collaborative-edge-intelligence', 'physical-ai'];
+const keyPages = ['', 'research/', ...researchAreas.map((area) => `research/${area}/`), 'research/acoustic/', 'research/wireless-sensing/', 'people/', 'people/leiwang/', 'people/shahid-muhammad-rehman/', 'people/akehao/', 'people/zhouxiaoyu/', 'papers/', 'papers/wimti/', 'news/', 'news/adapblinker/', 'joinus/'];
 try {
   for (const lang of ['zh', 'en']) {
     for (const width of [390, 768, 1440]) {
@@ -127,16 +128,86 @@ try {
   report.interactions.push('continuous six-second full cycle and English autoplay');
 
   await checkPublications(page, base, output);
+  for (const lang of ['zh', 'en']) {
+    const expected = lang === 'zh'
+      ? ['多模态感知', '通信与网络', '协同边缘智能', '物理 AI 系统']
+      : ['Multimodal Sensing', 'Communications and Networks', 'Collaborative Edge Intelligence', 'Physical AI Systems'];
+    for (const route of ['', 'research/']) {
+      await page.goto(base + lang + '/' + route);
+      assert.deepEqual(await page.locator('.research-card h3').allTextContents(), expected);
+      assert.deepEqual(await page.locator('.research-card h3 a').evaluateAll((links) => links.map((a) => a.getAttribute('href'))), researchAreas.map((area) => `/wilna-site/${lang}/research/${area}/`));
+      assert.equal(await page.locator('.research-card img').count(), 4);
+      assert.equal(await page.locator('.research-topics li').count(), 13);
+      assert.equal(await page.locator('.project-card').count(), 4);
+      if (!route) {
+        assert.ok((await page.title()).includes('WiLNA'));
+        assert.equal(await page.locator('.hero__full-name').textContent(), 'Wireless Lab of Network and Application');
+        assert.equal(await page.locator('h1').first().textContent(), 'WiLNA');
+        assert.ok((await page.locator('.hero__tagline').textContent()).includes(lang === 'zh' ? '感知 · 连接 · 决策 · 交互' : 'Decision-making'));
+        assert.ok((await page.locator('.hero__description').textContent()).includes(lang === 'zh' ? '面向海洋作业与工业现场' : 'marine operations'));
+      }
+    }
+    await page.goto(base + lang + '/joinus/');
+    assert.deepEqual(await page.locator('.join-directions h3').allTextContents(), expected);
+    await page.goto(base + lang + '/research/multimodal-sensing/');
+    assert.equal(await page.locator('.research-topic-links a').count(), 2);
+    for (const area of researchAreas) {
+      await page.goto(base + lang + `/research/${area}/`);
+      assert.equal(await page.locator('.area-section').count(), 3);
+      assert.deepEqual(await page.locator('.area-section h2').allTextContents(), lang === 'zh' ? ['研究目标', '具体课题', '代表成果'] : ['Research Goal', 'Specific Topics', 'Representative Results']);
+      assert.ok(await page.locator('.area-goal').textContent());
+      assert.ok(await page.locator('.area-topic-list li').count() > 0);
+      assert.ok(await page.locator('.area-paper-list li').count() > 0);
+      assert.ok(await page.locator('.area-paper-list a').evaluateAll((links) => links.every((a) => a.href.startsWith('https://doi.org/'))));
+      assert.equal(await page.locator('.project-card').count(), 1);
+      assert.equal(await page.locator('.area-paper-list li').count(), 1);
+      assert.equal(await page.locator('.project-card .text-link').count(), 1);
+      assert.ok((await page.locator('.project-card .text-link').getAttribute('href')).startsWith('https://doi.org/'));
+      assert.ok(await page.locator('.research-area-figure img').evaluate((img) => img.complete && img.naturalWidth > 0));
+      assert.equal(await page.locator('main img:not(.site-brand__university):not(.site-brand__team)').count(), 1);
+      assert.equal(await page.locator('figcaption').count(), 0);
+      assert.equal(await page.locator('.area-all-papers').getAttribute('href'), `/wilna-site/${lang}/papers/`);
+    }
+    for (const width of [320, 390, 768, 1440]) {
+      await page.setViewportSize({ width, height: 1000 });
+      for (const route of ['', 'research/', ...researchAreas.map((area) => `research/${area}/`)]) {
+        await page.goto(base + lang + '/' + route, { waitUntil: 'networkidle' });
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+        if (route === 'research/' || route === '') await page.screenshot({ path: path.join(output, `research-update-${lang}-${route ? 'areas' : 'hero'}-${width}.png`), fullPage: !!route });
+      }
+    }
+  }
+  report.interactions.push('four ordered bilingual research areas, 13 topics, correct links, updated hero, old topic routes and 320/390/768/1440px layouts');
   report.interactions.push('Data-driven exact titles/authors and verified links, pagination without duplicates, all years/types, title/author/venue search, combined filters, reset, empty state, URL persistence, language switch, keyboard and bilingual 320/390/768/1440px layouts');
 
   await page.goto(base + 'zh/people/');
-  assert.equal(await page.locator('.advisor-card').count(), 3);
-  assert.deepEqual(await page.locator('.advisor-card h3').allTextContents(), ['王雷', '覃振权', '池建成']);
+  assert.equal(await page.locator('.advisor-card').count(), 4);
+  assert.deepEqual(await page.locator('.advisor-card h3').allTextContents(), ['王雷', '覃振权', '池建成', '李中尉']);
+  assert.ok((await page.locator('.advisor-card').last().textContent()).includes('dllizhongwei@gmail.com'));
   assert.equal(await page.locator('#students .member-card').count(), 43);
-  assert.equal(await page.locator('#alumni .member-card').count(), 0);
-  report.interactions.push('3 faculty, 43 confirmed students, no fabricated alumni');
+  assert.equal(await page.locator('#phd-students .member-card').count(), 18);
+  assert.equal(await page.locator('#master-students .member-card').count(), 25);
+  assert.equal(await page.locator('#undergraduate-students .member-card').count(), 0);
+  assert.equal(await page.locator('#alumni .member-card').count(), 18);
+  assert.ok((await page.locator('#phd-students .member-card__identity').allTextContents()).every((identity) => identity === '博士'));
+  assert.ok((await page.locator('#master-students .member-card__identity').allTextContents()).every((identity) => identity === '硕士'));
+  assert.ok((await page.locator('#phd-students').textContent()).includes('Shahid Muhammad Rehman'));
+  assert.equal(await page.locator('#master-students a[href$="/akehao/"] .member-card__photo').count(), 0);
+  assert.equal(await page.locator('#phd-students a[href$="/wangzhaohui/"] .member-card__photo').count(), 0);
+  assert.equal(await page.locator('#master-students a[href$="/akehao/"] .member-card__mark').count(), 1);
+  assert.equal(await page.locator('#phd-students a[href$="/wangzhaohui/"] .member-card__mark').count(), 1);
+  report.interactions.push('4 faculty, 18 PhD students, 25 masters, empty undergraduate section, 18 alumni, English international names, missing-photo placeholders');
   await page.goto(base + 'en/people/');
-  assert.deepEqual(await page.locator('.advisor-card h3').allTextContents(), ['Lei Wang', 'Zhenquan Qin', 'Jiancheng Chi']);
+  assert.deepEqual(await page.locator('.advisor-card h3').allTextContents(), ['Lei Wang', 'Zhenquan Qin', 'Jiancheng Chi', 'Li Zhongwei']);
+  assert.ok((await page.locator('.advisor-card').last().textContent()).includes('dllizhongwei@gmail.com'));
+  await page.goto(base + 'zh/people/akehao/');
+  assert.equal(await page.locator('.profile__grid--student h1').textContent(), '阿克豪');
+  assert.equal(await page.locator('.profile__role').textContent(), '硕士');
+  assert.equal(await page.locator('.profile__research').count(), 0);
+  assert.equal(await page.locator('.profile__intro').count(), 0);
+  await page.goto(base + 'en/people/shahid-muhammad-rehman/');
+  assert.equal(await page.locator('.profile__grid--student h1').textContent(), 'Shahid Muhammad Rehman');
+  assert.equal(await page.locator('.profile__role').textContent(), 'PhD');
   for (const lang of ['zh', 'en']) {
     await page.goto(base + lang + '/news/');
     assert.equal(await page.locator('#archive').count(), 0);

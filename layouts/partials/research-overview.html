@@ -1,4 +1,4 @@
 {{ $ui := index .Site.Data.ui .Lang }}
 <header class="page-heading"><div class="site-container"><p class="eyebrow">Research directions</p><h1>{{ $ui.research }}</h1><p>{{ .Site.Params.researchDescription }}</p></div></header>
-<section class="section" aria-labelledby="research-areas"><div class="site-container"><h2 class="sr-only" id="research-areas">{{ $ui.research }}</h2><div class="research-grid">{{ range .Pages.ByTitle }}{{ partial "research-card.html" . }}{{ end }}</div></div></section>
+<section class="section" aria-labelledby="research-areas"><div class="site-container"><h2 class="sr-only" id="research-areas">{{ $ui.research }}</h2><div class="research-grid">{{ range (where .Pages "Params.primary_area" true).ByWeight }}{{ partial "research-card.html" . }}{{ end }}</div></div></section>
 <section class="section section--soft"><div class="site-container"><div class="section-heading"><div><p class="eyebrow">Featured research</p><h2>{{ $ui.featured }}</h2></div></div><div class="project-grid">{{ range .Site.Data.featured_research }}{{ partial "project-card.html" (dict "page" $ "project" .) }}{{ end }}</div></div></section>

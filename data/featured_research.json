@@ -1,4 +1,78 @@
 [
-  {"id":"wimti","name":"WiMTI","paper":"papers/WiMTI","topic":"wireless","zh":{"question":"人体姿态变化会如何影响基于 Wi-Fi 的身份识别？","method":"多任务学习与动态交叉缝合单元，在身份和姿态识别任务间实现特征自适应融合。"},"en":{"question":"How do changes in posture affect Wi-Fi-based identity recognition?","method":"Multitask learning and dynamic cross-stitch units adaptively fuse features across identity and posture recognition."}},
-  {"id":"powernetmax","name":"PowerNetMax","paper":"papers/PowerNetMax","topic":"networking","zh":{"question":"如何优化复杂环境下大规模 IoT 网络的覆盖与能量效率？","method":"结合深度强化学习（DRL）与图神经网络（GNN），动态调整智能反射面（IRS）的相位。"},"en":{"question":"How can large IoT networks improve coverage and energy efficiency in complex environments?","method":"Deep reinforcement learning (DRL) and graph neural networks (GNN) dynamically adjust intelligent reflecting surface (IRS) phases."}}
+  {
+    "id": "uwbeacon",
+    "publication_id": 60,
+    "image": "projects/uwbeacon.png",
+    "zh": {
+      "topic": "多模态感知",
+      "name": "UWBeacon：水下厘米级定位",
+      "question": "如何在低能见度和强环境光干扰的水下环境中实现高精度定位？",
+      "method": "使用 LED 信标与相机接收器，并以不同颜色和偏振角的偏振光抑制背景干扰。",
+      "publication": "MobiCom 2024"
+    },
+    "en": {
+      "topic": "Multimodal sensing",
+      "name": "UWBeacon: Centimeter-Level Underwater Positioning",
+      "question": "How can accurate positioning work underwater amid poor visibility and strong ambient-light interference?",
+      "method": "LED beacons and a camera receiver use polarized lights of different colors and angles to suppress background interference.",
+      "publication": "MobiCom 2024"
+    }
+  },
+  {
+    "id": "aqualink",
+    "publication_id": 11,
+    "image": "projects/aqualink.png",
+    "zh": {
+      "topic": "通信与网络",
+      "name": "AquaLink：水下光学相机通信",
+      "question": "如何在动态、带宽受限的水下环境中实现可靠通信，而不依赖专用收发硬件？",
+      "method": "以普通手机和平板进行二维码光学相机通信，结合蓝绿双色编码、LDPC 纠错和环境自适应。",
+      "publication": "IEEE TMC 2026"
+    },
+    "en": {
+      "topic": "Communications & networks",
+      "name": "AquaLink: Underwater Optical Camera Communication",
+      "question": "How can reliable communication work in dynamic, bandwidth-limited underwater settings without specialized transceivers?",
+      "method": "QR-code optical camera communication on commodity phones and tablets combines blue-green encoding, LDPC error correction, and environmental adaptation.",
+      "publication": "IEEE TMC 2026"
+    }
+  },
+  {
+    "id": "industrial-task-offloading",
+    "publication_id": 12,
+    "image": "projects/industrial-task-offloading.png",
+    "zh": {
+      "topic": "协同边缘智能",
+      "name": "工业物联网自适应任务卸载",
+      "question": "如何让工业物联网中的延迟敏感任务更快适应变化，同时减少标注数据与训练开销？",
+      "method": "半监督储备池计算框架固定动态储备层、仅训练读出层，并利用未标注数据。",
+      "publication": "IEEE TMC 2026"
+    },
+    "en": {
+      "topic": "Collaborative edge intelligence",
+      "name": "Adaptive Task Offloading for Industrial IoT",
+      "question": "How can latency-sensitive Industrial IoT tasks adapt quickly while reducing labeled-data and training costs?",
+      "method": "A semi-supervised reservoir-computing framework keeps a dynamic reservoir fixed, trains only the readout layer, and uses unlabeled data.",
+      "publication": "IEEE TMC 2026"
+    }
+  },
+  {
+    "id": "multi-submersible-escort",
+    "publication_id": 71,
+    "image": "projects/multi-submersible-escort.png",
+    "zh": {
+      "topic": "物理 AI 系统",
+      "name": "多潜器协同护航",
+      "question": "如何让多台自主水下航行器在海流等因素下协同护航载人潜器？",
+      "method": "基于水下物联网的软件定义网络协同通信，并以人工流场势场算法规划多潜器路径。",
+      "publication": "IEEE TITS 2023"
+    },
+    "en": {
+      "topic": "Physical AI systems",
+      "name": "Cooperative Escort by Multiple Submersibles",
+      "question": "How can multiple autonomous underwater vehicles coordinate to escort a crewed submersible amid ocean currents?",
+      "method": "Software-defined networking for underwater IoV supports coordination, while an artificial-flow potential-field algorithm plans multi-submersible paths.",
+      "publication": "IEEE TITS 2023"
+    }
+  }
 ]

@@ -1,7 +1,14 @@
 {{ define "main" }}
 {{ $ui := index .Site.Data.ui .Lang }}
-<section class="profile"><div class="site-container"><a class="back-link" href="{{ "people/" | relLangURL }}">← {{ $ui.backPeople }}</a><div class="profile__grid">
-  <div class="profile__placeholder" aria-hidden="true">{{ substr (.Params.name_cn | default .Title) 0 1 }}</div>
-  <div><p class="eyebrow">{{ if eq .Params.member_status "alumni" }}{{ $ui.alumni }}{{ else }}{{ $ui.students }}{{ end }}</p><h1>{{ if eq .Lang "zh" }}{{ .Params.name_cn | default .Title }}{{ else }}{{ .Params.name | default .Title }}{{ end }}</h1><p class="profile__role">{{ if eq .Lang "zh" }}{{ .Params.name }}{{ else }}{{ .Params.name_cn }}{{ end }} · {{ .Params.work }}</p><div class="profile__intro">{{ .Content }}</div>{{ partial "translation-pill.html" . }}</div>
+{{ $records := where .Site.Data.students.students "profile" .File.ContentBaseName }}
+{{ $student := dict }}{{ with $records }}{{ $student = index . 0 }}{{ end }}
+{{ $name := cond (eq .Lang "zh") (.Params.name_cn | default .Title) (.Params.name | default .Title) }}
+{{ if $student }}{{ $name = cond (eq .Lang "zh") $student.name_zh $student.name_en }}{{ end }}
+{{ $status := cond (eq .Params.member_status "alumni") (cond (eq .Lang "zh") "校友" "Alumnus") "" }}
+{{ if $student }}{{ $status = cond (eq .Lang "zh") (cond (eq $student.level "phd") "博士" (cond (eq $student.level "master") "硕士" "本科生")) (cond (eq $student.level "phd") "PhD" (cond (eq $student.level "master") "Master's" "Undergraduate")) }}{{ end }}
+{{ $direction := "" }}{{ if $student }}{{ $direction = cond (eq .Lang "zh") $student.research_zh $student.research_en }}{{ end }}
+<section class="profile"><div class="site-container"><a class="back-link" href="{{ "people/" | relLangURL }}">← {{ $ui.backPeople }}</a><div class="profile__grid profile__grid--student">
+  {{ if and $student $student.image }}{{ partial "image.html" (dict "src" $student.image "alt" $name "class" "profile__photo profile__photo--student" "width" 480 "loading" "eager") }}{{ else }}<div class="profile__placeholder" aria-hidden="true">{{ substr $name 0 1 }}</div>{{ end }}
+  <div><p class="eyebrow">{{ if eq .Params.member_status "alumni" }}{{ $ui.alumni }}{{ else }}{{ $ui.students }}{{ end }}</p><h1>{{ $name }}</h1>{{ with $status }}<p class="profile__role">{{ . }}</p>{{ end }}{{ with $direction }}<p class="profile__research">{{ . }}</p>{{ end }}</div>
 </div></div></section>
 {{ end }}

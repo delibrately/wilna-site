@@ -4,12 +4,13 @@
   <meta name="color-scheme" content="light">
   <script>document.documentElement.classList.add('js');</script>
   {{ $ui := index .Site.Data.ui .Lang }}
-  <title>{{ if .IsHome }}Wilna Lab · {{ $ui.university }}{{ else }}{{ .Title }} · Wilna Lab{{ end }}</title>
+  <title>{{ if .IsHome }}WiLNA · {{ $ui.university }}{{ else }}{{ .Title }} · WiLNA{{ end }}</title>
   {{ $description := .Description }}
+  {{ if .IsHome }}{{ $description = .Site.Params.heroDescription }}{{ end }}
   {{ if not $description }}
     {{ if eq .Type "research" }}{{ with .File }}{{ with index $.Site.Data.research (lower .ContentBaseName) }}{{ $description = (index . $.Lang).summary }}{{ end }}{{ end }}{{ end }}
     {{ if and (not $description) (eq .Type "paper") }}{{ with .Params.abstract }}{{ $description = index . 0 }}{{ end }}{{ end }}
-    {{ if and (not $description) (eq .Type "people") }}{{ with .Params.introduction }}{{ $description = (index . 0).content }}{{ else }}{{ $description = printf "%s · %s · Wilna Lab · %s" $.Title ($.Params.work | default $ui.people) $ui.university }}{{ end }}{{ end }}
+    {{ if and (not $description) (eq .Type "people") }}{{ with .Params.introduction }}{{ $description = (index . 0).content }}{{ else }}{{ $description = printf "%s · %s · WiLNA · %s" $.Title ($.Params.work | default $ui.people) $ui.university }}{{ end }}{{ end }}
     {{ if not $description }}{{ $description = printf "%s · %s" .Title $ui.footerMission }}{{ end }}
   {{ end }}
   <meta name="description" content="{{ $description | plainify | truncate 180 }}">
@@ -20,7 +21,7 @@
   {{ $styles := resources.Get "css/lab.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
   {{ range .AlternativeOutputFormats }}<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}">{{ end }}
-  <meta property="og:title" content="{{ .Title }} · Wilna Lab">
+  <meta property="og:title" content="{{ .Title }} · WiLNA">
   <meta property="og:description" content="{{ $description | plainify | truncate 180 }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
