@@ -1,0 +1,11 @@
+{{ $publication := .publication }}
+{{ $selection := .selection }}
+{{ $title := $publication.title }}
+{{ with $publication.link_verification.title }}{{ $title = index . 0 }}{{ end }}
+<article class="paper-item" data-featured-publication data-publication-id="{{ $publication.id }}">
+  <div class="paper-item__meta"><span>{{ $publication.year }}</span><span class="badge">CCF {{ $selection.ccf }}</span></div>
+  <h3>{{ if and $publication.link_verified $publication.url }}<a href="{{ $publication.url }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>{{ else }}{{ $title }}{{ end }}</h3>
+  <p class="paper-item__authors">{{ delimit $publication.authors ", " }}</p>
+  <p class="paper-item__venue"><em>{{ $publication.venue }}</em>{{ with $publication.publication_details }}, {{ . }}{{ end }}</p>
+  {{ if and $publication.link_verified $publication.doi }}<div class="paper-item__links"><a href="{{ $publication.url }}" target="_blank" rel="noopener noreferrer">DOI: {{ $publication.doi }} <span aria-hidden="true">↗</span></a></div>{{ end }}
+</article>
