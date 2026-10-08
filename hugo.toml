@@ -146,9 +146,9 @@ relativeURLs = false
 
 
 [[params.introImages]]
-  src = "intro/3.jpg"
+  src = "intro/wasa-2022-2023.jpg"
 [[params.introImages]]
-  src = "intro/1.jpg"
+  src = "intro/software-school-team.jpg"
 [[params.introImages]]
   src = "intro/2.jpg"
 
