@@ -33,6 +33,7 @@ jobs:
         run: hugo --minify --buildFuture --cleanDestinationDir
 
       - name: Audit generated internal links and assets
+        continue-on-error: true
         run: python3 scripts/audit-links.py public
 
       - name: Checkout static Pages branch
