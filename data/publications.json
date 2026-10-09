@@ -37572,6 +37572,56 @@
           "accepted": true
         }
       }
+    },
+    {
+      "id": 265,
+      "title": "FedFree: A Data-Free Model Poisoning Attack Against Federated Learning",
+      "authors": [
+        "Zhenquan Qin",
+        "Kehao A",
+        "B. Lu",
+        "G. Han"
+      ],
+      "year": 2026,
+      "venue": "IEEE Trans. Dependable Secur. Comput.",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "article_number": "",
+      "type": "journal-article",
+      "contributor_role": "author",
+      "eprint_id": "",
+      "publication_details": "2026.",
+      "doi": "10.1109/TDSC.2026.3737460",
+      "url": "https://doi.org/10.1109/TDSC.2026.3737460",
+      "link_verified": true,
+      "source_pages": [],
+      "raw_reference": "Zhenquan Qin, Kehao A, B. Lu, and G. Han. FedFree: A Data-Free Model Poisoning Attack Against Federated Learning. IEEE Trans. Dependable Secur. Comput., 2026.",
+      "citation": "Zhenquan Qin, Kehao A, B. Lu, and G. Han. FedFree: A Data-Free Model Poisoning Attack Against Federated Learning. IEEE Trans. Dependable Secur. Comput., 2026.",
+      "review_flags": [],
+      "related_ids": [],
+      "source_kind": "user-requested",
+      "link_verification": {
+        "provider": "IEEE Xplore",
+        "source_url": "https://ieeexplore.ieee.org/document/11710313",
+        "checked_at": "2026-10-09T00:00:00+00:00",
+        "title": [
+          "FedFree: A Data-Free Model Poisoning Attack Against Federated Learning"
+        ],
+        "authors": [
+          { "given": "Zhenquan", "family": "Qin", "sequence": "first" },
+          { "given": "A", "family": "Kehao", "sequence": "additional" },
+          { "given": "B.", "family": "Lu", "sequence": "additional" },
+          { "given": "G.", "family": "Han", "sequence": "additional" }
+        ],
+        "container_title": [
+          "IEEE Transactions on Dependable and Secure Computing"
+        ],
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article_number": null
+      }
     }
   ],
   "legacy_mapping": [

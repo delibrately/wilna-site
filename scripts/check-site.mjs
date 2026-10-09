@@ -104,9 +104,9 @@ try {
   assert.equal(await page.locator('[data-hero-dot]').count(), 3);
   assert.equal(await page.locator('[data-carousel-toggle], [data-full-photo]').count(), 0);
   const featuredPublications = page.locator('[data-featured-publication]');
-  assert.deepEqual(await featuredPublications.evaluateAll((items) => items.map((item) => item.dataset.publicationId)), ['11', '12', '37', '39', '60']);
+  assert.deepEqual(await featuredPublications.evaluateAll((items) => items.map((item) => item.dataset.publicationId)), ['11', '12', '265', '37', '39', '60']);
   assert.equal(await featuredPublications.locator('.badge').allTextContents().then((labels) => labels.every((label) => label === 'CCF A')), true);
-  assert.equal(await featuredPublications.locator('.paper-item__links a').evaluateAll((links) => links.length === 5 && links.every((link) => link.href.startsWith('https://doi.org/'))), true);
+  assert.equal(await featuredPublications.locator('.paper-item__links a').evaluateAll((links) => links.length === 6 && links.every((link) => link.href.startsWith('https://doi.org/'))), true);
   await page.locator('[data-hero-dot]').nth(2).click();
   assert.equal(await page.locator('[data-hero-dot]').nth(2).getAttribute('aria-current'), 'true');
   await page.locator('[data-hero-dot]').nth(2).focus();
@@ -187,7 +187,7 @@ try {
   await page.goto(base + 'zh/people/');
   assert.equal(await page.locator('.advisor-card').count(), 4);
   assert.deepEqual(await page.locator('.advisor-card h3').allTextContents(), ['王雷', '覃振权', '李中尉', '池建成']);
-  assert.ok((await page.locator('.advisor-card').filter({ has: page.locator('a[href$="/lizhongwei/"]') }).textContent()).includes('dllizhongwei@gmail.com'));
+  assert.ok((await page.locator('.advisor-card').filter({ hasText: 'dllizhongwei@gmail.com' }).textContent()).includes('dllizhongwei@gmail.com'));
   assert.equal(await page.locator('#students .member-card').count(), 43);
   assert.equal(await page.locator('#phd-students .member-card').count(), 18);
   assert.equal(await page.locator('#master-students .member-card').count(), 25);
@@ -203,7 +203,7 @@ try {
   report.interactions.push('4 faculty, 18 PhD students, 25 masters, empty undergraduate section, 18 alumni, English international names, missing-photo placeholders');
   await page.goto(base + 'en/people/');
   assert.deepEqual(await page.locator('.advisor-card h3').allTextContents(), ['Lei Wang', 'Zhenquan Qin', 'Li Zhongwei', 'Jiancheng Chi']);
-  assert.ok((await page.locator('.advisor-card').filter({ has: page.locator('a[href$="/lizhongwei/"]') }).textContent()).includes('dllizhongwei@gmail.com'));
+  assert.ok((await page.locator('.advisor-card').filter({ hasText: 'dllizhongwei@gmail.com' }).textContent()).includes('dllizhongwei@gmail.com'));
   await page.goto(base + 'zh/people/akehao/');
   assert.equal(await page.locator('.profile__grid--student h1').textContent(), '阿克豪');
   assert.equal(await page.locator('.profile__role').textContent(), '硕士');

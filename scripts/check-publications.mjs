@@ -4,7 +4,19 @@ import path from 'node:path';
 
 export async function checkPublications(page, base, output) {
   const data = JSON.parse(await fs.readFile(new URL('../data/publications.json', import.meta.url), 'utf8')).publications;
-  const sorted = [...data].sort((a, b) => b.year - a.year || a.id - b.id);
+  const ranks = JSON.parse(await fs.readFile(new URL('../data/publication_rankings.json', import.meta.url), 'utf8')).publications;
+  assert.equal(Object.keys(ranks).length, data.length);
+  for (const publication of data) {
+    const rank = ranks[String(publication.id)];
+    assert.ok(rank, `missing ranking metadata for ${publication.id}`);
+    assert.equal(rank.venue, publication.venue);
+    assert.equal(rank.type, publication.type);
+    assert.ok(Object.hasOwn(rank.cas, 'major_zone'));
+    assert.ok(Array.isArray(rank.cas.subject_zones));
+    assert.ok(Number.isInteger(rank.sort_order));
+    if (rank.ccf.category) assert.equal(rank.sort_order, { A: 1, B: 2, C: 3 }[rank.ccf.category]);
+  }
+  const sorted = [...data].sort((a, b) => b.year - a.year || ranks[String(a.id)].sort_order - ranks[String(b.id)].sort_order || a.id - b.id);
   const visibleIDs = () => page.locator('[data-publication]:visible').evaluateAll((items) => items.map((item) => Number(item.dataset.id)));
   const reset = () => page.locator('[data-publication-filters] button[type="reset"]').click();
   for (const lang of ['zh', 'en']) {
@@ -15,6 +27,14 @@ export async function checkPublications(page, base, output) {
     assert.equal(await page.locator('.page-heading p:not(.eyebrow)').count(), 0);
     assert.equal(await page.locator('.publication-summary > p').count(), 1);
     assert.deepEqual(await visibleIDs(), sorted.slice(0, 20).map((p) => p.id));
+    const renderedRanks = await page.locator('[data-publication]').evaluateAll((items) => items.map((item) => ({
+      id: Number(item.dataset.id), order: Number(item.dataset.rankOrder), label: item.dataset.rankLabel,
+    })));
+    for (const rendered of renderedRanks) {
+      const rank = ranks[String(rendered.id)];
+      assert.equal(rendered.order, rank.sort_order);
+      assert.equal(rendered.label, (lang === 'zh' ? rank.selected.label_zh : rank.selected.label_en) || '');
+    }
     assert.equal(await page.locator('[data-publication-prev]').isDisabled(), true);
     const rendered = await page.locator('[data-publication]').evaluateAll((items) => items.map((item) => ({
       id: Number(item.dataset.id), title: item.querySelector('h3').textContent,

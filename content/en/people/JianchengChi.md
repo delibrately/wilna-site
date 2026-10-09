@@ -12,7 +12,7 @@ name = 'Jiancheng Chi'
 name_cn = '池建成'
 name_en = 'Jiancheng Chi'
 degree = 'Assistant Professor'
-image = "people/JianchengChi.png"
+image = "people/JianchengChi.jpg"
 
 email = 'chijiancheng@dlut.edu.cn'
 faculty_homepage = 'https://faculty.dlut.edu.cn/chijiancheng/en/index.htm'

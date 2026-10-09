@@ -1,6 +1,7 @@
-{{ $p := .publication }}{{ $ui := .ui }}
-<article class="paper-item publication-item" id="publication-{{ $p.id }}" data-publication data-id="{{ $p.id }}" data-year="{{ $p.year }}" data-type="{{ $p.type }}" tabindex="-1">
-  <div class="paper-item__meta"><span>[{{ $p.id }}]</span><span>{{ index $ui.types $p.type }}</span></div>
+{{ $p := .publication }}{{ $rank := .ranking }}{{ $ui := .ui }}{{ $lang := .lang }}
+{{ $rankLabel := $rank.selected.label_en }}{{ if eq $lang "zh" }}{{ $rankLabel = $rank.selected.label_zh }}{{ end }}
+<article class="paper-item publication-item" id="publication-{{ $p.id }}" data-publication data-id="{{ $p.id }}" data-year="{{ $p.year }}" data-type="{{ $p.type }}" data-rank-order="{{ $rank.sort_order }}" data-rank-label="{{ $rankLabel }}" data-rank-source="{{ $rank.selected.source }}" tabindex="-1">
+  <div class="paper-item__meta"><span>[{{ $p.id }}]</span><span>{{ index $ui.types $p.type }}</span>{{ with $rankLabel }}<span class="badge">{{ . }}</span>{{ end }}</div>
   <h3 data-publication-title>{{ if and $p.link_verified $p.url (hasPrefix $p.url "https://") }}<a href="{{ $p.url }}" target="_blank" rel="noopener">{{ $p.title }}</a>{{ else }}{{ $p.title }}{{ end }}</h3>
   <p class="paper-item__authors" data-publication-authors>{{ if eq $p.contributor_role "editor" }}{{ $ui.editors }}: {{ end }}{{ delimit $p.authors ", " }}</p>
   <p class="paper-item__venue" data-publication-venue>{{ if ne $p.type "edited-volume" }}<em>{{ $p.venue }}</em>{{ if $p.publication_details }}, {{ end }}{{ end }}{{ $p.publication_details }}</p>

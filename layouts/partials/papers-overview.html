@@ -1,5 +1,7 @@
 {{ $ui := index .Site.Data.ui .Lang }}
 {{ $pubUI := index .Site.Data.publication_ui .Lang }}
+{{ $lang := .Lang }}
+{{ $rankRecords := .Site.Data.publication_rankings.records }}
 {{ $papers := sort .Site.Data.publications.publications "year" "desc" }}
 {{ $years := slice }}
 {{ range $papers }}{{ $years = $years | append .year }}{{ end }}
@@ -14,7 +16,16 @@
   </form>
   <div class="publication-summary"><p class="filter-count" role="status" aria-live="polite" data-publication-count>{{ len $papers }} {{ $pubUI.count }}</p></div>
   <div class="paper-list publication-results" id="publication-results" tabindex="-1">
-    {{ range $years }}<section class="year-group" data-publication-year aria-labelledby="year-{{ . }}"><h2 id="year-{{ . }}">{{ . }}</h2><div>{{ range sort (where $papers "year" .) "id" "asc" }}{{ partial "publication-item.html" (dict "publication" . "ui" $pubUI) }}{{ end }}</div></section>{{ end }}
+    {{ range $years }}
+      {{ $year := . }}
+      <section class="year-group" data-publication-year aria-labelledby="year-{{ $year }}"><h2 id="year-{{ $year }}">{{ $year }}</h2><div>
+        {{ range sort (where $rankRecords "year" $year) "sort_key" "asc" }}
+          {{ $rank := . }}
+          {{ $matchingPaper := where $papers "id" $rank.id }}
+          {{ if $matchingPaper }}{{ partial "publication-item.html" (dict "publication" (index $matchingPaper 0) "ranking" $rank "ui" $pubUI "lang" $lang) }}{{ end }}
+        {{ end }}
+      </div></section>
+    {{ end }}
   </div>
   <p class="empty-state" data-publication-empty hidden>{{ $pubUI.empty }}</p>
   <nav class="publication-pagination" data-publication-pagination hidden aria-label="{{ $pubUI.pagination }}">
