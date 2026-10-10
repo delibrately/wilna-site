@@ -3,6 +3,7 @@ title = 'Wireless Sensing'
 draft = false
 type = 'research'
 layout = 'research'
+parent_area = 'research/multimodal-sensing'
 
 intro = """Wireless sensing is a type of non-intrusive sensing technology that utilizes common wireless signals in the environment (such as Wi-Fi, Bluetooth, millimeter waves, LoRa, etc.) to see the states of people and objects. It achieves capabilities such as action recognition, gait analysis, vital sign monitoring, and spatial state perception by analyzing the subtle disturbances (such as CSI fluctuations, Doppler effect) caused by human activities and environmental changes during the propagation of the signals. Compared to wearable devices or cameras, wireless sensing has the advantages of no need for contact, privacy friendliness, all-day operation, and certain robustness in penetration and obstruction. Therefore, it has broad application prospects in smart homes, health monitoring, security, human-computer interaction, and smart cities. With the development of 5G/6G, the Internet of Things, and AI, wireless sensing is accelerating its evolution towards higher precision, stronger generalization, and edge real-time deployment."""
 

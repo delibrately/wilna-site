@@ -3,10 +3,13 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 export async function checkPublications(page, base, output) {
-  const data = JSON.parse(await fs.readFile(new URL('../data/publications.json', import.meta.url), 'utf8')).publications;
+  const allData = JSON.parse(await fs.readFile(new URL('../data/publications.json', import.meta.url), 'utf8')).publications;
+  const excludedIDs = JSON.parse(await fs.readFile(new URL('../data/publication_exclusions.json', import.meta.url), 'utf8')).ids;
+  const data = allData.filter((publication) => !excludedIDs.includes(publication.id));
+  const excludedTitles = allData.filter((publication) => excludedIDs.includes(publication.id)).map((publication) => publication.title);
   const ranks = JSON.parse(await fs.readFile(new URL('../data/publication_rankings.json', import.meta.url), 'utf8')).publications;
-  assert.equal(Object.keys(ranks).length, data.length);
-  for (const publication of data) {
+  assert.equal(Object.keys(ranks).length, allData.length);
+  for (const publication of allData) {
     const rank = ranks[String(publication.id)];
     assert.ok(rank, `missing ranking metadata for ${publication.id}`);
     assert.equal(rank.venue, publication.venue);
@@ -20,9 +23,15 @@ export async function checkPublications(page, base, output) {
   const visibleIDs = () => page.locator('[data-publication]:visible').evaluateAll((items) => items.map((item) => Number(item.dataset.id)));
   const reset = () => page.locator('[data-publication-filters] button[type="reset"]').click();
   for (const lang of ['zh', 'en']) {
+    for (const relative of [`${lang}/`, `${lang}/research/task-offloading/`]) {
+      await page.goto(base + relative);
+      const bodyText = await page.locator('body').innerText();
+      for (const title of excludedTitles) assert.equal(bodyText.includes(title), false, `${title} rendered at ${relative}`);
+    }
     await page.goto(base + lang + '/papers/');
     await page.waitForSelector('[data-publication-filters]:visible');
     assert.equal(await page.locator('[data-publication]').count(), data.length);
+    for (const id of excludedIDs) assert.equal(await page.locator(`#publication-${id}`).count(), 0, `excluded publication ${id} rendered in ${lang}`);
     assert.equal(await page.locator('.publication-citation,.publication-related,.publication-flag,.publication-archive').count(), 0);
     assert.equal(await page.locator('.page-heading p:not(.eyebrow)').count(), 0);
     assert.equal(await page.locator('.publication-summary > p').count(), 1);
@@ -61,9 +70,9 @@ export async function checkPublications(page, base, output) {
     assert.equal(await page.locator('[data-publication-next]').isDisabled(), true);
     assert.equal((await visibleIDs()).length, data.length % 20 || 20);
     await page.locator('[data-publication-prev]').click();
-    assert.equal(await page.locator('[data-publication-page]').inputValue(), '13');
+    assert.equal(await page.locator('[data-publication-page]').inputValue(), String(pageCount - 1));
     await page.locator('[data-publication-next]').click();
-    assert.equal(await page.locator('[data-publication-page]').inputValue(), '14');
+    assert.equal(await page.locator('[data-publication-page]').inputValue(), String(pageCount));
     await reset();
     for (const year of new Set(data.map((p) => p.year))) {
       await page.selectOption('[name="year"]', String(year));

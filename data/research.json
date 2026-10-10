@@ -1,6 +1,7 @@
 {
   "multimodal-sensing": {
     "number": "01",
+    "topic_pages": ["research/Acoustic", "research/Wireless Sensing", "research/underwater-sensing"],
     "projects": ["uwbeacon"],
     "publication_ids": [60],
     "zh": {
@@ -16,6 +17,7 @@
   },
   "communications-networks": {
     "number": "02",
+    "topic_pages": ["research/underwater-optical-communication", "research/underwater-networking", "research/industrial-iot"],
     "projects": ["aqualink"],
     "publication_ids": [11],
     "zh": {
@@ -31,6 +33,7 @@
   },
   "collaborative-edge-intelligence": {
     "number": "03",
+    "topic_pages": ["research/task-offloading", "research/on-device-models", "research/lightweight-vision"],
     "projects": ["industrial-task-offloading"],
     "publication_ids": [12],
     "zh": {
@@ -46,6 +49,7 @@
   },
   "physical-ai": {
     "number": "04",
+    "topic_pages": ["research/underwater-robots", "research/robotic-arms", "research/unmanned-aerial-vehicles", "research/unmanned-ground-vehicles"],
     "projects": ["multi-submersible-escort"],
     "publication_ids": [71],
     "zh": {
@@ -59,13 +63,68 @@
       "topics": ["Underwater robots", "Robotic arms", "Unmanned aerial vehicles", "Unmanned ground vehicles"]
     }
   },
+  "underwater-sensing": {
+    "number": "01.03", "projects": ["uwbeacon"], "publication_ids": [60],
+    "zh": {"summary":"融合声学、光学与无线信号，面向水下定位、设备状态与环境信息获取。", "questions":["如何在低能见度、强散射和复杂噪声环境中获得稳定的水下观测？","如何融合声学、光学与无线测量，提升目标定位和环境理解能力？","如何让水下感知结果支撑机器人及传感网络的后续任务？"], "methods":[{"title":"多源信号采集","text":"结合水下相机、光学信标、声学设备与无线传感节点，按场景选择可用观测。"},{"title":"定位与信息融合","text":"提取图像、信号强度、到达时间等特征，研究互补信息的融合与不确定性处理。"},{"title":"复杂环境适配","text":"关注水体浑浊、环境光、散射和设备差异对感知可靠性的影响。"}]},
+    "en": {"summary":"Combining acoustic, optical, and wireless signals for underwater positioning and environmental awareness.", "questions":["How can underwater observations remain reliable amid low visibility, scattering, and complex noise?","How can acoustic, optical, and wireless measurements be fused for positioning and scene understanding?","How can underwater sensing support downstream tasks for robots and sensor networks?"], "methods":[{"title":"Multimodal acquisition","text":"Underwater cameras, optical beacons, acoustic devices, and wireless sensor nodes provide observations suited to each setting."},{"title":"Positioning and fusion","text":"Image, signal-strength, and time-of-arrival features can be combined while accounting for uncertainty."},{"title":"Adaptation to underwater conditions","text":"The work considers how turbidity, ambient light, scattering, and device differences affect sensing reliability."}]}
+  },
+  "underwater-optical-communication": {
+    "number": "02.01", "projects": ["aqualink"], "publication_ids": [11, 44, 58, 127],
+    "zh": {"summary":"研究利用水下可见光和相机进行信息传输，关注动态水体中的链路可靠性与实用部署。", "questions":["如何在水体散射、遮挡和设备运动下维持可用的光学通信链路？","如何利用普通相机与显示设备降低专用收发硬件依赖？","如何在吞吐率、距离、可靠性和终端资源之间进行权衡？"], "methods":[{"title":"光学链路设计","text":"围绕可见光传播、蓝绿波段和相机成像特性设计水下信息传输方式。"},{"title":"编码与纠错","text":"结合图像编码、二维码承载及纠错机制，提高接收端对误码和图像扰动的容忍度。"},{"title":"环境自适应","text":"考虑水体浑浊、距离变化、运动和环境光对图像接收质量的影响。"}]},
+    "en": {"summary":"Using underwater visible light and cameras to transmit information, with attention to link reliability and practical deployment in dynamic water.", "questions":["How can an optical link remain usable under scattering, occlusion, and device motion?","Can commodity cameras and displays reduce reliance on specialized transceivers?","How should throughput, range, reliability, and device resources be balanced?"], "methods":[{"title":"Optical link design","text":"The work considers visible-light propagation, blue-green wavelengths, and camera imaging characteristics."},{"title":"Encoding and error correction","text":"Image encoding, QR-code payloads, and error-correction mechanisms can improve tolerance to bit errors and image distortion."},{"title":"Environmental adaptation","text":"Water turbidity, distance, motion, and ambient light are considered in receiver-quality adaptation."}]}
+  },
+  "underwater-networking": {
+    "number": "02.02", "projects": [], "publication_ids": [33, 39, 80, 81, 83],
+    "zh": {"summary":"面向水下光无线传感网络，研究节点发现、拓扑组织、路由与可靠数据传输。", "questions":["节点受限且链路易变化时，如何建立并维护有效网络拓扑？","如何在可靠交付、时延、能耗与信息新鲜度之间取得平衡？","如何在网络协作中兼顾节点发现与通信安全？"], "methods":[{"title":"拓扑控制与路由","text":"研究适应链路状态和任务需求的网络组织、路径选择与多目标路由策略。"},{"title":"可靠传输与调度","text":"结合链路质量、队列和时效需求，设计数据交付与发送调度机制。"},{"title":"网络安全与协同","text":"关注水下节点发现及协同过程中的身份验证和隐私保护问题。"}]},
+    "en": {"summary":"Underwater optical wireless sensor networks, including node discovery, topology organization, routing, and reliable data delivery.", "questions":["How can useful network topologies be established and maintained with constrained nodes and changing links?","How can reliable delivery, latency, energy use, and information freshness be balanced?","How can node discovery and communication security be addressed in network coordination?"], "methods":[{"title":"Topology control and routing","text":"Network organization, path selection, and multi-objective routing adapt to link conditions and task requirements."},{"title":"Reliable delivery and scheduling","text":"Link quality, queues, and freshness requirements inform data delivery and transmission scheduling."},{"title":"Secure coordination","text":"The work considers authentication and privacy in underwater node discovery and coordination."}]}
+  },
+  "industrial-iot": {
+    "number": "02.03", "projects": ["industrial-task-offloading"], "publication_ids": [12, 41, 73],
+    "zh": {"summary":"面向工业现场设备互联与时延敏感应用，研究网络协同、边缘计算和任务处理。", "questions":["设备、链路和计算负载动态变化时，如何维持工业应用的可靠服务？","如何将任务分配到合适的设备、边缘节点或云端？","如何兼顾实时性、资源利用率与通信可靠性？"], "methods":[{"title":"工业设备互联","text":"面向异构设备与网络连接，分析任务数据流、服务需求和通信约束。"},{"title":"边缘协同计算","text":"结合任务卸载、资源分配和边缘节点协同，缩短数据处理路径。"},{"title":"自适应服务","text":"利用在线状态与历史信息调整任务处理策略，关注工业场景的时延和可靠性要求。"}]},
+    "en": {"summary":"Device connectivity and latency-sensitive applications in industrial settings, spanning network coordination, edge computing, and task processing.", "questions":["How can industrial services remain reliable as devices, links, and computing loads change?","How should tasks be assigned among devices, edge nodes, and the cloud?","How can real-time response, resource use, and communication reliability be balanced?"], "methods":[{"title":"Industrial connectivity","text":"Heterogeneous devices, data flows, service requirements, and network constraints shape the system design."},{"title":"Collaborative edge computing","text":"Task offloading, resource allocation, and edge-node coordination can shorten processing paths."},{"title":"Adaptive services","text":"Online status and historical information can guide task processing under latency and reliability constraints."}]}
+  },
+  "task-offloading": {
+    "number": "03.01", "projects": ["industrial-task-offloading"], "publication_ids": [12, 73, 97, 98],
+    "zh": {"summary":"根据任务时限、设备能力和网络状态，在终端、边缘节点与云端之间分配计算任务。", "questions":["如何在时变网络与计算负载下选择任务执行位置？","如何降低任务时延和设备能耗，同时满足服务质量约束？","如何利用有限标注数据适应不断变化的任务与环境？"], "methods":[{"title":"任务与资源建模","text":"描述任务计算量、数据规模、时限、设备能力及通信开销，形成卸载决策依据。"},{"title":"在线卸载决策","text":"结合强化学习、模仿学习或半监督方法，根据系统状态调整任务分配。"},{"title":"多节点协同","text":"研究终端、边缘服务器和网络节点之间的资源协调与负载平衡。"}]},
+    "en": {"summary":"Assigning computation among devices, edge nodes, and the cloud according to deadlines, device capability, and network conditions.", "questions":["Where should tasks execute under changing networks and computing loads?","How can latency and device energy be reduced while meeting service constraints?","How can offloading adapt to changing tasks and environments with limited labeled data?"], "methods":[{"title":"Task and resource modeling","text":"Task computation, data size, deadlines, device capability, and communication cost inform offloading decisions."},{"title":"Online offloading","text":"Reinforcement learning, imitation learning, and semi-supervised methods can adapt task assignment to system state."},{"title":"Multi-node coordination","text":"Resources and workloads are coordinated across devices, edge servers, and network nodes."}]}
+  },
+  "on-device-models": {
+    "number": "03.02", "projects": [], "publication_ids": [24],
+    "zh": {"summary":"研究如何在算力、内存和能耗受限的终端设备上部署与运行智能模型。", "questions":["如何在有限计算与存储资源下部署满足任务需求的模型？","模型压缩后如何平衡推理速度、资源消耗与任务表现？","如何根据设备能力和输入负载调整模型推理过程？"], "methods":[{"title":"模型压缩与蒸馏","text":"通过知识蒸馏、结构裁剪等思路降低模型规模与计算开销。"},{"title":"端侧推理优化","text":"围绕设备算力、内存和功耗限制，优化模型执行与数据传输流程。"},{"title":"协同部署","text":"结合终端与边缘节点能力，探索模型分层部署及任务协同处理。"}]},
+    "en": {"summary":"Deploying and running intelligent models on devices with constrained compute, memory, and energy budgets.", "questions":["How can models that meet task requirements be deployed within limited compute and storage?","How can inference speed, resource use, and task performance be balanced after compression?","How can inference adapt to device capability and input workload?"], "methods":[{"title":"Compression and distillation","text":"Knowledge distillation and structural pruning are approaches to reduce model size and computation."},{"title":"On-device inference","text":"Execution and data movement are optimized around device compute, memory, and power constraints."},{"title":"Collaborative deployment","text":"Model partitioning and task coordination can make use of both device and edge-node capabilities."}]}
+  },
+  "lightweight-vision": {
+    "number": "03.03", "projects": [], "publication_ids": [24],
+    "zh": {"summary":"面向边缘设备上的视觉任务，研究计算开销较低且适合实际部署的视觉模型。", "questions":["如何减少视觉模型的参数量、运算量和推理延迟？","模型轻量化后如何尽可能维持目标任务所需的识别能力？","如何应对现场图像变化与设备算力差异？"], "methods":[{"title":"高效网络结构","text":"探索多路径特征提取、轻量模块与计算复用，控制模型的运行成本。"},{"title":"知识迁移与压缩","text":"利用蒸馏和模型压缩，将较大模型的表征能力迁移至紧凑模型。"},{"title":"边缘部署评估","text":"结合目标设备的时延、内存和能耗约束评估推理流程。"}]},
+    "en": {"summary":"Vision models with lower computational cost for practical deployment on edge devices.", "questions":["How can model parameters, operations, and inference latency be reduced?","How can a compact model retain the recognition capability required by its task?","How can models handle image variation and differences in device capability?"], "methods":[{"title":"Efficient architectures","text":"Multi-path feature extraction, lightweight modules, and computation reuse help control runtime cost."},{"title":"Knowledge transfer and compression","text":"Distillation and compression transfer representations from larger models to compact ones."},{"title":"Edge deployment evaluation","text":"Inference is considered under latency, memory, and energy constraints of target devices."}]}
+  },
+  "underwater-robots": {
+    "number": "04.01", "projects": ["multi-submersible-escort"], "publication_ids": [71],
+    "zh": {"summary":"面向水下自主航行器，研究环境感知、定位导航、协同通信与任务执行。", "questions":["水下定位和通信受限时，机器人如何获得可用的环境与队友信息？","多台潜器如何交换状态并协调航迹与任务？","如何让感知、通信和运动决策适配水下环境约束？"], "methods":[{"title":"水下感知与导航","text":"结合声学、光学及惯性等传感信息，支持目标定位和运动状态估计。"},{"title":"协同通信","text":"研究水下节点间的信息传输、网络组织与任务状态共享。"},{"title":"路径与任务规划","text":"根据任务目标、队形需求和环境约束组织多潜器的协同行动。"}]},
+    "en": {"summary":"Sensing, localization, communication, and task execution for autonomous underwater vehicles.", "questions":["How can robots obtain useful environmental and teammate information with constrained underwater positioning and communication?","How can multiple submersibles exchange state and coordinate routes and tasks?","How can sensing, communication, and motion decisions adapt to underwater constraints?"], "methods":[{"title":"Underwater sensing and navigation","text":"Acoustic, optical, and inertial observations can support target localization and motion-state estimation."},{"title":"Cooperative communication","text":"Information transfer, network organization, and task-state sharing are considered for underwater nodes."},{"title":"Route and task planning","text":"Multi-submersible coordination is organized around mission objectives, formation requirements, and environmental constraints."}]}
+  },
+  "robotic-arms": {
+    "number": "04.02", "projects": [], "publication_ids": [18],
+    "zh": {"summary":"围绕机械臂与视觉传感器的空间关系标定，为视觉引导的机器人操作提供基础。", "questions":["如何准确估计相机坐标系与机械臂坐标系之间的变换关系？","机器人测量和视觉观测存在误差差异时，如何提升联合标定的准确性？","标定误差如何影响后续定位、抓取与操作任务？"], "methods":[{"title":"手眼标定","text":"利用机械臂运动和视觉观测建立相机与末端执行器之间的几何关系。"},{"title":"机器人世界联合标定","text":"联合估计机器人、视觉传感器及参考坐标系之间的变换参数。"},{"title":"精度分析与优化","text":"分析不同观测误差对参数估计的影响，并据此优化标定过程。"}]},
+    "en": {"summary":"Calibrating the spatial relationship between robotic arms and vision sensors as a foundation for vision-guided manipulation.", "questions":["How can the transformation between camera and robot coordinate frames be estimated accurately?","How can joint calibration account for different errors in robot measurements and visual observations?","How do calibration errors affect localization, grasping, and manipulation?"], "methods":[{"title":"Hand-eye calibration","text":"Robot motion and visual observations establish the geometric relationship between a camera and the end effector."},{"title":"Robot-world joint calibration","text":"Transform parameters among the robot, vision sensor, and reference frame are estimated jointly."},{"title":"Accuracy analysis and optimization","text":"The effects of measurement errors on parameter estimation inform calibration optimization."}]}
+  },
+  "unmanned-aerial-vehicles": {
+    "number": "04.03", "projects": [], "publication_ids": [30, 75],
+    "zh": {"summary":"研究无人机在无线网络中的定位、路径覆盖和任务协同，关注通信与能效约束。", "questions":["通信和传感信息受限时，如何支持无人机定位与飞行网络运行？","如何规划无人机覆盖区域和任务周期，满足网络服务需求？","如何兼顾覆盖效果、飞行能耗与传感网络运行成本？"], "methods":[{"title":"定位与网络支持","text":"结合飞行网络路由与通信信息，研究无人机状态定位及网络可达性。"},{"title":"覆盖与任务调度","text":"依据目标区域和周期性服务需求安排无人机覆盖与任务顺序。"},{"title":"能效优化","text":"在覆盖质量、飞行与通信能耗之间建立优化目标。"}]},
+    "en": {"summary":"Localization, area coverage, and task coordination for UAVs in wireless networks, considering communication and energy constraints.", "questions":["How can localization and flying-network operation be supported with constrained communication and sensing?","How should UAV coverage areas and task cycles be planned to meet network service needs?","How can coverage be balanced against flight energy and sensor-network operating cost?"], "methods":[{"title":"Localization and network support","text":"Flying-network routing and communication information inform UAV localization and network reachability."},{"title":"Coverage and task scheduling","text":"Coverage and task order are planned around target areas and periodic service requirements."},{"title":"Energy-efficiency optimization","text":"Coverage quality is considered alongside flight and communication energy costs."}]}
+  },
+  "unmanned-ground-vehicles": {
+    "number": "04.04", "projects": [], "publication_ids": [],
+    "zh": {"summary":"面向无人地面车辆的自主运行，关注环境感知、定位、路径规划与车辆控制之间的协同。", "questions":["车辆如何在道路或作业区域中持续估计自身状态与周边环境？","如何将感知信息转化为满足安全约束的行驶路径和动作？","通信、计算或传感能力受限时，如何维持任务执行的稳定性？"], "methods":[{"title":"环境感知与定位","text":"利用车载传感器获取周边目标和道路信息，并估计车辆位置与运动状态。"},{"title":"路径规划与控制","text":"依据环境、任务目标和安全约束生成行驶决策，并由车辆控制系统执行。"},{"title":"系统协同","text":"研究车载计算、通信网络与运动控制之间的时序和资源协调。"}]},
+    "en": {"summary":"Autonomous operation of unmanned ground vehicles, coordinating environmental sensing, localization, route planning, and vehicle control.", "questions":["How can a vehicle continuously estimate its state and surroundings on roads or in work areas?","How can perception be translated into safe routes and actions?","How can task execution remain stable with limited communication, compute, or sensing capability?"], "methods":[{"title":"Perception and localization","text":"Onboard sensors provide information about nearby objects and roads while estimating vehicle position and motion."},{"title":"Route planning and control","text":"Driving decisions are generated from the environment, task objectives, and safety constraints, then executed by vehicle controllers."},{"title":"System coordination","text":"Timing and resources are coordinated across onboard computing, communication, and motion control."}]}
+  },
   "acoustic": {
-    "number":"01", "papers":[], "projects":[],
+    "number":"01.01", "papers":[], "projects":[], "publication_ids":[91,171,195,205,207],
     "zh":{"summary":"从声音中理解环境、定位声源。结合麦克风阵列、信号处理与学习方法，研究噪声和混响条件下的声事件识别与空间定位，面向智能家居、机器人及人机交互等应用场景。","questions":["如何在噪声、回声与混响中识别语音和环境声事件？","如何利用多麦克风的时间差、相位差和能量信息确定声源位置？","如何兼顾多声源场景下的鲁棒性与边缘设备的实时性？"],"methods":[{"title":"声学信号处理","text":"结合降噪、回声消除和去混响，构建 Mel 频谱、MFCC 等时频特征。"},{"title":"阵列定位与跟踪","text":"通过到达时间差（TDOA）、波束形成与声源分离，分析声源方向和空间位置。"},{"title":"学习与部署","text":"探索数据驱动的声学表示、跨场景泛化与多模态融合，关注边缘实时运行。"}]},
     "en":{"summary":"Understanding environments and locating sound sources through audio. We explore microphone arrays, signal processing, and learning methods for event recognition and localization in noise and reverberation, with applications in smart spaces, robotics, and human-computer interaction.","questions":["How can speech and sound events be recognized in noise, echoes, and reverberation?","How can timing, phase, and energy differences across microphones locate a sound source?","How can multi-source robustness be balanced with real-time processing on edge devices?"],"methods":[{"title":"Acoustic signal processing","text":"Noise reduction, echo cancellation, and dereverberation support time-frequency representations such as Mel spectra and MFCCs."},{"title":"Array localization and tracking","text":"Time difference of arrival (TDOA), beamforming, and source separation provide spatial information."},{"title":"Learning and deployment","text":"Data-driven acoustic representations, cross-scene generalization, and multimodal fusion inform real-time edge processing."}]}
   },
   "wireless sensing": {
-    "number":"02", "papers":["papers/WiMTI","papers/AutoDLAR"], "projects":[],
+    "number":"01.02", "papers":["papers/WiMTI","papers/AutoDLAR"], "projects":[],
     "zh":{"summary":"让无线信号成为观察人与环境的另一种方式。通过分析 Wi-Fi 等信号中的信道变化与多普勒信息，研究无需接触的动作、身份和空间状态感知，关注跨场景泛化、系统鲁棒性及实时部署。","questions":["如何从无线信道的微小变化中识别人类活动与空间状态？","如何减小设备、房间布局和人员差异带来的分布变化？","如何在实时性与能耗限制下部署可靠的感知系统？"],"methods":[{"title":"信道采集与预处理","text":"利用 Wi-Fi CSI 或雷达信息，进行去噪、相位校正、时频变换与多天线特征融合。"},{"title":"学习与多模态融合","text":"结合学习模型及互补模态，研究身份、姿态与活动识别，提升复杂场景下的感知能力。"},{"title":"泛化与边缘推理","text":"关注迁移学习、自监督学习和域自适应，并通过轻量化模型探索端侧实时推理。"}]},
     "en":{"summary":"Using wireless signals to observe people and their surroundings without contact. Channel variations and Doppler information support activity, identity, and spatial sensing. Our research considers cross-scene generalization, robustness, and real-time deployment.","questions":["How can small channel variations reveal human activity and spatial state?","How can sensing adapt to differences in hardware, rooms, and people?","How can reliable sensing operate within real-time and energy constraints?"],"methods":[{"title":"Channel acquisition and processing","text":"Wi-Fi CSI and radar measurements support denoising, phase correction, time-frequency transforms, and multi-antenna feature fusion."},{"title":"Learning across modalities","text":"Learning models and complementary modalities support identity, posture, and activity recognition in complex environments."},{"title":"Generalization and edge inference","text":"Transfer learning, self-supervised learning, and domain adaptation complement lightweight models for real-time inference."}]}
   }

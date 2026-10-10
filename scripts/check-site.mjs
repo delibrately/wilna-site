@@ -44,7 +44,14 @@ page.on('response', (response) => {
   if (response.url().startsWith(origin) && response.status() >= 400) report.issues.push({ type: 'http', status: response.status(), url: response.url() });
 });
 const researchAreas = ['multimodal-sensing', 'communications-networks', 'collaborative-edge-intelligence', 'physical-ai'];
-const keyPages = ['', 'research/', ...researchAreas.map((area) => `research/${area}/`), 'research/acoustic/', 'research/wireless-sensing/', 'people/', 'people/leiwang/', 'people/shahid-muhammad-rehman/', 'people/akehao/', 'people/zhouxiaoyu/', 'papers/', 'papers/wimti/', 'news/', 'news/adapblinker/', 'joinus/'];
+const researchTopics = ['acoustic', 'wireless-sensing', 'underwater-sensing', 'underwater-optical-communication', 'underwater-networking', 'industrial-iot', 'task-offloading', 'on-device-models', 'lightweight-vision', 'underwater-robots', 'robotic-arms', 'unmanned-aerial-vehicles', 'unmanned-ground-vehicles'];
+const areaTopics = {
+  'multimodal-sensing': ['acoustic', 'wireless-sensing', 'underwater-sensing'],
+  'communications-networks': ['underwater-optical-communication', 'underwater-networking', 'industrial-iot'],
+  'collaborative-edge-intelligence': ['task-offloading', 'on-device-models', 'lightweight-vision'],
+  'physical-ai': ['underwater-robots', 'robotic-arms', 'unmanned-aerial-vehicles', 'unmanned-ground-vehicles'],
+};
+const keyPages = ['', 'research/', ...researchAreas.map((area) => `research/${area}/`), ...researchTopics.map((topic) => `research/${topic}/`), 'people/', 'people/leiwang/', 'people/shahid-muhammad-rehman/', 'people/akehao/', 'people/zhouxiaoyu/', 'papers/', 'papers/wimti/', 'news/', 'news/adapblinker/', 'joinus/'];
 try {
   for (const lang of ['zh', 'en']) {
     for (const width of [390, 768, 1440]) {
@@ -142,6 +149,8 @@ try {
       assert.deepEqual(await page.locator('.research-card h3 a').evaluateAll((links) => links.map((a) => a.getAttribute('href'))), researchAreas.map((area) => `/wilna-site/${lang}/research/${area}/`));
       assert.equal(await page.locator('.research-card img').count(), 4);
       assert.equal(await page.locator('.research-topics li').count(), 13);
+      assert.equal(await page.locator('.research-topics a').count(), 13);
+      assert.deepEqual(await page.locator('.research-topics a').evaluateAll((links) => links.map((a) => new URL(a.href).pathname)), researchTopics.map((topic) => `/wilna-site/${lang}/research/${topic}/`));
       assert.equal(await page.locator('.project-card').count(), 4);
       if (!route) {
         assert.ok((await page.title()).includes('WiLNA'));
@@ -154,13 +163,17 @@ try {
     await page.goto(base + lang + '/joinus/');
     assert.deepEqual(await page.locator('.join-directions h3').allTextContents(), expected);
     await page.goto(base + lang + '/research/multimodal-sensing/');
-    assert.equal(await page.locator('.research-topic-links a').count(), 2);
+    assert.equal(await page.locator('.area-topic-list a').count(), 3);
+    assert.deepEqual(await page.locator('.area-topic-list a').allTextContents(), lang === 'zh' ? ['声学定位 ↗', '无线感知（包括 Wi-Fi 感知） ↗', '水下感知 ↗'] : ['Acoustic localization ↗', 'Wireless sensing (including Wi-Fi sensing) ↗', 'Underwater sensing ↗']);
     for (const area of researchAreas) {
       await page.goto(base + lang + `/research/${area}/`);
       assert.equal(await page.locator('.area-section').count(), 3);
       assert.deepEqual(await page.locator('.area-section h2').allTextContents(), lang === 'zh' ? ['研究目标', '具体课题', '代表成果'] : ['Research Goal', 'Specific Topics', 'Representative Results']);
       assert.ok(await page.locator('.area-goal').textContent());
       assert.ok(await page.locator('.area-topic-list li').count() > 0);
+      assert.equal(await page.locator('.area-topic-list a').count(), await page.locator('.area-topic-list li').count());
+      assert.deepEqual(await page.locator('.area-topic-list a').evaluateAll((links) => links.map((a) => new URL(a.href).pathname)), areaTopics[area].map((topic) => `/wilna-site/${lang}/research/${topic}/`));
+      assert.equal(await page.locator('.research-topic-links').count(), 0);
       assert.ok(await page.locator('.area-paper-list li').count() > 0);
       assert.ok(await page.locator('.area-paper-list a').evaluateAll((links) => links.every((a) => a.href.startsWith('https://doi.org/'))));
       assert.equal(await page.locator('.project-card').count(), 1);
@@ -172,6 +185,16 @@ try {
       assert.equal(await page.locator('figcaption').count(), 0);
       assert.equal(await page.locator('.area-all-papers').getAttribute('href'), `/wilna-site/${lang}/papers/`);
     }
+    for (const topic of researchTopics) {
+      await page.goto(base + lang + `/research/${topic}/`);
+      assert.equal(await page.locator('h1').count(), 1, `${lang}/${topic}`);
+      assert.ok(await page.locator('.question-list li').count() >= 2, `${lang}/${topic} questions`);
+      assert.ok(await page.locator('.method-grid article').count() >= 2, `${lang}/${topic} methods`);
+      assert.ok((await page.locator('.back-link').getAttribute('href'))?.includes('/research/'), `${lang}/${topic} parent link`);
+      assert.ok(await page.locator('.research-figure img').evaluate((img) => img.complete && img.naturalWidth > 0), `${lang}/${topic} image`);
+      const publicationHrefs = await page.locator('.paper-item__links a').evaluateAll((links) => links.map((link) => link.href));
+      assert.equal(publicationHrefs.every((href) => href.startsWith('https://doi.org/') || new URL(href).pathname.startsWith(`/wilna-site/${lang}/papers/`)), true, `${lang}/${topic} publication links`);
+    }
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: 1000 });
       for (const route of ['', 'research/', ...researchAreas.map((area) => `research/${area}/`)]) {
@@ -181,7 +204,7 @@ try {
       }
     }
   }
-  report.interactions.push('four ordered bilingual research areas, 13 topics, correct links, updated hero, old topic routes and 320/390/768/1440px layouts');
+  report.interactions.push('four ordered bilingual research areas, 13 linked topic pages, correct parent links, related publications, updated hero, and 320/390/768/1440px layouts');
   report.interactions.push('Data-driven exact titles/authors and verified links, pagination without duplicates, all years/types, title/author/venue search, combined filters, reset, empty state, URL persistence, language switch, keyboard and bilingual 320/390/768/1440px layouts');
 
   await page.goto(base + 'zh/people/');
@@ -231,7 +254,9 @@ try {
   const noJSPage = await noJS.newPage();
   await noJSPage.goto(base + 'zh/papers/');
   const publicationData = JSON.parse(await fs.readFile(new URL('../data/publications.json', import.meta.url), 'utf8'));
-  assert.equal(await noJSPage.locator('[data-publication]:visible').count(), publicationData.publications.length);
+  const excludedPublicationIDs = JSON.parse(await fs.readFile(new URL('../data/publication_exclusions.json', import.meta.url), 'utf8')).ids;
+  assert.equal(await noJSPage.locator('[data-publication]:visible').count(), publicationData.publications.length - excludedPublicationIDs.length);
+  for (const id of excludedPublicationIDs) assert.equal(await noJSPage.locator(`#publication-${id}`).count(), 0);
   assert.equal(await noJSPage.locator('.site-nav').isVisible(), true);
   await noJS.close();
   report.interactions.push('navigation and all publications available without JavaScript');

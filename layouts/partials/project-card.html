@@ -4,7 +4,7 @@
 {{ $copy := index $project $page.Lang }}
 {{ $publication := false }}
 {{ range $page.Site.Data.publications.publications }}
-  {{ if eq .id $project.publication_id }}{{ $publication = . }}{{ end }}
+  {{ if and (eq .id $project.publication_id) (not (in $page.Site.Data.publication_exclusions.ids .id)) }}{{ $publication = . }}{{ end }}
 {{ end }}
 <article class="project-card" id="project-{{ $project.id }}">
   <div class="project-card__media">

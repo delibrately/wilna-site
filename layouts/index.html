@@ -33,7 +33,7 @@
 </div></section>
 <section class="section" aria-labelledby="publications-heading"><div class="site-container editorial-grid">
   <div class="section-heading section-heading--side"><p class="eyebrow">Latest publications</p><h2 id="publications-heading">{{ $ui.selected }}</h2><p>{{ $ui.selectedIntro }}</p><a class="text-link" href="{{ "papers/" | relLangURL }}">{{ $ui.all }} <span aria-hidden="true">↗</span><span class="sr-only"> {{ $ui.papers }}</span></a></div>
-  <div class="paper-list" data-featured-publications>{{ range $.Site.Data.featured_publications }}{{ $selection := . }}{{ range $.Site.Data.publications.publications }}{{ if eq .id $selection.id }}{{ partial "featured-publication-item.html" (dict "publication" . "selection" $selection) }}{{ end }}{{ end }}{{ end }}</div>
+  <div class="paper-list" data-featured-publications>{{ range $.Site.Data.featured_publications }}{{ $selection := . }}{{ range $.Site.Data.publications.publications }}{{ if and (eq .id $selection.id) (not (in $.Site.Data.publication_exclusions.ids .id)) }}{{ partial "featured-publication-item.html" (dict "publication" . "selection" $selection) }}{{ end }}{{ end }}{{ end }}</div>
 </div></section>
 <section class="section section--soft" aria-labelledby="news-heading"><div class="site-container editorial-grid">
   <div class="section-heading section-heading--side"><p class="eyebrow">News &amp; updates</p><h2 id="news-heading">{{ $ui.news }}</h2><a class="text-link" href="{{ "news/" | relLangURL }}">{{ $ui.all }} <span aria-hidden="true">↗</span><span class="sr-only"> {{ $ui.news }}</span></a></div>

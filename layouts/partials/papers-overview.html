@@ -2,7 +2,10 @@
 {{ $pubUI := index .Site.Data.publication_ui .Lang }}
 {{ $lang := .Lang }}
 {{ $rankRecords := .Site.Data.publication_rankings.records }}
-{{ $papers := sort .Site.Data.publications.publications "year" "desc" }}
+{{ $excludedIDs := .Site.Data.publication_exclusions.ids }}
+{{ $papers := slice }}
+{{ range .Site.Data.publications.publications }}{{ if not (in $excludedIDs .id) }}{{ $papers = $papers | append . }}{{ end }}{{ end }}
+{{ $papers = sort $papers "year" "desc" }}
 {{ $years := slice }}
 {{ range $papers }}{{ $years = $years | append .year }}{{ end }}
 {{ $years = $years | uniq }}

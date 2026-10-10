@@ -3,6 +3,7 @@ title = 'Acoustic Sensing and Acoustic Localization'
 draft = false
 type = 'research'
 layout = 'research'
+parent_area = 'research/multimodal-sensing'
 
 intro = """Acoustic perception and acoustic positioning are key technologies that utilize sound signals to understand the environment and determine the spatial location of sound sources. The former focuses on extracting information such as speech, events, and environmental conditions from audio (e.g., speech recognition, noise monitoring, abnormal sound detection), while the latter focuses on estimating the direction and location of sound sources based on multi-microphone arrays and the propagation characteristics of sound waves (e.g., TDOA, beamforming). Due to their low cost, wide coverage, and the absence of line-of-sight requirements, these two technologies have significant application value in scenarios such as smart homes, robot navigation, AR/VR spatial audio, and security monitoring."""
 
