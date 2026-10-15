@@ -5,7 +5,6 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/multimodal-sensing'
-img = 'research/multimodal-sensing.png'
 intro = """Underwater sensing combines acoustic, optical, and wireless measurements to obtain target positions, device states, and environmental information in settings with low visibility, strong scattering, or constrained communication."""
 detailedIntro = [
 "Underwater conditions affect both signal propagation and image formation. Acoustic sensing supports information acquisition over distance, optical methods provide images and positioning cues, and wireless or network measurements can add node and link state. This topic considers how complementary observations can be selected for a task and how differences in sampling, coordinate frames, noise, and uncertainty can be handled.",
