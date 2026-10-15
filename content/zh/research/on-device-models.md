@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/collaborative-edge-intelligence'
-img = 'research/collaborative-edge-intelligence.png'
+img = 'research/on-device-models.png'
 intro = """端侧模型研究将智能推理部署到靠近数据源的设备上，减少数据传输并支持及时响应，同时面对计算、存储和能耗限制。"""
 detailedIntro = [
 "模型在终端运行时，需要在模型规模、推理速度、资源消耗和任务需求之间权衡。设备类型和输入负载也会影响实际执行效率。研究可从模型压缩、知识蒸馏、推理优化和端边协同等方面探索适配方法。",
