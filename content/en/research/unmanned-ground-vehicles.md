@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/physical-ai'
-img = 'researchunmanned-ground-vehicles.png'
+img = 'research/unmanned-ground-vehicles.png'
 intro = """Unmanned ground vehicles use onboard sensors and computing systems to perceive their surroundings and generate driving decisions and control actions from task objectives."""
 detailedIntro = [
 "Autonomous driving involves perception of roads or work areas, vehicle localization, route planning, and motion control. Occlusion, dynamic objects, localization error, and real-time computing budgets all affect system decisions. Components need to share a consistent view of the environment and vehicle state while satisfying task and safety constraints.",
