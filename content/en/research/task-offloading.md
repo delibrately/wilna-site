@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/collaborative-edge-intelligence'
-img = 'research/collaborative-edge-intelligence.png'
+img = 'research/task-offloading.png'
 intro = """Task offloading decides whether computation should run locally or be assigned to an edge or cloud node, based on task requirements, device capability, and network conditions."""
 detailedIntro = [
 "Offloading decisions involve task computation, input size, deadlines, device energy, communication latency, and server load. Network conditions and task arrivals change over time, so fixed allocation policies may not continuously meet service requirements. Adaptive decisions based on system state are therefore an important research problem.",
