@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/communications-networks'
-img = 'research/communications-networks.png'
+img = 'research/underwater-networking.png'
 intro = """Underwater networking studies how distributed underwater devices can form cooperative networks and exchange information despite changing links and constrained node resources."""
 detailedIntro = [
 "Underwater nodes may have limited energy, computing capability, and communication range, while water conditions affect link quality. Networks must address node discovery, topology maintenance, routing, reliable delivery, and information freshness. These requirements call for trade-offs among communication overhead, latency, energy use, and robustness.",
