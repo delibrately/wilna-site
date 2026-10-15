@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/physical-ai'
-img = 'research/physical-ai.png'
+img = 'research/robotic-arms.png'
 intro = """Robotic arms turn perception into physical actions, and accurate relationships between robot and camera coordinate frames are an important foundation for vision-guided tasks."""
 detailedIntro = [
 "Hand-eye calibration estimates the transformation between a camera and a robot end effector. Robot-world calibration also involves the robot base, vision sensors, and an external reference frame. Measurement noise, observation quality, and differences between sensor errors affect joint parameter estimation.",
