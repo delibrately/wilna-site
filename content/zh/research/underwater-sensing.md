@@ -5,7 +5,6 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/multimodal-sensing'
-img = 'research/multimodal-sensing.png'
 intro = """水下感知面向低能见度、强散射和通信受限等环境，综合利用声学、光学与无线测量，获取目标位置、设备状态和环境信息。"""
 detailedIntro = [
 "水下环境会改变信号传播与图像成像条件。声学传感适合较远距离的信息获取，光学方法能够提供图像和定位线索，而无线及网络测量可补充节点与链路状态。本方向关注如何根据任务和环境选取互补观测，并处理不同传感器在采样频率、坐标系、噪声和不确定性方面的差异。",
