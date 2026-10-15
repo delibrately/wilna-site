@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/physical-ai'
-img = 'research/physical-ai.png'
+img = 'research/underwater-robots.png'
 intro = """Underwater robots must localize, navigate, and perform tasks with limited observations, constrained communication, and changing environmental conditions."""
 detailedIntro = [
 "Autonomous underwater vehicles rely on sensors to estimate the environment and their own state, while facing limits in underwater positioning, communication range, and link stability. Multi-vehicle missions also require state sharing, formation keeping, route coordination, and task allocation.",
