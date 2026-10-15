@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/physical-ai'
-img = 'research/physical-ai.png'
+img = 'research/unmanned-aerial-vehicles.png'
 intro = """无人机可作为移动感知与通信节点参与网络任务，其自主运行需要协调定位、覆盖规划、通信和能量管理。"""
 detailedIntro = [
 "在无线传感网络和飞行网络中，无人机需要根据目标区域、网络服务需求和可用资源规划移动与任务周期。定位信息、路由连通性、覆盖效果和能量预算之间存在相互影响，需要结合应用目标进行建模。",
