@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/collaborative-edge-intelligence'
-img = 'research/collaborative-edge-intelligence.png'
+img = 'research/lightweight-vision.png'
 intro = """Lightweight vision studies how image recognition, detection, and segmentation models can run efficiently on end and edge devices with limited compute."""
 detailedIntro = [
 "The compute and memory footprint of vision models affects inference latency and energy use on edge devices. Lightweight design is task-dependent: it should reduce unnecessary parameters and operations while retaining the representations needed for recognition, detection, or segmentation.",
