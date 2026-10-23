@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/collaborative-edge-intelligence'
-img = 'research/on-device-models.png'
+img = 'research/on-device-models-paper.png'
 intro = """On-device models bring inference closer to data sources to reduce data movement and support timely responses, while operating within compute, storage, and energy limits."""
 detailedIntro = [
 "Models on end devices require trade-offs among model size, inference speed, resource use, and task requirements. Device types and input workloads also affect execution efficiency. Research can explore adaptation through model compression, knowledge distillation, inference optimization, and device-edge collaboration.",

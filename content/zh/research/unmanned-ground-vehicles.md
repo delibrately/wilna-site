@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/physical-ai'
-img = 'research/unmanned-ground-vehicles.png'
+img = 'research/unmanned-ground-vehicles-paper.png'
 intro = """无人地面车辆通过车载传感器和计算系统感知周边环境，并依据任务目标生成行驶决策和控制动作。"""
 detailedIntro = [
 "自主行驶涉及道路或作业区域感知、车辆定位、路径规划和运动控制等环节。环境遮挡、动态目标、定位误差和实时计算预算会共同影响系统决策。各环节需要共享一致的环境与车辆状态，并满足任务和安全约束。",

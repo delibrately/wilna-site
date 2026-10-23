@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/communications-networks'
-img = 'research/underwater-optical-communication.png'
+img = 'research/underwater-optical-communication-paper.png'
 intro = """水下光通信利用可见光在水体中传递数据，可与相机和显示设备结合，形成适用于水下设备的通信链路。"""
 detailedIntro = [
 "水下光链路受到水体吸收与散射、距离、设备运动、遮挡和环境光等因素影响。接收端还需要从图像或光信号中恢复数据，因此编码格式、成像质量与纠错能力都关系到通信可靠性。本方向关注蓝绿光传播、相机通信和适应水下变化的链路设计。",

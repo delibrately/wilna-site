@@ -5,7 +5,7 @@ draft = false
 type = 'research'
 layout = 'research'
 parent_area = 'research/physical-ai'
-img = 'research/unmanned-aerial-vehicles.png'
+img = 'research/unmanned-aerial-vehicles-paper.png'
 intro = """UAVs can act as mobile sensing and communication nodes in networked tasks, requiring coordination among localization, coverage planning, communication, and energy management."""
 detailedIntro = [
 "In wireless sensor and flying networks, UAV movement and task cycles depend on target areas, service requirements, and available resources. Localization, route connectivity, coverage, and energy budgets interact and should be modeled according to application goals.",
